@@ -70,7 +70,7 @@
         <input type="text" name="" id=""><br/>
         <label for="">Es mayor de edad?:</label><br/>
         <input type="radio" name="mayorDeEdad" id="">Sí<br/>
-        <input type="radio" checked name="mayorDeEdad" id="">No<br/>
+        <input type="radio" checked="checked" name="mayorDeEdad" id="">No<br/>
         <label for="">Telefono:</label>
         <input type="tel"><br/>
         <textarea name="" id="" rows="5" cols="30" placeholder="Ingrese aquí sus comentarios"></textarea>
@@ -81,26 +81,27 @@
     <form action="">
         <table>
             <tr>
-                <td><input type="text" placeholder="1" tabindex="1"></td>
-                <td><input type="text" placeholder="4" tabindex="4"></td>
-                <td><input type="text" placeholder="7" tabindex="7"></td>
+                <td><input type="text" name="text1" placeholder="1" tabindex="1"></td>
+                <td><input type="text" name="text2" placeholder="2" tabindex="4"></td>
+                <td><input type="text" name="text3" placeholder="3" tabindex="7"></td>
             </tr>
             <tr>
-                <td><input type="text" placeholder="2" tabindex="2"></td>
-                <td><input type="text" placeholder="5" tabindex="5"></td>
-                <td><input type="text" placeholder="8" tabindex="8"></td>
+                <td><input type="text" name="text4" placeholder="4" tabindex="2"></td>
+                <td><input type="text" name="text5" placeholder="5" tabindex="5"></td>
+                <td><input type="text" name="text6" placeholder="6" tabindex="8"></td>
             </tr>
             <tr>
-                <td><input type="text" placeholder="3" tabindex="3"></td>
-                <td><input type="text" placeholder="6" tabindex="6"></td>
-                <td><input type="text" placeholder="9" tabindex="9"></td>
+                <td><input type="text" name="text7" placeholder="7" tabindex="3"></td>
+                <td><input type="text" name="text8" placeholder="8" tabindex="6"></td>
+                <td><input type="text" name="text9" placeholder="9" tabindex="9"></td>
             </tr>
         </table>
+        <input type="submit" tabindex="10">
     </form>
     
     <h1>Ejercicio 6</h1>
     <form action="">
-        <label><input type="radio" name="edad" id="ninos" disabled>Niños</label><br/>
+        <label><input type="radio" name="edad" id="ninos" disabled="disabled">Niños</label><br/>
         <label><input type="radio" name="edad" id="">Adolescentes</label><br/>
         <label><input type="radio" name="edad" id="">Mayores<br/></label>
         <input type="submit" name="" id="">
@@ -111,13 +112,13 @@
         <label for="nombre1">Nombre de usuario:</label>
         <input type="text" id="nombre1" maxlength="20"><br/>
         <label for="clave">Clave de usuario:</label>
-        <input type="text" id="clave" maxlength="12">
+        <input type="password" id="clave" maxlength="12"><br/>
         <input type="submit" name="" id="">
     </form>
 
     <h1>Ejercicio 8</h1>
     <h1>Inycom</h1>
-    <textarea name="" id="" readonly cols="100" rows="15">
+    <textarea name="" id="" readonly="readonly" cols="100" rows="15">
         Por el presente documento, [Nombre del Prestador] se compromete a realizar el servicio de [descripción del servicio] para [Nombre del Cliente], quien acepta las condiciones aquí estipuladas.
 
         El servicio se llevará a cabo entre los días [fecha de inicio] y [fecha de finalización], por un monto total de $[cantidad], que será abonado en [forma de pago].
@@ -129,7 +130,7 @@
     
     <h1>Ejercicio 9</h1>
     <h1>Reclamos</h1>
-    <form action="">
+    <form action="mailto:asd@gmail.com" method="post" enctype="text/plain">
         <label for="">Ingrese su nombre:</label>
         <input type="text"><br/>
         <label for="">Ingrese su dirección:</label>
@@ -140,7 +141,7 @@
     </form>
     
     <h1>Ejercicio 10</h1>
-    <form action="">
+    <form action="/registardatos.php">
         <legend>Formulario de comentarios</legend>
         <label for="">Ingrese su nombre:</label>
         <input type="text"><br/>
@@ -148,6 +149,8 @@
         <input type="email"><br/>
         <label for="">Comentarios:</label>
         <textarea name="" id=""></textarea><br/>
+        <input type="submit">
     </form>
 </body>
 </html>
+
