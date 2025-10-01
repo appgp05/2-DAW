@@ -1,0 +1,8 @@
+:root {
+    --body-background: rgb(216, 236, 253);
+    --header-background: rgb(167, 215, 255);
+    --introduccion-color: rgb(255, 255, 255);
+    --introduccion-text-background: rgba(0, 0, 0, 0.664);
+    --card-background: rgb(255, 255, 255);
+    --footer-background: rgb(145, 180, 209);
+}

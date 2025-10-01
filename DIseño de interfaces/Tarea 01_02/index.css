@@ -5,6 +5,11 @@
     padding: 0px;
     font-family: 'Merriweather', serif;
 }
+
+body {
+    background-color: var(--body-background);
+}
+
 header {
     display: flex;
     padding-left: 40px;
@@ -12,16 +17,16 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(197, 215, 255);
+    background-color: var(--header-background);
 
     > div {
         width: 600px;
         display: flex;
         justify-content: space-between;
-    }
-
-    > p {
-        text-decoration: underline;
+        
+        > p {
+            text-decoration: underline;
+        }
     }
 
     > #logo {
@@ -39,101 +44,135 @@ header {
 
 #seccionIntroduccion {
     height: 800px;
+    height: calc(100vh - 100px);
+    
     background-image: url("/img/cabecera_museo2.jpg");
     background-size: cover;
     background-position: 0px -150px;
+
+    font-size: 30px;
+    color: var(--introduccion-color);
+
+    > div {
+        width: 800px;
+
+        padding-top: 650px;
+        padding-left: 100px;
+
+        > p {
+            border-radius: 10px;
+
+            padding: 20px;
+
+            background-color: var(--introduccion-text-background);
+        }
+    }
 }
 
 #exposiciones {
     width: 100%;
-    height: 100%;
+    height: 800px;
 
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 100px;
 
-    > .card {
-        width: 360px;
-        height: 500px;
-        
-        
-        background-color: aliceblue;
-        
-        border-radius: 40px;
-        box-shadow: 0px 0px 40px black;
-        
+    > div {
         display: flex;
-        flex-direction: column;
-
-        > img {
-            height: 300px;
-            border-radius: 40px 40px 0px 0px;
-        }
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 120px;
         
-        > div {
-            height: 100%;
-
-            padding-left: 20px;
-            padding-right: 20px;
-
+        > .card {
+            width: 360px;
+            height: 500px;
+            
+            background-color: var(--card-background);
+            
+            border-radius: 40px;
+            box-shadow: 0px 0px 40px black;
+            
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
-        }
-        
-        > button {
-            width: 180px;
-            height: 30px;
-            border-radius: 10px;
+    
+            > img {
+                height: 190px;
+                border-radius: 40px 40px 0px 0px;
+            }
+            
+            > div {
+                height: 100%;
+    
+                padding-left: 20px;
+                padding-right: 20px;
+    
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+            
+            > div > button {
+                width: 180px;
+                height: 30px;
+                border-radius: 10px;
+            }
         }
     }
 }
 
 #colecciones {
     width: 100%;
-    height: 700px;
+    height: 800px;
 
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 100px;
 
-    > .card {
-        width: 360px;
-        height: 500px;
-        
-        
-        background-color: aliceblue;
-        
-        border-radius: 40px;
-        box-shadow: 0px 0px 40px black;
-        
+    > div {
         display: flex;
-        flex-direction: column;
-
-        > img {
-            height: 300px;
-            border-radius: 40px 40px 0px 0px;
-        }
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 120px;
         
-        > div {
-            height: 100%;
-
-            padding-left: 20px;
-            padding-right: 20px;
-
+        > .card {
+            width: 360px;
+            height: 500px;
+            
+            background-color: var(--card-background);
+            
+            border-radius: 40px;
+            box-shadow: 0px 0px 40px black;
+            
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
-        }
-        
-        > button {
-            width: 180px;
-            height: 30px;
-            border-radius: 10px;
+    
+            > img {
+                height: 190px;
+                border-radius: 40px 40px 0px 0px;
+            }
+            
+            > div {
+                height: 100%;
+    
+                padding-left: 20px;
+                padding-right: 20px;
+    
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+            
+            > div > button {
+                width: 180px;
+                height: 30px;
+                border-radius: 10px;
+            }
         }
     }
 }
@@ -143,5 +182,9 @@ footer {
     width: 100%;
     height: 100px;
 
-    background-color: rgb(147, 206, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: var(--footer-background);
 }
