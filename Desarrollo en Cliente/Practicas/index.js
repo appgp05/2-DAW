@@ -1,19 +1,25 @@
-let x = 2342342344.43544;
-// x = 2;
-let text
-text = x.toString();
-text = x.toExponential(10)
-text = x.toFixed(2)
-text = x.toPrecision(12)
-text = x.valueOf()
-text = Number.isFinite(x)
-text = Number.isInteger(x)
-text = Number.isNaN(x)
-text = Number.isSafeInteger(x)
-text = Number.parseInt(x)
-text = Number.parseFloat(x)
+let nombre = prompt("Introduce tu nombre")
+console.log(nombre)
+// let a = confirm("Te ha gustado?")
+// console.log(a)
 
-document.getElementById("demo").innerHTML = text;
+
+// let x = 2342342344.43544;
+// // x = 2;
+// let text
+// text = x.toString();
+// text = x.toExponential(10)
+// text = x.toFixed(2)
+// text = x.toPrecision(12)
+// text = x.valueOf()
+// text = Number.isFinite(x)
+// text = Number.isInteger(x)
+// text = Number.isNaN(x)
+// text = Number.isSafeInteger(x)
+// text = Number.parseInt(x)
+// text = Number.parseFloat(x)
+
+// document.getElementById("demo").innerHTML = text;
 
 
 
