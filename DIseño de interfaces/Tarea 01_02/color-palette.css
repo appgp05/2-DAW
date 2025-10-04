@@ -1,8 +1,15 @@
 :root {
     --body-background: rgb(216, 236, 253);
-    --header-background: rgb(167, 215, 255);
+    
+    --header-background: rgba(118, 182, 255, 1);
+    
     --introduccion-color: rgb(255, 255, 255);
     --introduccion-text-background: rgba(0, 0, 0, 0.664);
+    
+    --productos-boton-border: rgba(0, 29, 109, 1);
+    --productos-boton-color: rgba(255, 255, 255, 1);
+    --productos-boton-background: rgba(41, 106, 202, 1);
     --card-background: rgb(255, 255, 255);
+    
     --footer-background: rgb(145, 180, 209);
 }
