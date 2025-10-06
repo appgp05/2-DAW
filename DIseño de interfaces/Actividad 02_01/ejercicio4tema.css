@@ -1,0 +1,12 @@
+@import url("ejercicio4base.css");
+
+div{
+    padding: 20px;
+}
+h1{
+    color: violet;
+}
+p{
+    margin-top: 20px;
+    color: yellowgreen;
+}
