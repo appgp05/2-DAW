@@ -1,0 +1,32 @@
+p{
+    color: blue;
+}
+
+.texto{
+    color: green;
+}
+
+#parrafo1{
+    color: red;
+}
+
+div{
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    border: 5px gold solid;
+}
+
+h2{
+    color: blue;
+}
+h2.titulo{
+    color: green;
+}
+.titulo{
+    color: orange !important;
+}
+
+span{
+    border: inherit;
+    font-weight: bold;
+}

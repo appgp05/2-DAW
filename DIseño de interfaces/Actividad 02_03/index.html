@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <p id="parrafo1" class="texto">Esto es un texto de prueba</p>
+    
+    <!-- El órden en el que se han aplicado los estilos es de más genérico
+     a más específico, es decir primero el elemento, luego la clase y luego el id -->
+    
+    <h1>Ejercicio 2</h1>
+    <div>
+        <h1>Texto de prueba</h1>
+        <p>Más texto de prueba <span>junto a un span</span></p>
+    </div>
+
+    <!-- La propiedad del borde no ha sido heredada pero el color
+     y la fuente sí han sido heredadas. El motivo por el que unas
+     son heredadas y otras no es que algunas son más genéricas y
+     puede interesar que en toda una sección sean iguales, como
+     por ejemplo la fuente de texto, que conviene que sea la misma
+     en una misma sección, mientras que igual no te interesa tener
+     border por toda una sección -->
+
+     <h1>Ejercicio 3</h1>
+     <h2 class="titulo">Esto es un título</h2>
+
+     <!-- !importante hace que el atributo asignado en el css tenga
+      una prioridad mayor que los demás atributos, ésto ayuda en
+      caso de que haya conflictos entre estilos aplicados a un mismo
+      elemento en el DOM -->
+
+    <h1>Ejercicio 4</h1>
+    <div>
+        <h1>Texto de prueba</h1>
+        <p>Más texto de prueba <span>junto a un span</span></p>
+        <span>junto a un span</span>
+    </div>
+    <!-- Inherit hace que los elementos hereden las propiedades
+     de sus elementos padres, esto puede ayudar en caso de que
+     quieras especificar una propiedad en un elemento y que sus
+     elementos hijos tengan la misma propiedad pero ésta
+     predeterminadamente no se herede, sin emabrgo el color sí
+     se estaba heredando al span, asíq ue he usado el inherit
+     para el borde -->
+</body>
+</html>

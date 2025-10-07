@@ -1,9 +1,9 @@
 // EJERCICIO 1
-// let mensaje = `Hola a todo el Mundo!
-// Qué fácil es incluir 'comillas simples'
-// y "comillas dobles"`
+let mensaje = `Hola a todo el Mundo!
+Qué fácil es incluir 'comillas simples'
+y "comillas dobles"`
 
-// alert(mensaje)
+alert(mensaje)
 
 // EJERCICIO 2
 function enviarFormularioEj2(){

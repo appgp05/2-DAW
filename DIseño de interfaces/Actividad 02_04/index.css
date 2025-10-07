@@ -1,0 +1,14 @@
+li:first-child{
+    color: violet;
+}
+li:nth-child(odd){
+    font-size: 30px;
+}
+
+h1::after, h1::before{
+    content: "";
+    display: block;
+    width: 2em;
+    height: 1px;
+    background-color: black;
+}
