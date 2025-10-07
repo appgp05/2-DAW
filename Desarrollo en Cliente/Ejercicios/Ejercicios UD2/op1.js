@@ -1,3 +1,4 @@
+// EJERCICIO 1
 function enviarFormularioEj1 () {
     let nombre = document.getElementById("ej1Nombre").value
     let apellido1 = document.getElementById("ej1Apellido1").value
@@ -8,9 +9,9 @@ function enviarFormularioEj1 () {
     diaNacimiento = fechaNacimiento.getUTCDate()
     mesNacimiento = fechaNacimiento.getUTCMonth()
     anoNacimiento = fechaNacimiento.getFullYear()
-
+    
     let edad
-
+    
     edad = new Date().getFullYear() - anoNacimiento
     
     if(mesNacimiento >= new Date().getUTCMonth()){
@@ -22,12 +23,13 @@ function enviarFormularioEj1 () {
             edad--
         }
     }
-
+    
     console.log("Edad: " + edad)
     console.log(diaNacimiento, mesNacimiento, anoNacimiento)
     document.getElementById("resultadosEj1").value = fullName + "\n" + edad
 }
 
+// EJERCICIO 2
 function enviarFormularioEj2(){
     let numero = Number.parseInt(document.getElementById("ej2Numero").value)
     let numeroExponencial = Math.exp(numero)
@@ -35,6 +37,7 @@ function enviarFormularioEj2(){
     document.getElementById("resultadosEj2").innerHTML = numeroExponencial   
 }
 
+// EJERCICIO 3
 function enviarFormularioEj3(){
     let numero = Number.parseInt(document.getElementById("ej3Numero").value)
     
@@ -45,25 +48,27 @@ function enviarFormularioEj3(){
     } else {
         par = "No"
     }
-
+    
     document.getElementById("resultadosEj3").innerHTML = par
 }
 
+// EJERCICIO 4
 function enviarFormularioEj4(){
     let numero1 = Number.parseInt(document.getElementById("ej4Numero1").value)
     let numero2 = Number.parseInt(document.getElementById("ej4Numero2").value)
     
     let multiplo
-
+    
     if(Number.isInteger((numero1 / numero2)) && numero1 > numero2){
         multiplo = "Sí es multiplo"
     } else {
         multiplo = "No es multiplo"
     }
-
+    
     document.getElementById("resultadosEj4").innerHTML = multiplo
 }
 
+// EJERCICIO 5
 let ej5MesesDelAno = [
     'Enero',
     'Febrero',
@@ -85,6 +90,7 @@ ej5MesesDelAno.forEach(mes => {
     )
 });
 
+// EJERCICIO 6
 function enviarFormularioEj6(){
     let numero1 = document.getElementById("ej6Numero1").value
     let numero2 = document.getElementById("ej6Numero2").value
@@ -116,10 +122,12 @@ function enviarFormularioEj6(){
     }
 }
 
+// EJERCICIO 7
 for(let i = 0; i < 30; i++){
     document.getElementById("resultadosEj7").innerHTML += "<p>" + i + "</p>";
 }
 
+// EJERCICIO 8
 function enviarFormularioEj8(){
     let numero = document.getElementById("ej8Numero").value
     let resultado = 0;
@@ -136,6 +144,7 @@ function enviarFormularioEj8(){
     document.getElementById("resultadosEj8").innerHTML = resultado;
 }
 
+// EJERCICIO 9
 function empezarEjercicio9(){
     let ciudad = prompt("Elige una ciudad (Zaragoza, Barcelona, Madrid)")
     let mensaje = ""
