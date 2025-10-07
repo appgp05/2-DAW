@@ -135,3 +135,25 @@ function enviarFormularioEj8(){
 
     document.getElementById("resultadosEj8").innerHTML = resultado;
 }
+
+function empezarEjercicio9(){
+    let ciudad = prompt("Elige una ciudad (Zaragoza, Barcelona, Madrid)")
+    let mensaje = ""
+
+    switch(ciudad){
+        case "Zaragoza":
+            mensaje = "Marvillosa gente, Capital del Ebro"
+            break
+        case "Barcelona":
+            mensaje = "Buenas playas y comida, a disfrutar"
+            break
+        case "Madrid":
+            mensaje = "La capital de España, gran elección"
+            break
+        default:
+            mensaje = "No conozco esa ciudad"
+            break
+    }
+
+    document.getElementById("resultadosEj9").innerHTML = mensaje
+}
