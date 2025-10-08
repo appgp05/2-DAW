@@ -1,3 +1,4 @@
+/* Ejercicio 1 */
 li:first-child{
     color: violet;
 }
@@ -5,10 +6,73 @@ li:nth-child(odd){
     font-size: 30px;
 }
 
+/* Ejercicio 2 */
+h1{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 h1::after, h1::before{
     content: "";
     display: block;
     width: 2em;
     height: 1px;
     background-color: black;
+}
+
+/* Ejercicio 3 */
+nav > ul > a:hover{
+    padding: 5px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    transition: 0,5s;
+    border-radius: 20px;
+}
+
+/* Ejercicio 4 */
+#bloque1{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+}
+#bloque2{
+    width: 10rem;
+    height: 10rem;
+    background-color: brown;
+}
+
+/* Ejercicio 5 */
+form{
+    input[type="email"], input[type="password"]{
+        background-color: lightgrey;
+        border-radius: 20px;
+    }
+}
+
+/* Ejercicio 6 */
+section{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    > div{
+        padding: 20px;
+        border-radius: 20px;
+        background-color: rgb(127, 187, 255);
+        > img{
+            width: 100px;
+        }
+    }
+    > div[class="nuevo"]::before{
+        position: absolute;
+        left: 620px;
+        display: block;
+        content: "Nuevo";
+        background-color: rgb(255, 54, 54);
+        border-radius: 20px;
+        text-align: center;
+    }
 }
