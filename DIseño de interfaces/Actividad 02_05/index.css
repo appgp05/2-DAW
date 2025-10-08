@@ -1,0 +1,53 @@
+/* Ejercicio 1 */
+#divEj1{
+    width: 100%;
+    background-color: lightblue;
+
+    > *{
+        background-color: bisque;
+        position: static;
+        margin: 50px;
+        padding: 50px;
+    }
+}
+/* Ejercicio 2 */
+#sectionEj2{
+    background-color: rgb(255, 255, 90);
+    > div{
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+    
+        > div{
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            top: 10px;
+            position: relative;
+        }
+    }
+}
+/* Ejercicio 3 */
+#divEj3{
+    width: 100%;
+    height: 200px;
+    top: 100px;
+    left: 50px;
+    position: relative;
+    background-color: aqua;
+    > div{
+        width: 50px;
+        height: 50px;
+        top: 100px;
+        position: absolute;
+        background-color: rgb(138, 255, 115);
+    }
+}
+/* Ejercicio 4 */
+#sectionEj4{
+    background-color: red;
+}
+
+/* Ejercicio 5 */
+/* Ejercicio 6 */
+/* Ejercicio 7 */
