@@ -3,14 +3,22 @@ let mensaje = `Hola a todo el Mundo!
 Qué fácil es incluir 'comillas simples'
 y "comillas dobles"`
 
-alert(mensaje)
+// alert(mensaje)
 
 // EJERCICIO 2
 function enviarFormularioEj2(){
     let ej2Numero1 = document.getElementById("ej2Numero1").value
     let ej2Numero2 = document.getElementById("ej2Numero2").value
 
-    let ej2Resultado = ej2Numero1 >> Math.sqrt(ej2Numero2)
+    let exponenteEnBase2DelNumero2 = 0
+    let cantidadActual = ej2Numero2
+
+    while(cantidadActual % 2 == 0){
+        exponenteEnBase2DelNumero2++
+        cantidadActual = cantidadActual/2
+    }
+
+    let ej2Resultado = ej2Numero1 >> exponenteEnBase2DelNumero2
 
     document.getElementById("resultadosEj2").innerHTML = ej2Resultado
 }
@@ -20,7 +28,15 @@ function enviarFormularioEj3(){
     let ej3Numero1 = document.getElementById("ej3Numero1").value
     let ej3Numero2 = document.getElementById("ej3Numero2").value
 
-    let ej3Resultado = ej3Numero1 << Math.sqrt(ej3Numero2)
+    let exponenteEnBase2DelNumero2 = 0
+    let cantidadActual = ej3Numero2
+
+    while(cantidadActual % 2 == 0){
+        exponenteEnBase2DelNumero2++
+        cantidadActual = cantidadActual/2
+    }
+
+    let ej3Resultado = ej3Numero1 << exponenteEnBase2DelNumero2
 
     document.getElementById("resultadosEj3").innerHTML = ej3Resultado
 }
@@ -34,17 +50,29 @@ console.log("un valor infinito es " + Infinity)
 let OVNI = "OBJETO VOLADOR NO IDENTIFICADO"
 let Info = "En un lugar de la mancha"
 
-comprobarMinusculasYMayusculas(OVNI)
-comprobarMinusculasYMayusculas(Info)
+comprobarMinusculasYMayusculas(OVNI, false)
+comprobarMinusculasYMayusculas(Info, false)
 
-function comprobarMinusculasYMayusculas(texto){
+function enviarFormularioEj5(){
+    let texto = document.getElementById("ej5Texto").value
+    comprobarMinusculasYMayusculas(texto, true)
+}
+
+function comprobarMinusculasYMayusculas(texto, mostrarEnresultados){
+    let mensaje = ""
+
     if(texto === texto.toUpperCase()){
-        console.log("Tiene mayúsculas")
+        mensaje = "Tiene mayúsculas"
     } else {
         if(texto === texto.toLowerCase()){
-            console.log("Tiene minúsculas")
+            mensaje ="Tiene minúsculas"
         } else {
-            console.log("Tiene minúsculas y mayúsculas")
+            mensaje = "Tiene minúsculas y mayúsculas"
         }
+    }
+
+    console.log(mensaje)
+    if(mostrarEnresultados){
+        document.getElementById("resultadosEj5").innerHTML = mensaje
     }
 }
