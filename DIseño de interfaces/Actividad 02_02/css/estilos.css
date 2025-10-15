@@ -1,20 +1,22 @@
+@import url(colores.css);
+
 *{
     margin: 0px;
     padding: 0px;
 
     font-family: 'Times New Roman', Times, serif;
-    color: black
+    color: var(--colorGeneral);
 }
 
 body{
-    background-color: rgb(196, 255, 235);
+    background-color: var(--backgroundColorBody);
 }
 
 header{
     width: 100vw;
     height: 50px;
 
-    background-color: aquamarine;
+    background-color: var(--backgroundColorHeader);
     
     > nav{
         width: 100%;
@@ -30,7 +32,7 @@ footer{
     width: 100vw;
     height: 50px;
 
-    background-color: aquamarine;
+    background-color: var(--backgroundColorFooter);
 
     > div {
         display: flex;
@@ -42,6 +44,14 @@ footer{
 
 #seccionPrincipal{
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 h1{
@@ -85,7 +95,12 @@ a{
 }
 
 button{
+    width: 160px;
+    height: 30px;
 
+    border-radius: 5px;
+
+    background-color: var(--backgroundColorButton);
 }
 
 .destacado{

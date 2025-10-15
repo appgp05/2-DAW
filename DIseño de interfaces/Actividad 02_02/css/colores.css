@@ -1,0 +1,11 @@
+:root{
+    --colorGeneral: black;
+    --backgroundColorBody: rgb(196, 255, 235);
+    --backgroundColorHeader: aquamarine;
+    --backgroundColorFooter: aquamarine;
+    --backgroundColorButton: aquamarine;
+    --: rgb(0, 0 ,0);
+    --: rgb(0, 0 ,0);
+    --: rgb(0, 0 ,0);
+    --: rgb(0, 0 ,0);
+}
