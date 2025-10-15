@@ -1,12 +1,12 @@
 // Ejercicio 1
 function enviarFormularioEj1(){
-    let notaProyecto = parseInt(document.getElementById("ej1Numero1").value)
-    let notaExamen = parseInt(document.getElementById("ej1Numero2").value)
+    let notaProyecto = parseFloat(document.getElementById("ej1Numero1").value)
+    let notaExamen = parseFloat(document.getElementById("ej1Numero2").value)
 
     console.log(notaProyecto, notaExamen)
 
-    if(notaProyecto < 0 || notaProyecto > 10 || notaExamen < 0 || notaExamen > 10){
-        alert("Notas invalidas")
+    if(Number.isNaN(notaProyecto) || Number.isNaN(notaExamen) ||notaProyecto < 0 || notaProyecto > 10 || notaExamen < 0 || notaExamen > 10){
+        alert("Notas invalidas, las notas deben de ser un número del 0 al 10")
     } else {
         let mediaResultante = (notaProyecto + notaExamen) / 2
         let calificacion
