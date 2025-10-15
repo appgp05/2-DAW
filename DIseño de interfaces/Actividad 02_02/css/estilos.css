@@ -3,8 +3,9 @@
 *{
     margin: 0px;
     padding: 0px;
-
-    font-family: 'Times New Roman', Times, serif;
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
     color: var(--colorGeneral);
 }
 
@@ -43,14 +44,64 @@ footer{
 }
 
 #seccionPrincipal{
+    height: calc(100vh - 100px);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    > img {
+        width: 400px;
+    }
 
     > div {
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        
+    }
+}
+
+#seccionProductos{
+    width: 100%;
+    height: calc(100vh - 50px);
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    > article {
+        width: 400px;
+        height: 600px;
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: space-evenly;
+
+        border-radius: 20px;
+        border: 2px black solid;
+
+        background-color: var(--backgroundColorArticle);
+
+        > img {
+            width: 100%;
+
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        > div {        
+            height: 100%;
+
+            padding: 10px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: space-evenly;
+        }
     }
 }
 
@@ -87,7 +138,17 @@ li{
 }
 
 form{
+    width: 500px;
+    height: 200px;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    > div {
+        width: 100%;   
+    }
 }
 
 a{
@@ -95,8 +156,9 @@ a{
 }
 
 button{
-    width: 160px;
-    height: 30px;
+    width: fit-content;
+    
+    padding: 10px;
 
     border-radius: 5px;
 
