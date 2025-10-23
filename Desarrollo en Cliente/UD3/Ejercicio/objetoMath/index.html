@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Math.exp(10) Explicación: Devuelve el número E elevado a 10 
+        document.write(Math.exp(10)); 
+        document.write("<br>"); 
+        //Math.pow(2,10)) Explicación Devuelve 2 elevado a 10 
+        document.write(Math.pow(2,10)); 
+        document.write("<br>"); 
+        //Ejercicio: Haz un script que calcules dos números de forma aleatoria, por ejemplo a y b. Luego opera “a” elevado a “b”. 
+        var a = Math.round(Math.random()*100000000); 
+        var b = Math.round(Math.random()*10); 
+        var resultado= Math.pow(a,b); 
+        document.write(resultado); 
+        document.write("<br>");
+        //diferencias entre Math.floor y Math.round.  
+        document.write(Math.floor(Math.random()*10)); //Redondeo hacia abajo 
+        document.write("<br>"); 
+        document.write(Math.round(Math.random()*10)); //Redondeo hacia arriba 
+        document.write("<br>"); 
+    </script>
+</body>
+</html>
