@@ -5,8 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/imagenes-mapa-bits/img/favicon.png">
+    <link rel="icon" type="image/png" href="/imagenes-mapa-bits/img/favicon.webp">
 </head>
 <body>
+    <picture>
+        <source type="image/webp" srcset="img/Mount_Kalaga_National_Park.webp">
+        <source type="image/png" srcset="img/Mount_Kalaga_National_Park.png">
+        <img src="img/favicon.png" alt="Descripción de la imagen">
+    </picture>
+
+    <header>
+        <h1>Éste es el header</h1>
+    </header>
+
+    <ul>
+        <div class="animado"></div>
+        <div class="icono-flechaarriba"></div>
+        <div class="icono-flechaderecha"></div>
+        <div class="icono-flechaabajo"></div>
+        <div class="icono-flechaizquierda"></div>
+    </ul>
+
+    <div id="carga">
+        <img src="img/carga.gif" alt="">
+        <button>Cargando...</button>
+    </div>
     <div id="galeria">
         <div>
             <h1>.jpg</h1>
@@ -29,5 +53,19 @@
             <img src="img/Mount_Kalaga_National_Park.gif" alt="">
         </div>
     </div>
+
+    
+    <!-- EJERCICIO 1 
+        El orden de tamaño que ocupa cada formato para la imágen que he usado es el siguiente (mayor a menor peso)
+        - bpm
+        - png
+        - git
+        - webp
+        - jpg
+
+    Por loq ue el formato más eficiente respecto al peso es el jpg -->
+
+    <!-- EJERCICIO 2
+    Ambos favicons me funcionaron igual y en ambos casos usé microsoft edge -->
 </body>
 </html>
