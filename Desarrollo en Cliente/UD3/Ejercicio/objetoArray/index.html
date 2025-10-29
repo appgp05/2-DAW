@@ -1,0 +1,37 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script> 
+    let arr = new Array('one', 'two', 'tres', 'cuatro', 'cinco', 'seis'); 
+    //let arr = ['one', 'two', 'tres', 'cuatro', 'cinco', 'seis']; 
+    document.write(arr.length + "<br/>"); 
+    document.write(arr[3] + "<br/>"); 
+    document.write(arr.pop() + "<br/>"); 
+    document.write(arr.push("nuevo1", "nuevo2") + "<br/>"); 
+    document.write(arr);
+
+    const fruits = [];
+    fruits.push("banana", "apple", "peach");
+    console.log(fruits.length); // 3
+    fruits[5] = "mango";
+    console.log(fruits[5]); // 'mango'
+    console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
+    console.log(fruits.length); // 6
+    fruits[3] = null
+    console.log(fruits[3]);
+    console.log(fruits[8]);
+    console.log(typeof(null))
+    fruits.length = 30;
+    console.log(fruits)
+    console.log(fruits.length)
+    fruits.length = 2;
+    console.log(fruits)
+    console.log(fruits.length)
+    </script> 
+ </body>
+ </html>

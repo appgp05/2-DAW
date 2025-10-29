@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="seccionPNG">
+        <h1>Sección PNG</h1>
+        <div>
+            <img class="imagenPequena" src="img/coche.png" alt="">
+            <img class="imagenGrande" src="img/coche.png" alt="">
+        </div>
+    </section>
+    <section id="seccionSVG">
+        <h1>Sección SVG</h1>
+        <div>
+            <img class="imagenPequena" src="img/coche.svg" alt="">
+            <img class="imagenGrande" src="img/coche.svg" alt="">
+        </div>
+    </section>
+
+
+    <!-- - En mi caso ambas imágenes al agrandarlas se ven con bastante calidad,
+    sin embargo se ve algo más borrosa la imagen PNG a la hora de agrandarla
+    - El SVG al escalarse mediante vectores mantiene los bordes nítidos al
+    contrario que el PNG, al igual que gana más calidad al agrandarlo
+    - El SVG ocupa mucho menos espacio que el PNG, el png ocupa 144KB y el SVG 3KB -->
+
+    <svg style="width: 100px;" width="100px" height="100px" xmlns="http://www.w3.org/2000/svg">
+        <style>
+            svg:hover {
+                transform: scale(2);
+            }
+            circle:hover {
+                display: none;
+            }
+        </style>
+        <rect width="100px" height="100px" fill="#000000ff"></rect>
+        <circle cx="50px" cy="50px" r="50px" fill="#b96262ff" stroke="rgba(233, 0, 0, 1)" stroke-width="2px"/>        <rect x="12.5px" y="25px" width="75px" height="50px" fill="#357aa8ff"/>
+        <text x="0px" y="30px" font-family="Arial, Helvetica, sans-serif" font-size="30px" fill="rgba(47, 236, 0, 1)">Texto de prueba</text>
+        <line x1="0" y1="80" x2="100" y2="20" stroke="rgba(255, 251, 0, 1)"/>
+        <polygon points="0,0 25,50 0,100 50,75 100, 100 75,50 100,0 50,25" fill="rgba(255, 140, 46, 1)"/>
+        <polygon points="0,100 50,25 50,75 100,0" fill="rgba(46, 213, 255, 1)"/>
+    </svg>
+    
+    <img src="img/graf_ej2.svg" alt="" id="miImagenSVG">
+
+    <!-- - Los cambios que he realizado en el svg aparte de los que se piden en el
+    ejercicio son añadir un polígono y una línea, y además he añadido un
+    polígono que he creado yo a mano
+    - Para cambiar el color se usa fill, para el tamo width y height, que son
+    la anchura y la altura correspondientemente, y para la posición puedes
+    usar x e y o cx cy si quieres que la posición no sea respecto al la esquina
+    origen del elemento sino al centro del elemento -->
+
+    <!-- - La diferencia que veo entre insertar el svg como imagen o como inline
+    es que si lo insertas inline y quieres modificarlo solo modificas ese svg,
+    y si lo insertas como iagen puedes modificar el original yq ue se modifiquen
+    todas las imágenes en las que usas el svg
+    - Si insertas el svg inline puedes aplicarle estilos directamente
+    a los elementos que continee el svg, sin emabrgo si insertas el svg como una
+    imagen solo puedes aplicarle estilos a la imagen y no a los elemtnos del svg -->
+
+    <!-- - Creo que es más recomendable usar un gráfico vectorial cuando se requiere
+    de una imágen no demasiado compleja que se quiera reescalar y mantener su calidad,
+    por ejemplo un logo, y el mapa de bits creo que es más oportuno para imágenes
+    reales como imágenes de productos, o imágenes que no requieren de gran calidad al reescalarse
+    - Prefiero inseratr un gráfico vectorial como una imagen puesto que creo que
+    el código queda más limpio, y que es más escalable puesto que si modificas
+    el gráfico de vectores original modificas también todos los sitios en los que se aplica -->
+</body>
+</html>
