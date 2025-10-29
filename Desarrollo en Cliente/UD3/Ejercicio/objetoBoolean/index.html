@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Si especificas cualquier objeto, incluido un objeto Boolean cuyo valor es false, como valor 
+        //inicial de un objeto Boolean,  
+        //el nuevo objeto Boolean tiene un valor de true. 
+        let myFalse = new Boolean(false);   // valor inicial de false 
+        console.log(myFalse)
+        let g = Boolean(myFalse);   
+        console.log(g)        
+        // valor inicial de true 
+        let myString = new String('Hola');  // objeto string 
+        let s = Boolean(false);          
+        console.log(s)
+        // valor inicial de true 
+
+        console.log("New boolean", new Boolean(false))
+        console.log("Boolean", Boolean(true))
+
+        console.log("New string", Boolean(new String("")))
+        console.log("String", Boolean(String("")))
+
+        console.log("New number", Boolean(new Number(0)))
+        console.log("Number", Boolean(Number(0)))
+    </script>
+</body>
+</html>
