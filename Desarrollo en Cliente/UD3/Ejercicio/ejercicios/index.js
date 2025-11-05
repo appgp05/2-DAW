@@ -31,28 +31,70 @@ console.log(noPrimos)
 // #######################
 // EJERCICIO MAYOR Y MENOR
 // #######################
+// let numeros2 = []
+// numeros2.length = 10
+
+// for(let i = 0; i < numeros2.length; ++i){
+//     numeros2[i] = Math.round(Math.random()*10)
+// }
+
+// let mayor = 0
+// let menor = 10
+
+// for(let i = 0; i < numeros2.length; ++i){
+//     if(numeros2[i] > mayor){
+//         mayor = numeros2[i]
+//     }
+//     if(numeros2[i] < menor){
+//         menor = numeros2[i]
+//     }
+// }
+
+// document.getElementById("ejercicioMayorYMenor").innerHTML += "<p>Números aleatorios: "+numeros2+"</p>"
+// document.getElementById("ejercicioMayorYMenor").innerHTML += "<p>Número mayor: "+mayor+"</p>"
+// document.getElementById("ejercicioMayorYMenor").innerHTML += "<p>Número menor: "+menor+"</p>"
+
+
+//AMPLIACION:
 let numeros2 = []
-numeros2.length = 10
 
-for(let i = 0; i < numeros2.length; ++i){
-    numeros2[i] = Math.round(Math.random()*10)
+function enviarFormularioMayorYMenor(){
+    let numero = document.getElementById("numeroEjercicioMayorYMenor").value
+
+    if(isNaN(Number(numero))){
+        return
+    }
+
+    numeros2.push(numero)
+
+    if(numeros2.length >= 10){
+        document.getElementById("numeroEjercicioMayorYMenor").value = ""
+        document.getElementById("numeroEjercicioMayorYMenor").disabled = "disabled"
+        document.getElementById("botonEjercicioMayorYMenor").disabled = "disabled"
+    }
+
+    let mayor = 0
+    let menor = 10
+
+    for(let i = 0; i < numeros2.length; ++i){
+        if(numeros2[i] > mayor){
+            mayor = numeros2[i]
+        }
+        if(numeros2[i] < menor){
+            menor = numeros2[i]
+        }
+    }
+
+    document.getElementById("ejercicioMayorYMenor").innerHTML = "<p>Números aleatorios: "+numeros2+"</p>"
+    document.getElementById("ejercicioMayorYMenor").innerHTML += "<p>Número mayor: "+mayor+"</p>"
+    document.getElementById("ejercicioMayorYMenor").innerHTML += "<p>Número menor: "+menor+"</p>"
 }
 
-let mayor = 0
-let menor = 10
+// for(let i = 0; i < numeros2.length; ++i){
+//     numeros2[i] = Math.round(Math.random()*10)
+// }
 
-for(let i = 0; i < numeros2.length; ++i){
-    if(numeros2[i] > mayor){
-        mayor = numeros2[i]
-    }
-    if(numeros2[i] < menor){
-        menor = numeros2[i]
-    }
-}
 
-document.getElementById("ejercicioMayorYMenor").innerHTML += "<p>Números aleatorios: "+numeros2+"</p>"
-document.getElementById("ejercicioMayorYMenor").innerHTML += "<p>Número mayor: "+mayor+"</p>"
-document.getElementById("ejercicioMayorYMenor").innerHTML += "<p>Número menor: "+menor+"</p>"
 
 // ###############################
 // EJERCICIO CALCULO DE LAS TALLAS
