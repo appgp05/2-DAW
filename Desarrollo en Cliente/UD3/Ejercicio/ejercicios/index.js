@@ -1,6 +1,6 @@
-// #############
-// EJERCICIO 500
-// #############
+// #################################################
+// EJERCICIO MULTIPLOS DE 3 Y NO PRIMOS DEL 1 AL 500
+// #################################################
 let numeros = [];
 for(let i = 1; i <= 500; ++i){
     numeros.push(i);
@@ -29,7 +29,7 @@ console.log(multiplos3)
 console.log(noPrimos)
 
 // #######################
-// EJERCICIO Mayor y Menor
+// EJERCICIO MAYOR Y MENOR
 // #######################
 let numeros2 = []
 numeros2.length = 10
@@ -50,13 +50,13 @@ for(let i = 0; i < numeros2.length; ++i){
     }
 }
 
-console.log("Lista de numeros: ", numeros2)
-console.log("Número mayor:", mayor)
-console.log("Numero menor: ", menor)
+document.getElementById("ejercicioMayorYMenor").innerHTML += "<p>Números aleatorios: "+numeros2+"</p>"
+document.getElementById("ejercicioMayorYMenor").innerHTML += "<p>Número mayor: "+mayor+"</p>"
+document.getElementById("ejercicioMayorYMenor").innerHTML += "<p>Número menor: "+menor+"</p>"
 
-// ################
-// EJERCICIO Tallas
-// ################
+// ###############################
+// EJERCICIO CALCULO DE LAS TALLAS
+// ###############################
 function enviarFormularioTallas(){
     let tallasGrandes = ["XXL", "XL", "L"]
     let tallasMedianas = ["M"]
@@ -70,24 +70,32 @@ function enviarFormularioTallas(){
     switch(true){
         case tallasGrandes.includes(respuestaTalla):
             tallaResultante = "Grande";
-            break;
+            break
         case tallasMedianas.includes(respuestaTalla):
             tallaResultante = "Mediana";
-            break;
+            break
         case tallasPequenas.includes(respuestaTalla):
             tallaResultante = "Pequeña";
-            break;
+            break
+        default:
+            tallaResultante = "La talla introducida no existe"
+            break
     }
 
     document.getElementById("ejercicioTalla").innerHTML = "Tu talla es: " + tallaResultante
 }
 
 // #######################################
-// EJERCICIO Longitud de la circunferencia
+// EJERCICIO LONGITUD DE LA CIRCUNFREENCIA
 // #######################################
 // let radio = prompt("Dime el radio de la circunferencia")
 function enviarFormularioLongitud(){
     let radio = document.getElementById("radioEjercicioLongitud").value
+
+    if(isNaN(Number(radio))){
+        document.getElementById("ejercicioLongitud").innerHTML = "Ha introducido un radio erróneo, recuerda que el radio debe ser un número."
+        return
+    }
 
     let longitud = 2 * Math.PI * radio
 
@@ -95,7 +103,7 @@ function enviarFormularioLongitud(){
 }
 
 // #################
-// EJERCICIO Loteria
+// EJERCICIO LOTERIA
 // #################
 let numeros1al50 = []
 // numeros1al50.forEach((numero, index) => {
@@ -105,28 +113,38 @@ let numeros1al50 = []
 for(let i = 0; i < 5; ++i){
     numeros1al50[i] = Math.ceil(Math.random()*50)
 }
-console.log("Números del 1 al 50:", numeros1al50)
 
-let numeros1al10 = []
-for(let i = 0; i < 2; ++i){
-    numeros1al10[i] = Math.ceil(Math.random()*10)
+document.getElementById("ejercicioLoteria").innerHTML += "<h2>Números del 1 al 50</h2>"
+for(let numero of numeros1al50){
+    document.getElementById("ejercicioLoteria").innerHTML += "<p>"+numero+"</p>"
 }
-console.log("Estrellas del 1 al 10", numeros1al10)
+
+let estrellas1al10 = []
+for(let i = 0; i < 2; ++i){
+    estrellas1al10[i] = Math.ceil(Math.random()*10)
+}
+
+document.getElementById("ejercicioLoteria").innerHTML += "<h2>Estrellas del 1 al 10</h2>"
+for(estrella of estrellas1al10){
+    document.getElementById("ejercicioLoteria").innerHTML += "<p>"+estrella+"</p>"
+}
+
+// console.log("Estrellas del 1 al 10", numeros1al10)
 
 // ################
-// EJERCICIO Matriz 
+// EJERCICIO MATRIZ 
 // ################
 let filas = 5
 let columnas = 3
 
 for(let i = 1; i <= filas; ++i){
     for(let j = 1; j <= columnas; ++j){
-        console.log("("+i+", "+j+")")
+        document.getElementById("ejercicioMatriz").innerHTML += "<p>("+i+", "+j+")</p>"
     }
 }
 
 // #####################
-// EJERCICIO Calculadora
+// EJERCICIO CALCULADORA
 // #####################
 
 function funcionalidadCalculadora(boton){
@@ -177,6 +195,12 @@ function funcionalidadCalculadora(boton){
         case "/":
             resultadoCalculo.innerHTML += "/"
             break;
+        case "Borrar 1":
+            resultadoCalculo.innerHTML = resultadoCalculo.innerHTML.substring(0,  resultadoCalculo.innerHTML.length -1)
+            break;
+        case "Borrar todo":
+            resultadoCalculo.innerHTML = ""
+            break;
         case "=":
             let operacion = resultadoCalculo.innerHTML
             let operandos = []
@@ -184,24 +208,33 @@ function funcionalidadCalculadora(boton){
             switch (true){
                 case operacion.includes("+"):
                     operandos = resultadoCalculo.innerHTML.split("+")
-                    resultado = operandos[0]+operandos[1]
+                    resultado = parseInt(operandos[0])+parseInt(operandos[1])
                     resultadoCalculo.innerHTML = resultado
                     break;
                 case operacion.includes("-"):
                     operandos = resultadoCalculo.innerHTML.split("-")
-                    resultado = operandos[0]-operandos[1]
+                    resultado = parseInt(operandos[0])-parseInt(operandos[1])
+                    resultadoCalculo.innerHTML = resultado
                     break;
                 case operacion.includes("*"):
                     operandos = resultadoCalculo.innerHTML.split("*")
-                    resultado = operandos[0]*operandos[1]
+                    resultado = parseInt(operandos[0])*parseInt(operandos[1])
+                    resultadoCalculo.innerHTML = resultado
                     break;
                 case operacion.includes("/"):
                     operandos = resultadoCalculo.innerHTML.split("/")
-                    resultado = Number(operandos[0])/Number(operandos[1])
+                    resultado = parseInt(operandos[0])/parseInt(operandos[1])
                     resultadoCalculo.innerHTML = resultado
                     break;
             }
-
-            break;
+        break;
     }
+}
+
+// ################################
+// EJERCICIO SEGUIR LEYENDO NOTICIA
+// ################################
+
+function verMas(){
+    document.getElementById("textoAmpliar").innerHTML += "Ahora estás viendo el texto ampliado"
 }

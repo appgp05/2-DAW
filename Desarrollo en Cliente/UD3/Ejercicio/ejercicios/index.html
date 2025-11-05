@@ -6,42 +6,77 @@
     <title>Document</title>
 </head>
 <body>
+    <hr>
+    <h1>Ejercicio multiplos de 3 y no primos del 1 al 500</h1>
     <div id="ejercicio500"></div>
     
+    <hr>
+    <h1>Ejercicio mayor y menor</h1>
+    <div id="ejercicioMayorYMenor"></div>
+
+    <hr>
+    <h1>Ejercicio calculo de las tallas</h1>
     <form>
         <input id="tallaEjercicioTalla" placeholder="Indicar la talla">
         <input type="button" value="Enviar" onclick="enviarFormularioTallas()"/>
     </form>
     <div id="ejercicioTalla"></div>
     
+    <hr>
+    <h1>Ejercicio longitud de la circunferencia</h1>
     <form>
         <input id="radioEjercicioLongitud" placeholder="Indicar el radio">
         <input type="button" value="Enviar" onclick="enviarFormularioLongitud()"/>
     </form>
     <div id="ejercicioLongitud"></div>
 
+    <hr>
+    <h1>Ejercicio loteria</h1>
+    <div id="ejercicioLoteria"></div>
+
+    <hr>
+    <h1>Ejercicio matriz</h1>
+    <div id="ejercicioMatriz"></div>
+
+    <hr>
+    <h1>Ejercicio calculadora</h1>
     <form>
         <div id="resultadoCalculo"></div>
-        <button type="button" onclick="funcionalidadCalculadora('7')">7</button>
-        <button type="button" onclick="funcionalidadCalculadora('8')">8</button>
-        <button type="button" onclick="funcionalidadCalculadora('9')">9</button>
-        <button type="button" onclick="funcionalidadCalculadora('/')">/</button>
-        <button type="button" onclick="funcionalidadCalculadora('4')">4</button>
-        <button type="button" onclick="funcionalidadCalculadora('5')">5</button>
-        <button type="button" onclick="funcionalidadCalculadora('6')">6</button>
-        <button type="button" onclick="funcionalidadCalculadora('*')">*</button>
-        <button type="button" onclick="funcionalidadCalculadora('1')">1</button>
-        <button type="button" onclick="funcionalidadCalculadora('2')">2</button>
-        <button type="button" onclick="funcionalidadCalculadora('3')">3</button>
-        <button type="button" onclick="funcionalidadCalculadora('+')">+</button>
-        <button type="button" onclick="funcionalidadCalculadora('0')">0</button>
-        <button type="button" onclick="funcionalidadCalculadora('=')">=</button>
-        <button type="button" onclick="funcionalidadCalculadora('-')">-</button>
+        <table>
+            <tr>
+                <td><button type="button" onclick="funcionalidadCalculadora('7')">7</button></td>
+                <td><button type="button" onclick="funcionalidadCalculadora('8')">8</button></td>
+                <td><button type="button" onclick="funcionalidadCalculadora('9')">9</button></td>
+                <td><button type="button" onclick="funcionalidadCalculadora('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="funcionalidadCalculadora('4')">4</button></td>
+                <td><button type="button" onclick="funcionalidadCalculadora('5')">5</button></td>
+                <td><button type="button" onclick="funcionalidadCalculadora('6')">6</button></td>
+                <td><button type="button" onclick="funcionalidadCalculadora('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="funcionalidadCalculadora('1')">1</button></td>
+                <td><button type="button" onclick="funcionalidadCalculadora('2')">2</button></td>
+                <td><button type="button" onclick="funcionalidadCalculadora('3')">3</button></td>
+                <td><button type="button" onclick="funcionalidadCalculadora('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="funcionalidadCalculadora('0')">0</button></td>
+                <td><button type="button" onclick="funcionalidadCalculadora('=')">=</button></td>
+                <td><button type="button" onclick="funcionalidadCalculadora('-')">-</button></td>
+                <td><button type="button" onclick="funcionalidadCalculadora('Borrar 1')">Borrar 1</button></td>
+                <td><button type="button" onclick="funcionalidadCalculadora('borrar')">Borrar todo</button></td>        
+            </tr>
+        </table>
     </form>
 
-    <p aria-valuemax="100">
-        
+    <hr>
+    <h1>Ejercicio Seguir leyendo noticia</h1>
+    <p id="textoAmpliar" aria-valuemax="100">
+        Esto es un texto de prueba, si quieres leer más pulsa el botón...
     </p>
+    <button onclick="verMas()">Ver más</button>
     
     <script src="index.js"></script>
 </body>
