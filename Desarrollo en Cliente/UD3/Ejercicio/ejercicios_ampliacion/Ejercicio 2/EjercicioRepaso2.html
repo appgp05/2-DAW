@@ -19,7 +19,6 @@
 - Muestra la ultima y la primera palabra del textarea
 */
 
-
 /* Para el div calificaciones: 
 Dado el siguiente array de notas de clase en la 1ª Evaluación. 
 var notas = new Array(4.5, 4, 6, 1, 7.5, 10, 5.25, 4.5, 2, 1, 8,7.5, 1, 7.5, 8);
@@ -36,8 +35,8 @@ NOTA1: Emplea siempre que se pueda metodos y propiedades del objeto Array
 NOTA2: Emplea if, for, for-in, for-of, do-while, while... */
 
     function pulsar(){
-        let textoIntroducido = document.getElementById("mitexto").value
-        let palabrasDelTexto = textoIntroducido.split(" ")
+        let textoIntroducido = document.getElementsByName("mitexto")[0].value.trim()
+        let palabrasDelTexto = textoIntroducido.split(/\s+/)
         console.log(palabrasDelTexto, palabrasDelTexto)
 
         document.getElementById("palabras").innerHTML = "<p>Palabras introducidas: "+palabrasDelTexto.length+"</p>"
@@ -48,14 +47,138 @@ NOTA2: Emplea if, for, for-in, for-of, do-while, while... */
     var notas = new Array(4.5, 4, 6, 1, 7.5, 10, 5.25, 4.5, 2, 1, 8,7.5, 1, 7.5, 8);
 
     let divCalificaciones = document.getElementById("calificaciones")
-    
-    divCalificaciones.innerHTML = "<h1>Notas aprobadas</h1>"
-    for(let nota of notas){
-        if(nota >= 5){
-            divCalificaciones.innerHTML += nota+" "
+
+    mostrarNotasAprobadas()
+    mostrarNotasNoRepetidas()
+    mostrarNotasPorDebajoDe5QueSeanPares()
+    sacarNotasImparesConAlMenosUn7()
+
+    eliminarLasNotasPorDebajoDe5()
+    let numerosaleatorios = calcularNumerosEntre5Y10SinDecimales(3)
+    anadirNumerosAleatoriosAlArray(numerosaleatorios)
+    mostrarElArrayOrdenadoDeMayorAMenor()
+
+    function mostrarNotasAprobadas(){
+        divCalificaciones.innerHTML += "<h1>Notas aprobadas</h1>"
+        for(let nota of notas){
+            if(nota >= 5){
+                divCalificaciones.innerHTML += "- "+nota+"<br>"
+            }
         }
     }
+
+    function mostrarNotasNoRepetidas(){
+        //Repetidas: 4,5 7.5, 1, 8
+
+        let notasNoRepetidas = []
+
+        notas.forEach((nota, index) =>{
+            let demasNotas = notas.slice()
+
+            demasNotas[index] = null
+
+            if(!demasNotas.includes(nota)){
+                notasNoRepetidas.push(nota)
+            }
+        })
+
+        console.log(notasNoRepetidas)
+
+        divCalificaciones.innerHTML += "<h1>Notas no repetidas</h1>"
+        for(let nota of notasNoRepetidas){
+            divCalificaciones.innerHTML += "- "+nota+"<br>"
+        }
+
+        // for(let nota of notas){
+        //     let demasNotas = notas
+        //     demasNotas.(nota)
+        //     console.log(demasNotas)
+
+        //     for(let nota2 of demasNotas){
+        //         if(nota == nota2){
+        //             // console.log(nota)
+        //         }
+        //     }
+        // }
+
+        // for(let nota of notas){
+        //     let demasNotas = notas
+        //     demasNotas.(nota)
+        //     console.log(demasNotas)
+
+        //     for(let nota2 of demasNotas){
+        //         if(nota == nota2){
+        //             // console.log(nota)
+        //         }
+        //     }
+        // }
+    }
+
+    function mostrarNotasPorDebajoDe5QueSeanPares(){
+        divCalificaciones.innerHTML += "<h1>Suspensos pares</h1>"
+
+        let suspensosPares = notas.filter((nota) => nota < 5 && nota % 2 == 0)
+        for(let nota of suspensosPares){
+            divCalificaciones.innerHTML += "- "+nota+"<br>"
+        }
+    }
+
+    function sacarNotasImparesConAlMenosUn7(){
+        divCalificaciones.innerHTML += "<h1>Notas impares mayores de 7</h1>"
+        for(let nota of notas){
+            if(nota > 7 && nota % 2 != 0){
+                divCalificaciones.innerHTML += "- "+nota+"<br>"
+            }
+        }
+    }
+
+    function eliminarLasNotasPorDebajoDe5(){
+        notas = notas.filter((nota) => nota >= 5)
+        console.log("Notas después de eliminar los suspensos", notas)
+    }
+
+    function calcularNumerosEntre5Y10SinDecimales(cantidadDeNumeros){
+        let numerosEntreEl5YEL10 = []
+
+        for(let i = 0; i < cantidadDeNumeros; i ++){
+            let numeroEntreEl5YEL10 = Math.ceil(Math.random()*6 + 4)
+            numerosEntreEl5YEL10.push(numeroEntreEl5YEL10)
+        }
+
+        return numerosEntreEl5YEL10
+    }
+
+    function anadirNumerosAleatoriosAlArray(numerosAleatorios){
+        for(let numero of numerosAleatorios){
+            notas.push(numero)
+        }
+
+        console.log("Notas después de añadir los números aleatorios", notas, numerosAleatorios)
+    }
     
+    function mostrarElArrayOrdenadoDeMayorAMenor(){
+        // notas.forEach((nota, index) => {
+        //     notas.forEach((nota2, index2) => {
+        //         if(nota < nota2){
+        //             let notatemp = nota
+        //             notas[index] = nota2
+        //             notas[index2] = notatemp
+        //         }
+        //     })
+        // })
+
+        notas.forEach((nota, index) => {
+            for(let i = 0; i < index; ++i){
+                if(nota > notas[i]){
+                    let notatemp = notas[index]
+                    notas[index] = notas[i]
+                    notas[i] = notatemp
+                }
+            }
+        })
+
+        console.log(notas)
+    }
 
 </script>
 </body>
