@@ -45,73 +45,61 @@ NOTA2: Emplea if, for, for-in, for-of, do-while, while... */
     }
 
     var notas = new Array(4.5, 4, 6, 1, 7.5, 10, 5.25, 4.5, 2, 1, 8,7.5, 1, 7.5, 8);
-
+    console.log("Notas originales:", notas)
+    
     let divCalificaciones = document.getElementById("calificaciones")
 
-    mostrarNotasAprobadas()
+    mostrarNumeroDeAprobados()
     mostrarNotasNoRepetidas()
     mostrarNotasPorDebajoDe5QueSeanPares()
     sacarNotasImparesConAlMenosUn7()
-
     eliminarLasNotasPorDebajoDe5()
-    let numerosaleatorios = calcularNumerosEntre5Y10SinDecimales(3)
+    let numerosaleatorios = calcularNumerosEntre5Y10SinDecimales(6)
     anadirNumerosAleatoriosAlArray(numerosaleatorios)
     mostrarElArrayOrdenadoDeMayorAMenor()
 
-    function mostrarNotasAprobadas(){
+    function mostrarNumeroDeAprobados(){
         divCalificaciones.innerHTML += "<h1>Notas aprobadas</h1>"
-        for(let nota of notas){
-            if(nota >= 5){
-                divCalificaciones.innerHTML += "- "+nota+"<br>"
-            }
-        }
+        let numeroDeAprobados = notas.filter((nota) => nota >= 5).length
+        divCalificaciones.innerHTML += "<p>"+numeroDeAprobados+"</p>"
     }
 
     function mostrarNotasNoRepetidas(){
-        //Repetidas: 4,5 7.5, 1, 8
-
-        let notasNoRepetidas = []
-
-        notas.forEach((nota, index) =>{
-            let demasNotas = notas.slice()
-
-            demasNotas[index] = null
-
-            if(!demasNotas.includes(nota)){
-                notasNoRepetidas.push(nota)
+        // No repetidas
+        // - 4
+        // - 6
+        // - 10
+        // - 5.25
+        // - 2
+        
+        let notasNoRepetidas = notas.filter((nota) => {
+            console.log("La nota"+nota, notas.filter(nota2 => nota2 == nota).length)
+            if(notas.filter(nota2 => nota2 == nota).length > 1){
+                console.log("true")
+                return false
             }
+
+            return true
         })
 
-        console.log(notasNoRepetidas)
+
+        // let notasNoRepetidas = []
+
+        // notas.forEach((nota, index) =>{
+        //     let demasNotas = notas.slice()
+        //     demasNotas[index] = null
+
+        //     if(!demasNotas.includes(nota)){
+        //         notasNoRepetidas.push(nota)
+        //     }
+        // })
+
+        console.log("Notas no repetdias:", notasNoRepetidas)
 
         divCalificaciones.innerHTML += "<h1>Notas no repetidas</h1>"
         for(let nota of notasNoRepetidas){
             divCalificaciones.innerHTML += "- "+nota+"<br>"
         }
-
-        // for(let nota of notas){
-        //     let demasNotas = notas
-        //     demasNotas.(nota)
-        //     console.log(demasNotas)
-
-        //     for(let nota2 of demasNotas){
-        //         if(nota == nota2){
-        //             // console.log(nota)
-        //         }
-        //     }
-        // }
-
-        // for(let nota of notas){
-        //     let demasNotas = notas
-        //     demasNotas.(nota)
-        //     console.log(demasNotas)
-
-        //     for(let nota2 of demasNotas){
-        //         if(nota == nota2){
-        //             // console.log(nota)
-        //         }
-        //     }
-        // }
     }
 
     function mostrarNotasPorDebajoDe5QueSeanPares(){
@@ -157,16 +145,8 @@ NOTA2: Emplea if, for, for-in, for-of, do-while, while... */
     }
     
     function mostrarElArrayOrdenadoDeMayorAMenor(){
-        // notas.forEach((nota, index) => {
-        //     notas.forEach((nota2, index2) => {
-        //         if(nota < nota2){
-        //             let notatemp = nota
-        //             notas[index] = nota2
-        //             notas[index2] = notatemp
-        //         }
-        //     })
-        // })
-
+        divCalificaciones.innerHTML += "<h1>Notas ordenadas de mayor a menor</h1>"
+        
         notas.forEach((nota, index) => {
             for(let i = 0; i < index; ++i){
                 if(nota > notas[i]){
@@ -176,6 +156,11 @@ NOTA2: Emplea if, for, for-in, for-of, do-while, while... */
                 }
             }
         })
+        
+        for(nota of notas){
+            divCalificaciones.innerHTML += "- "+nota+"<br>"
+
+        }
 
         console.log(notas)
     }
