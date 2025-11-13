@@ -4,25 +4,28 @@
 
     --h1-font-color: rgb(133, 67, 14);
     --text-font-color: rgba(16, 39, 0, 1);
-
-
+    
+    
     --header-font-color: #631800;
     /* --header-font-color: rgba(255, 255, 255, 1); */
-
-
+    
+    
     --header-background-color: rgb(231, 178, 118, 1);
     --header-background-color: rgba(255, 211, 160, 1);
     --header-background-color: rgba(214, 255, 180, 1);
-
-
+    
+    
     /* --producto-background-color: rgb(255, 158, 67); */
     --producto-background-color: rgba(255, 226, 199, 1);
     --producto-background-color: #e4d6bbff;
-
-
+    
+    
     /* --producto-button-backgroun-color: rgba(134, 22, 22, 1); */
     /* --producto-button-backgroun-color: rgba(134, 72, 22, 1); */
     --producto-button-backgroun-color: #d18b3cff;
+
+    --footer-background-color: rgb(133, 67, 14);
+    --footer-font-color: rgba(255, 211, 160, 1);
 }
 
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
@@ -47,12 +50,28 @@ p, button {
 
 h1 {
     font-size: 50px;
-    padding-left: 50px;
+    padding-left: 120px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     color: var(--h1-font-color);
+    background-color: #ffc979db;
+    background-image: url(imagenes_exportadas/fondo-h1.jpg);
 }
 
 body {
     background-color: var(--body-background-color);
+    background-image: url(imagenes_exportadas/fondo.jpg);
+    background-size: cover;
+}
+
+#iconoDeCarga {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 header {
@@ -109,11 +128,14 @@ header {
     background-position: bottom;
     background-image: url(imagenes_exportadas/banner.jpg);
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
 #productos {
     width: auto;
 
-    padding: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 
     display: flex;
     flex-wrap: wrap;
@@ -162,8 +184,59 @@ header {
                 border-radius: 20px;
 
                 background-color: var(--producto-button-backgroun-color);
+
+                font-size: 18px;
+
+                color: white;
+            }
+
+            > button:hover {
+                cursor: pointer;
+                border: #631800 3px solid;
             }
         }
     }
+
+    > #producto:hover {
+        scale: 1.05;
+        transition: 0.4s;
+    }
 }
 
+footer {
+    height: 180px;
+
+    padding-left: 200px;
+    padding-right: 200px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background-color: var(--footer-background-color);
+
+    * {
+        color: var(--footer-font-color);
+        font-family: "Delius Swash Caps", cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    img {
+        width: 160px;
+    }
+
+    > div {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        > div {
+            display: flex;
+            gap: 20px;
+        }
+    }
+}
