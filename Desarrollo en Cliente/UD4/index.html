@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body> 
+        <p id="demo1"></p> 
+    </body> 
+
+    <form>
+        <label for="salarioBruto">Salario bruto</label><input type="number" placeholder="Salario bruto" id="salarioBruto">
+        <label for="retencion">Retencion</label><input type="number" placeholder="Retencion" id="retencion">
+        <label for="numeroPagas">Numero de pagas</label><input type="number" placeholder="Numero de pagas" id="numeroPagas">
+        <input type="button" value="Calcular" onclick="nominaConFormulario()">
+    </form>
+
+    <form>
+        <button onclick="a()">Click</button>
+    </form>
+
+    <script>
+        a(1, "hola")
+        function a(a, b){
+            event.preventDefault()
+            b = b || 0
+            console.log(a)
+            console.log(b)
+        }
+
+
+        function suma(a, b) { 
+            return a + b; 
+            console.log("Esto no aparece"); 
+        }
+        let s = suma(3, 4); 
+        console.log(s); 
+        let x = 10; 
+        let y = 12; 
+        let t = suma(x, y); 
+        console.log(t);
+
+        x = nomina(15000,18,14); 
+        document.getElementById('demo1').innerHTML = x; 
+        console.log(hola)
+
+        function nominaConFormulario(){
+            var hola = "asdasd"
+            let salarioBruto = document.getElementById("salarioBruto").value
+            let retencion = document.getElementById("retencion").value
+            let numeroPagas = document.getElementById("numeroPagas").value
+
+            let resultado = nomina(salarioBruto, retencion, numeroPagas)
+            document.getElementById('demo1').innerHTML = resultado; 
+        }
+
+        function nomina(salarioBruto, retencion, numeroPagas) { 
+            let salarioNeto= salarioBruto * (1- (retencion/100)) / numeroPagas 
+            return salarioNeto;
+        } 
+    </script>
+</body>
+</html>
