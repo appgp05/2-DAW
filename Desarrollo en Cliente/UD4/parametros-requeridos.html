@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Parametros requeridos 
+        let esRequerido = function () {  
+            throw new Error( 'No se pasa numero a la función ');  
+        };  
+        let cuadrado = function ( n = esRequerido() ) {  
+            return n*n;
+        };  
+        console.log( cuadrado ( 3 ) ); // Devuelve 9  
+        console.log( cuadrado () ); // Error: Parámetro no enviado 
+    </script>
+</body>
+</html>

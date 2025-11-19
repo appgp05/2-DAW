@@ -24,7 +24,7 @@
     <script>
         a(1, "hola")
         function a(a, b){
-            event.preventDefault()
+            // event.preventDefault()
             b = b || 0
             console.log(a)
             console.log(b)
@@ -43,8 +43,7 @@
         console.log(t);
 
         x = nomina(15000,18,14); 
-        document.getElementById('demo1').innerHTML = x; 
-        console.log(hola)
+        document.getElementById('demo1').innerHTML = x;
 
         function nominaConFormulario(){
             var hola = "asdasd"
@@ -59,7 +58,33 @@
         function nomina(salarioBruto, retencion, numeroPagas) { 
             let salarioNeto= salarioBruto * (1- (retencion/100)) / numeroPagas 
             return salarioNeto;
-        } 
+        }
+
+        media(10, 5, 0)
+        media2([10, 5, 0])
+
+        function media(){
+            let resultado = 0
+
+            for(let argument of arguments){
+                resultado += argument
+            }
+
+            resultado = resultado/arguments.length
+
+            console.log(resultado)
+        }
+        function media2(array){
+            let resultado = 0
+
+            for(let argument of array){
+                resultado += argument
+            }
+
+            resultado = resultado/array.length
+
+            console.log(resultado)
+        }
     </script>
 </body>
 </html>
