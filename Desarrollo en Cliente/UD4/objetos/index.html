@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Jugador() {
+            this.fuerza = 1; 
+            this.mostrarFuerza = function () { 
+            console.log("Tu fuerza es de " + this.fuerza); 
+            }; 
+            this.incrementarFuerza = function () { 
+            this.fuerza += 1; 
+            }; 
+        } 
+            
+        let jugador1 = new Jugador(); 
+        jugador1.mostrarFuerza(); // Tu fuerza es de 1 
+        jugador1.incrementarFuerza(); 
+        jugador1.mostrarFuerza(); // Tu fuerza es de 2 
+
+
+        let objeto = new Object()
+        objeto.a = 1
+        objeto["b"] = 2
+
+        console.log(objeto.a)
+        console.log(objeto["a"])
+
+        console.log(objeto.b)
+        console.log(objeto["b"])
+    </script>
+</body>
+</html>
