@@ -4,17 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <video id="miVideo" src="videos/video1.mp4" muted></video>
-    <button onclick="reproducir()">
-        Reproducir
-    </button>
-
     <!-- <video controls autoplay loop muted loop class="mi-video">
         <source src="videos/video1.mp4" type="video/mp4">
     Tu navegador no soporta la etiqueta video.
     </video> -->
+    <header>
+        <div>
+            <a href="#">Inicio</a>
+            <a href="#">Conciertos</a>
+            <a href="#">Sobre Nosotros</a>
+            <a href="#"></a>
+        </div>
+    </header>
+
+    <section id="seccionConciertos">
+        <div>
+            <video controls loop muted class="mi-video" src="videos/bateria.mp4"></video>
+            <audio controls loop src="videos/bateria.mp3"></audio>
+            <div>
+                <p>Nombre</p>
+                <p>Descripción</p>
+                <button>Ver más</button>
+            </div>
+        </div>
+    </section>
+
+    <footer></footer>
 </body>
 </html>

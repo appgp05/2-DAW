@@ -1,3 +1,159 @@
+:root{
+    --body-background-gradient1: rgb(0, 81, 255);
+    --body-background-gradient2: rgb(68, 0, 255);
+    
+    --header-background-gradient1: rgb(0, 45, 143);
+    --header-background-gradient2: rgb(17, 0, 173);
+    --header-a-color: rgb(255, 255, 255);
+
+    --card-color: white;
+    --card-background-color: rgb(36, 124, 255);
+    --card-audio-background-color: rgba(0, 60, 255, 0.329);
+    --card-button-bakcground-color: rgb(144, 179, 255);
+}
+
+:root{
+    --body-background-gradient1: rgb(158, 189, 255);
+    --body-background-gradient2: rgb(96, 70, 170);
+    
+    --header-background-gradient1: rgb(104, 151, 255);
+    --header-background-gradient2: rgb(146, 134, 255);
+    --header-background-gradient1: rgb(0, 45, 143);
+    --header-background-gradient2: rgb(17, 0, 173);
+    --header-a-color: rgb(255, 255, 255);
+
+    --card-color: white;
+    --card-background-color: rgb(123, 176, 255);
+    --card-audio-background-color: rgba(0, 60, 255, 0.329);
+    --card-button-color: rgb(255, 255, 255);
+    --card-button-bakcground-color: rgb(0, 81, 255);
+}
+
+:root{
+    /* Fondo general: degradado oscuro y elegante */
+    --body-background-gradient1: #0c0f16;   /* azul grisáceo casi negro */
+    --body-background-gradient2: #1a1f2b;   /* contraste suave */
+
+    /* Header: tonos aún más sobrios con acento profundo */
+    --header-background-gradient1: #0a0c12;
+    --header-background-gradient2: #131722;
+
+    /* Color de los enlaces del header */
+    --header-a-color: #f2f2f2;
+
+    /* Tarjetas */
+    --card-color: #ffffff;
+    --card-background-color: #1f2533; /* gris azulado elegante */
+    --card-audio-background-color: rgba(255, 215, 0, 0.12); /* dorado suave translúcido */
+
+    /* Botones */
+    --card-button-color: #ffffff;
+    --card-button-bakcground-color: #c21807; /* rojo profundo tipo teatro */
+}
+
+:root{
+    /* Fondo general: atmósfera nocturna con un toque de iluminación escénica */
+    --body-background-gradient1: #0a0c14;      /* negro azulado profundo */
+    --body-background-gradient2: #1b1030;      /* violeta oscuro suave */
+
+    /* Header: más intensidad para dar presencia, pero sin perder elegancia */
+    --header-background-gradient1: #140e25;    /* púrpura muy oscuro */
+    --header-background-gradient2: #2a1b4a;    /* violeta escénico */
+
+    /* Enlaces del header */
+    --header-a-color: #f5f4fa;                 /* gris casi blanco con leve tinte violeta */
+
+    /* Tarjetas */
+    --card-color: #ffffff;
+    --card-background-color: #241b33;          /* púrpura grisáceo sobrio */
+    --card-audio-background-color: rgba(205, 81, 255, 0.18); /* acento magenta suave luminoso */
+
+    /* Botones */
+    --card-button-color: #ffffff;
+    --card-button-bakcground-color: #b624a4;   /* magenta profundo tipo luces de escenario */
+}
+
+body{
+    margin: 0px;
+    background-size: cover;
+    background-image: linear-gradient(90deg, var(--body-background-gradient1), var(--body-background-gradient2));
+}
+
+header{
+    width: 100%;
+    height: 100px;
+
+    background-image: linear-gradient(90deg, var(--header-background-gradient1), var(--header-background-gradient2));
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    > div > a{
+        color: var(--header-a-color);
+    }
+}
+
+#seccionConciertos{
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh - 100px);
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    > div{
+        width: auto;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        color: var(--card-color);
+
+        border-radius: 20px;
+
+        box-shadow: 0px 0px 10px 10px black;
+
+        background-color: var(--card-background-color);
+
+        > video{
+            width: 500px;
+
+            border-radius: 20px 20px 0px 0px;
+
+            background-color: aqua;
+        }
+
+        > audio{
+            width: 100%;
+            height: 30px;
+        }
+
+        > audio::-webkit-media-controls-enclosure{
+            border-radius: 0px;
+
+            background-color: var(--card-audio-background-color);
+        }
+
+        > div{
+            padding: 20px;
+
+            > button{
+                width: 200px;
+                height: 40px;
+
+                border-radius: 20px;
+
+                color: var(--card-button-color);
+                background-color: var(--card-button-bakcground-color);
+            }
+        }
+    }
+}
+
 .mi-video{
     
 }
