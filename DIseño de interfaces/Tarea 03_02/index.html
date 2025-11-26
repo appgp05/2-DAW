@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Página de Conciertos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -12,22 +13,83 @@
             <a href="#">Inicio</a>
             <a href="#">Conciertos</a>
             <a href="#">Sobre Nosotros</a>
-            <a href="#"></a>
+            <a href="#">Contacto</a>
         </div>
     </header>
 
-    <section id="seccionConciertos">
-        <div>
-            <video controls loop muted class="mi-video" src="videos/bateria.mp4"></video>
-            <audio controls loop src="videos/bateria.mp3"></audio>
-            <div>
-                <p>Nombre</p>
-                <p>Descripción</p>
-                <button>Ver más</button>
+    <div id="banner"></div>
+
+    <h1 class="tituloSeccion">Conoce nuestros conciertos</h1>
+
+    <section id="seccionConciertos" aria-labelledby="titulo-concierto">
+        <div class="tarjetaConcierto">
+            <video controls loop muted class="mi-video" src="multimedia/bateria editado.mp4" poster=""></video>
+            <audio controls loop src="multimedia/bateria editado.mp3"></audio>
+            <div class="infoConcierto">
+                <p class="tituloConcierto" id="titulo-concierto">Tour — Ritmo y Melodía</p>
+                <p class="descripcionConcierto">Una noche con batería potente y guitarras con presencia. Sala La Fábrica • 20 junio • Apertura 20:00</p>
+                <div>
+                    <button class="botonVerMas btn-primary" type="button">Comprar entradas</button>
+                    <button class="botonInfo btn-ghost" type="button">Ver cartel</button>
+                </div>
             </div>
         </div>
+        <div class="tarjetaConcierto">
+  <video controls loop muted class="mi-video" src="multimedia/guitarra editado.mp4" poster=""></video>
+  <audio controls loop src="multimedia/guitarra editado.mp3"></audio>
+  <div class="infoConcierto">
+    <p class="tituloConcierto" id="titulo-concierto">Tour — Cuerdas y Energía</p>
+    <p class="descripcionConcierto">Una velada con guitarras vibrantes y batería que marca el pulso. Sala La Fábrica • 21 junio • Apertura 20:00</p>
+    <div>
+      <button class="botonVerMas btn-primary" type="button">Comprar entradas</button>
+      <button class="botonInfo btn-ghost" type="button">Ver cartel</button>
+    </div>
+  </div>
+</div>
+
+<div class="tarjetaConcierto">
+  <video controls loop muted class="mi-video" src="multimedia/trompeta editado.mp4" poster=""></video>
+  <audio controls loop src="multimedia/trompeta editado.mp3"></audio>
+  <div class="infoConcierto">
+    <p class="tituloConcierto" id="titulo-concierto">Tour — Viento y Ritmo</p>
+    <p class="descripcionConcierto">Una noche con trompetas brillantes y batería que enciende la sala. Sala La Fábrica • 22 junio • Apertura 20:00</p>
+    <div>
+      <button class="botonVerMas btn-primary" type="button">Comprar entradas</button>
+      <button class="botonInfo btn-ghost" type="button">Ver cartel</button>
+    </div>
+  </div>
+</div>
     </section>
 
-    <footer></footer>
+    <footer>
+        <div>
+            <div>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Términos y condiciones</a>
+                <a href="#">FAQ</a>
+            </div>
+            <div>
+                <p>&copy; 2025 Concertistas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+        <div class="footer-contacto">
+            <h3>Contacto</h3>
+            <p>Email: contacto@concertistas.com</p>
+            <p>Teléfono: +34 123 456 789</p>
+            <p>Dirección: Calle de la Música, 123, Madrid, España</p>
+        </div>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="icono-redes">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="icono-redes">
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" class="icono-redes">
+            </a>
+        </div>
+    </footer>
+
 </body>
 </html>

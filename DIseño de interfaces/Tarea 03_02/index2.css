@@ -1,230 +1,182 @@
 :root{
-    --body-background-gradient1: #0B0F14;
-    --body-background-gradient2: #071018;
-    --surface: #687589;
+    --body-background-gradient1: rgb(0, 81, 255);
+    --body-background-gradient2: rgb(68, 0, 255);
+    
+    --header-background-gradient1: rgb(0, 45, 143);
+    --header-background-gradient2: rgb(17, 0, 173);
+    --header-a-color: rgb(255, 255, 255);
 
-    --text: #F8FAFC;
-    --muted: #AEB6C0;
-
-    --accent-guitar: #FF8A00;
-    --accent-drum: #E63946;
-    --accent-cyan: #00D9FF;
-
-    --card-radius: 14px;
-    --container-max: 1100px;
-    --card-shadow: 0 16px 40px rgba(2,6,23,0.6);
-
-    --glass: rgba(255,255,255,0.03);
-    --glass-2: rgba(255,255,255,0.04);
+    --card-color: white;
+    --card-background-color: rgb(36, 124, 255);
+    --card-audio-background-color: rgba(0, 60, 255, 0.329);
+    --card-button-bakcground-color: rgb(144, 179, 255);
 }
 
-*{
-    box-sizing:border-box
+:root{
+    --body-background-gradient1: rgb(158, 189, 255);
+    --body-background-gradient2: rgb(96, 70, 170);
+    
+    --header-background-gradient1: rgb(104, 151, 255);
+    --header-background-gradient2: rgb(146, 134, 255);
+    --header-background-gradient1: rgb(0, 45, 143);
+    --header-background-gradient2: rgb(17, 0, 173);
+    --header-a-color: rgb(255, 255, 255);
+
+    --card-color: white;
+    --card-background-color: rgb(123, 176, 255);
+    --card-audio-background-color: rgba(0, 60, 255, 0.329);
+    --card-button-color: rgb(255, 255, 255);
+    --card-button-bakcground-color: rgb(0, 81, 255);
 }
 
-html,body{
-    height:100%;
-    margin:0;
-    font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
-    background: linear-gradient(180deg,var(--body-background-gradient1), var(--body-background-gradient2));
-    color:var(--text);-webkit-font-smoothing:antialiased
+:root{
+    /* Fondo general: degradado oscuro y elegante */
+    --body-background-gradient1: #0c0f16;   /* azul grisáceo casi negro */
+    --body-background-gradient2: #1a1f2b;   /* contraste suave */
+
+    /* Header: tonos aún más sobrios con acento profundo */
+    --header-background-gradient1: #0a0c12;
+    --header-background-gradient2: #131722;
+
+    /* Color de los enlaces del header */
+    --header-a-color: #f2f2f2;
+
+    /* Tarjetas */
+    --card-color: #ffffff;
+    --card-background-color: #1f2533; /* gris azulado elegante */
+    --card-audio-background-color: rgba(255, 215, 0, 0.12); /* dorado suave translúcido */
+
+    /* Botones */
+    --card-button-color: #ffffff;
+    --card-button-bakcground-color: #c21807; /* rojo profundo tipo teatro */
 }
 
-.tituloSeccion{
-    padding-top: 50px;
-    width: 100%;
-    text-align: center;
+:root{
+    /* Fondo general: atmósfera nocturna con un toque de iluminación escénica */
+    --body-background-gradient1: #0a0c14;      /* negro azulado profundo */
+    --body-background-gradient2: #1b1030;      /* violeta oscuro suave */
+
+    /* Header: más intensidad para dar presencia, pero sin perder elegancia */
+    --header-background-gradient1: #140e25;    /* púrpura muy oscuro */
+    --header-background-gradient2: #2a1b4a;    /* violeta escénico */
+
+    /* Enlaces del header */
+    --header-a-color: #f5f4fa;                 /* gris casi blanco con leve tinte violeta */
+
+    /* Tarjetas */
+    --card-color: #ffffff;
+    --card-background-color: #241b33;          /* púrpura grisáceo sobrio */
+    --card-audio-background-color: rgba(205, 81, 255, 0.18); /* acento magenta suave luminoso */
+
+    /* Botones */
+    --card-button-color: #ffffff;
+    --card-button-bakcground-color: #b624a4;   /* magenta profundo tipo luces de escenario */
+}
+
+:root{
+    /* Fondo general: negro profundo con azul océano */
+    --body-background-gradient1: #0a0e27;      /* azul marino oscuro */
+    --body-background-gradient2: #1a1f3a;      /* azul medianoche */
+
+    /* Header: elegante y con presencia */
+    --header-background-gradient1: #1c1f35;    /* azul oscuro sofisticado */
+    --header-background-gradient2: #252b47;    /* azul pizarra */
+
+    /* Enlaces del header */
+    --header-a-color: #f0f4ff;                 /* blanco azulado cristalino */
+
+    /* Tarjetas */
+    --card-color: #ffffff;
+    --card-background-color: #1e2538;          /* azul carbón elegante */
+    --card-audio-background-color: rgba(79, 209, 197, 0.12); /* turquesa luminoso suave */
+
+    /* Botones */
+    --card-button-color: #ffffff;
+    --card-button-bakcground-color: #00d9ff;   /* cian eléctrico brillante */
+}
+
+
+body{
+    margin: 0px;
+    background-size: cover;
+    background-image: linear-gradient(90deg, var(--body-background-gradient1), var(--body-background-gradient2));
 }
 
 header{
-    width:100%;
-    height:100px;
-    display:flex;
-    align-items:center;
-    justify-content:space-evenly;
-    background: linear-gradient(90deg,var(--glass), rgba(255,255,255,0.01));
-    backdrop-filter: blur(6px);
-    box-shadow: 0 6px 18px rgba(2,6,23,0.5);
-    padding: 0 20px;
-}
-
-header > div > a{
-    color: var(--muted);
-    text-decoration: none;
-    margin: 0 12px;
-    font-weight: 600;
-    padding: 8px 10px;
-    border-radius: 8px;
-    transition: all .16s ease;
-}
-header > div > a:hover,
-header > div > a:focus{
-    color: var(--text);
-    background: var(--glass-2);
-    transform: translateY(-2px);
-    outline: none;
-}
-
-#banner{
     width: 100%;
-    height: 500px;
-    background-image: url(multimedia/banner.jpg);
-    /* background-size: con; */
-    background-position: 0px -500px;
-}
+    height: 100px;
 
-#seccionConciertos{
-    width:100%;
-    /* min-height: calc(100vh - 100px); */
-    display:flex;
-    align-items:center;
-    justify-content:space-evenly;
-    padding: 36px 0px;
-}
-
-#seccionConciertos > div.tarjetaConcierto{
-    /* width: min(920px, 96%); */
-    width: 400px;
-    display:flex;
-    flex-direction:column;
-    border-radius: var(--card-radius);
-    overflow: hidden;
-    background: linear-gradient(180deg,var(--surface), rgba(15,23,36,0.92));
-    box-shadow: var(--card-shadow);
-}
-
-#seccionConciertos > div.tarjetaConcierto > video{
-    width:100%;
-    max-width:880px;
-    height:auto;
-    display:block;
-    margin: 0 auto;
-    border-radius: var(--card-radius) var(--card-radius) 0 0;
-    background: transparent;
-    border: 0;
-}
-
-#seccionConciertos > div.tarjetaConcierto > audio{
-    width:100%;
-    max-width:880px;
-    display:block;
-    margin: 12px auto;
-    height: 40px;
-    background: linear-gradient(90deg, rgba(255,255,255,0.012), rgba(255,255,255,0.01));
-    padding: 10px 12px;
-    border-radius: 10px;
-}
-
-#seccionConciertos > div.tarjetaConcierto > audio::-webkit-media-controls-enclosure{
-    background-color: var(--glass-2);
-    border-radius: 8px;
-    
-}
-
-#seccionConciertos > div.tarjetaConcierto > div.infoConcierto{
-    padding: 20px;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-
-#seccionConciertos > div.tarjetaConcierto > div.infoConcierto > p.tituloConcierto{
-    margin:0;
-    font-weight:800;
-    font-family: "Oswald", Inter, sans-serif;
-    font-size: 22px;
-    letter-spacing: 0.2px;
-}
-#seccionConciertos > div.tarjetaConcierto > div.infoConcierto > p.descripcionConcierto{
-    margin:0;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-#seccionConciertos > div.tarjetaConcierto > div.infoConcierto > div {
-    display: flex;
-}
-
-#seccionConciertos > div.tarjetaConcierto > div.infoConcierto > div > button.botonVerMas,
-#seccionConciertos > div.tarjetaConcierto > div.infoConcierto > div > button.botonInfo{
-    width: 200px;
-    height: 40px;
-    border-radius: 20px;
-    border: none;
-    font-weight: 700;
-    cursor: pointer;
-    transition: transform .14s ease, box-shadow .14s ease;
-}
-
-.btn-primary{
-    background: linear-gradient(180deg, var(--accent-guitar), #e37400);
-    color: #081019;
-    box-shadow: 0 8px 24px rgba(255,138,0,0.12);
-}
-.btn-primary:hover{ transform: translateY(-3px); box-shadow: 0 18px 40px rgba(255,138,0,0.16); }
-
-.btn-ghost{
-    background: transparent;
-    color: var(--text);
-    border: 1px solid rgba(255,255,255,0.06);
-    padding: 8px 14px;
-    border-radius: 10px;
-}
-.btn-ghost:hover{ background: var(--glass-2); transform: translateY(-2px); }
-
-footer{
-    height: 150px;
-    margin-top: 28px;
-    background-color: var(--glass);
+    background-image: linear-gradient(90deg, var(--header-background-gradient1), var(--header-background-gradient2));
 
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 
-    a{
-        color: white;
+    > div > a{
+        color: var(--header-a-color);
     }
+}
 
-    h3, p{
-        margin: 4px;
-    }
+#seccionConciertos{
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh - 100px);
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
     > div{
+        width: auto;
+        height: auto;
+
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+
+        color: var(--card-color);
+
+        border-radius: 20px;
+
+        box-shadow: 0px 0px 10px 10px black;
+
+        background-color: var(--card-background-color);
+
+        > video{
+            width: 500px;
+
+            border-radius: 20px 20px 0px 0px;
+
+            background-color: aqua;
+        }
+
+        > audio{
+            width: 100%;
+            height: 30px;
+        }
+
+        > audio::-webkit-media-controls-enclosure{
+            border-radius: 0px;
+
+            background-color: var(--card-audio-background-color);
+        }
+
+        > div{
+            padding: 20px;
+
+            > button{
+                width: 200px;
+                height: 40px;
+
+                border-radius: 20px;
+
+                color: var(--card-button-color);
+                background-color: var(--card-button-bakcground-color);
+            }
+        }
     }
-
-    > div:last-child{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
 }
 
-.redes-sociales {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.icono-redes {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
-    transition: transform 0.3s ease;
-}
-
-.icono-redes:hover {
-    transform: scale(1.1);
-}
-
-@media (max-width: 720px){
-    header{ height: auto; padding: 14px; flex-direction: column; gap: 8px; align-items: flex-start; }
-    #seccionConciertos > div.tarjetaConcierto{ width: 96%; }
-    #seccionConciertos > div.tarjetaConcierto > video{ max-width:100%; }
-    #seccionConciertos > div.tarjetaConcierto > audio{ max-width:100%; }
-    #seccionConciertos > div.tarjetaConcierto > div.infoConcierto{ padding: 16px; }
+.mi-video{
+    
 }
