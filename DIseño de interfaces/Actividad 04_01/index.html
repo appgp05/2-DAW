@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Proyecto DOM</h1>
+    <p>El DOM es una representación en forma de árbol de una página web. Cada elemento HTML (como <div>, <p>, <img>) se convierte en un nodo dentro de ese árbol.</p>
+    <ul>
+        <li>Acceder a elementos</li>
+        <li>Modificar contenido</li>
+        <li>Cambiar estilos</li>
+        <li>Agregar elementos</li>
+        <li>Detectar eventos</li>
+    </ul>
+</body>
+</html>
+
+<!-- 
+PREGUNTAS
+    EJERCICIO 1
+        A)El DOM es la representación en memoria (en forma de árbol) de una página; el HTML es solo el código fuente que describe la estructura. El DOM es lo que el navegador crea a partir del HTML.
+        B)No podemos manipular el DOM antes de que cargue porque los elementos aún no existen en memoria, así que el código no encuentra lo que quiere modificar.
+        c) $(document).ready() (en jQuery) asegura que el DOM esté completamente cargado y accesible antes de ejecutar el código, evitando errores por intentar manipular elementos que todavía no se han creado.
+    EJERCICIO 2
+        A)La función each() recibe dos valores (índice y elemento) porque el índice indica la posición del elemento dentro de la colección que se está recorriendo mientras que elemento es la referencia directa al objeto actual (por ejemplo, un nodo del DOM o un elemento de un arreglo).
+-->
