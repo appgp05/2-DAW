@@ -73,6 +73,29 @@
     --card-button-bakcground-color: #b624a4;   /* magenta profundo tipo luces de escenario */
 }
 
+:root{
+    /* Fondo general: negro profundo con azul océano */
+    --body-background-gradient1: #0a0e27;      /* azul marino oscuro */
+    --body-background-gradient2: #1a1f3a;      /* azul medianoche */
+
+    /* Header: elegante y con presencia */
+    --header-background-gradient1: #1c1f35;    /* azul oscuro sofisticado */
+    --header-background-gradient2: #252b47;    /* azul pizarra */
+
+    /* Enlaces del header */
+    --header-a-color: #f0f4ff;                 /* blanco azulado cristalino */
+
+    /* Tarjetas */
+    --card-color: #ffffff;
+    --card-background-color: #1e2538;          /* azul carbón elegante */
+    --card-audio-background-color: rgba(79, 209, 197, 0.12); /* turquesa luminoso suave */
+
+    /* Botones */
+    --card-button-color: #ffffff;
+    --card-button-bakcground-color: #00d9ff;   /* cian eléctrico brillante */
+}
+
+
 body{
     margin: 0px;
     background-size: cover;
