@@ -30,6 +30,12 @@ html,body{
     color:var(--text);-webkit-font-smoothing:antialiased
 }
 
+.tituloSeccion{
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
 header{
     width:100%;
     height:100px;
@@ -59,17 +65,26 @@ header > div > a:focus{
     outline: none;
 }
 
+#banner{
+    width: 100%;
+    height: 500px;
+    background-image: url(multimedia/banner.jpg);
+    /* background-size: con; */
+    background-position: 0px -500px;
+}
+
 #seccionConciertos{
     width:100%;
-    min-height: calc(100vh - 100px);
+    /* min-height: calc(100vh - 100px); */
     display:flex;
     align-items:center;
-    justify-content:center;
-    padding: 36px 20px;
+    justify-content:space-evenly;
+    padding: 36px 0px;
 }
 
 #seccionConciertos > div.tarjetaConcierto{
-    width: min(920px, 96%);
+    /* width: min(920px, 96%); */
+    width: 400px;
     display:flex;
     flex-direction:column;
     border-radius: var(--card-radius);
@@ -126,8 +141,12 @@ header > div > a:focus{
     line-height: 1.4;
 }
 
-#seccionConciertos > div.tarjetaConcierto > div.infoConcierto > button.botonVerMas,
-#seccionConciertos > div.tarjetaConcierto > div.infoConcierto > button.botonInfo{
+#seccionConciertos > div.tarjetaConcierto > div.infoConcierto > div {
+    display: flex;
+}
+
+#seccionConciertos > div.tarjetaConcierto > div.infoConcierto > div > button.botonVerMas,
+#seccionConciertos > div.tarjetaConcierto > div.infoConcierto > div > button.botonInfo{
     width: 200px;
     height: 40px;
     border-radius: 20px;
