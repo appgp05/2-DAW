@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Página de Conciertos</title>
-
-    <!-- Tipografías (opcional, requiere conexión) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="index2.css">
 </head>
 <body>
@@ -22,25 +19,35 @@
     </header>
 
     <section id="seccionConciertos" aria-labelledby="titulo-concierto">
-        <!-- Mantengo la jerarquía: section > div > video + audio + div.infoConcierto -->
         <div class="tarjetaConcierto">
-
-            <!-- Video (misma nomenclatura que usabas) -->
             <video controls loop muted class="mi-video" src="videos/bateria.mp4" poster=""></video>
-
-            <!-- Audio (misma ubicación que en tu HTML) -->
             <audio controls loop src="videos/guitarra.mp3"></audio>
-
-            <!-- Contenido textual -->
             <div class="infoConcierto">
                 <p class="tituloConcierto" id="titulo-concierto">Tour — Ritmo y Melodía</p>
                 <p class="descripcionConcierto">Una noche con batería potente y guitarras con presencia. Sala La Fábrica • 20 junio • Apertura 20:00</p>
-
-                <!-- Botón con tu nomenclatura y clase adicional para estilo avanzado -->
                 <button class="botonVerMas btn-primary" type="button">Comprar entradas</button>
                 <button class="botonInfo btn-ghost" type="button">Ver cartel</button>
             </div>
-
+        </div>
+        <div class="tarjetaConcierto">
+            <video controls loop muted class="mi-video" src="videos/guitarra.mp4" poster=""></video>
+            <audio controls loop src="videos/guitarra.mp3"></audio>
+            <div class="infoConcierto">
+                <p class="tituloConcierto" id="titulo-concierto">Tour — Ritmo y Melodía</p>
+                <p class="descripcionConcierto">Una noche con batería potente y guitarras con presencia. Sala La Fábrica • 20 junio • Apertura 20:00</p>
+                <button class="botonVerMas btn-primary" type="button">Comprar entradas</button>
+                <button class="botonInfo btn-ghost" type="button">Ver cartel</button>
+            </div>
+        </div>
+        <div class="tarjetaConcierto">
+            <video controls loop muted class="mi-video" src="videos/Trompeta.mp4" poster=""></video>
+            <audio controls loop src="videos/Trompeta.mp3"></audio>
+            <div class="infoConcierto">
+                <p class="tituloConcierto" id="titulo-concierto">Tour — Ritmo y Melodía</p>
+                <p class="descripcionConcierto">Una noche con batería potente y guitarras con presencia. Sala La Fábrica • 20 junio • Apertura 20:00</p>
+                <button class="botonVerMas btn-primary" type="button">Comprar entradas</button>
+                <button class="botonInfo btn-ghost" type="button">Ver cartel</button>
+            </div>
         </div>
     </section>
 

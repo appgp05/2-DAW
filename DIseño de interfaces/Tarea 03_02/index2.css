@@ -1,5 +1,4 @@
 :root{
-    /* Paleta y tokens (idéntica a la propuesta profesional) */
     --body-background-gradient1: #0B0F14;
     --body-background-gradient2: #071018;
     --surface: #0F1724;
@@ -7,8 +6,8 @@
     --text: #F8FAFC;
     --muted: #AEB6C0;
 
-    --accent-guitar: #FF8A00; /* CTA principal (ámbar) */
-    --accent-drum: #E63946;   /* highlight secundario (rojo) */
+    --accent-guitar: #FF8A00;
+    --accent-drum: #E63946;
     --accent-cyan: #00D9FF;
 
     --card-radius: 14px;
@@ -19,13 +18,18 @@
     --glass-2: rgba(255,255,255,0.04);
 }
 
-/* Reset / base */
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;background:
-  linear-gradient(180deg,var(--body-background-gradient1),var(--body-background-gradient2));
-  color:var(--text);-webkit-font-smoothing:antialiased}
+*{
+    box-sizing:border-box
+}
 
-/* Header (mantengo estructura header > div > a) */
+html,body{
+    height:100%;
+    margin:0;
+    font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+    background: linear-gradient(180deg,var(--body-background-gradient1), var(--body-background-gradient2));
+    color:var(--text);-webkit-font-smoothing:antialiased
+}
+
 header{
     width:100%;
     height:100px;
@@ -55,7 +59,6 @@ header > div > a:focus{
     outline: none;
 }
 
-/* Contenedor principal similar a la versión profesional */
 #seccionConciertos{
     width:100%;
     min-height: calc(100vh - 100px);
@@ -65,7 +68,6 @@ header > div > a:focus{
     padding: 36px 20px;
 }
 
-/* Tarjeta (mantengo selector #seccionConciertos > div.tarjetaConcierto ) */
 #seccionConciertos > div.tarjetaConcierto{
     width: min(920px, 96%);
     display:flex;
@@ -76,7 +78,6 @@ header > div > a:focus{
     box-shadow: var(--card-shadow);
 }
 
-/* Video (selector igual al tuyo: #seccionConciertos > div > video) */
 #seccionConciertos > div.tarjetaConcierto > video{
     width:100%;
     max-width:880px;
@@ -88,7 +89,6 @@ header > div > a:focus{
     border: 0;
 }
 
-/* Audio (selector igual al tuyo: #seccionConciertos > div > audio) */
 #seccionConciertos > div.tarjetaConcierto > audio{
     width:100%;
     max-width:880px;
@@ -100,13 +100,11 @@ header > div > a:focus{
     border-radius: 10px;
 }
 
-/* Intenta estilizar el contenedor de controles webkit (limitado por el navegador) */
 #seccionConciertos > div.tarjetaConcierto > audio::-webkit-media-controls-enclosure{
     background-color: var(--glass-2);
     border-radius: 8px;
 }
 
-/* Info (selector: #seccionConciertos > div > div.infoConcierto ) */
 #seccionConciertos > div.tarjetaConcierto > div.infoConcierto{
     padding: 20px;
     display:flex;
@@ -114,7 +112,6 @@ header > div > a:focus{
     gap:10px;
 }
 
-/* Textos */
 #seccionConciertos > div.tarjetaConcierto > div.infoConcierto > p.tituloConcierto{
     margin:0;
     font-weight:800;
@@ -129,7 +126,6 @@ header > div > a:focus{
     line-height: 1.4;
 }
 
-/* Botones (mantengo tu nomenclatura botonVerMas) */
 #seccionConciertos > div.tarjetaConcierto > div.infoConcierto > button.botonVerMas,
 #seccionConciertos > div.tarjetaConcierto > div.infoConcierto > button.botonInfo{
     width: 200px;
@@ -141,7 +137,6 @@ header > div > a:focus{
     transition: transform .14s ease, box-shadow .14s ease;
 }
 
-/* clases añadidas para estilizado avanzado (pueden coexistir con tu nomenclatura) */
 .btn-primary{
     background: linear-gradient(180deg, var(--accent-guitar), #e37400);
     color: #081019;
@@ -158,13 +153,11 @@ header > div > a:focus{
 }
 .btn-ghost:hover{ background: var(--glass-2); transform: translateY(-2px); }
 
-/* Footer */
 footer{
     height: 60px;
     margin-top: 28px;
 }
 
-/* Responsive */
 @media (max-width: 720px){
     header{ height: auto; padding: 14px; flex-direction: column; gap: 8px; align-items: flex-start; }
     #seccionConciertos > div.tarjetaConcierto{ width: 96%; }
