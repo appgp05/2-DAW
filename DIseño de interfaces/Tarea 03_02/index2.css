@@ -1,0 +1,174 @@
+:root{
+    /* Paleta y tokens (idéntica a la propuesta profesional) */
+    --body-background-gradient1: #0B0F14;
+    --body-background-gradient2: #071018;
+    --surface: #0F1724;
+
+    --text: #F8FAFC;
+    --muted: #AEB6C0;
+
+    --accent-guitar: #FF8A00; /* CTA principal (ámbar) */
+    --accent-drum: #E63946;   /* highlight secundario (rojo) */
+    --accent-cyan: #00D9FF;
+
+    --card-radius: 14px;
+    --container-max: 1100px;
+    --card-shadow: 0 16px 40px rgba(2,6,23,0.6);
+
+    --glass: rgba(255,255,255,0.03);
+    --glass-2: rgba(255,255,255,0.04);
+}
+
+/* Reset / base */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;background:
+  linear-gradient(180deg,var(--body-background-gradient1),var(--body-background-gradient2));
+  color:var(--text);-webkit-font-smoothing:antialiased}
+
+/* Header (mantengo estructura header > div > a) */
+header{
+    width:100%;
+    height:100px;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    background: linear-gradient(90deg,var(--glass), rgba(255,255,255,0.01));
+    backdrop-filter: blur(6px);
+    box-shadow: 0 6px 18px rgba(2,6,23,0.5);
+    padding: 0 20px;
+}
+
+header > div > a{
+    color: var(--muted);
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: all .16s ease;
+}
+header > div > a:hover,
+header > div > a:focus{
+    color: var(--text);
+    background: var(--glass-2);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+/* Contenedor principal similar a la versión profesional */
+#seccionConciertos{
+    width:100%;
+    min-height: calc(100vh - 100px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 36px 20px;
+}
+
+/* Tarjeta (mantengo selector #seccionConciertos > div.tarjetaConcierto ) */
+#seccionConciertos > div.tarjetaConcierto{
+    width: min(920px, 96%);
+    display:flex;
+    flex-direction:column;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    background: linear-gradient(180deg,var(--surface), rgba(15,23,36,0.92));
+    box-shadow: var(--card-shadow);
+}
+
+/* Video (selector igual al tuyo: #seccionConciertos > div > video) */
+#seccionConciertos > div.tarjetaConcierto > video{
+    width:100%;
+    max-width:880px;
+    height:auto;
+    display:block;
+    margin: 0 auto;
+    border-radius: var(--card-radius) var(--card-radius) 0 0;
+    background: transparent;
+    border: 0;
+}
+
+/* Audio (selector igual al tuyo: #seccionConciertos > div > audio) */
+#seccionConciertos > div.tarjetaConcierto > audio{
+    width:100%;
+    max-width:880px;
+    display:block;
+    margin: 12px auto;
+    height: 40px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.012), rgba(255,255,255,0.01));
+    padding: 10px 12px;
+    border-radius: 10px;
+}
+
+/* Intenta estilizar el contenedor de controles webkit (limitado por el navegador) */
+#seccionConciertos > div.tarjetaConcierto > audio::-webkit-media-controls-enclosure{
+    background-color: var(--glass-2);
+    border-radius: 8px;
+}
+
+/* Info (selector: #seccionConciertos > div > div.infoConcierto ) */
+#seccionConciertos > div.tarjetaConcierto > div.infoConcierto{
+    padding: 20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+/* Textos */
+#seccionConciertos > div.tarjetaConcierto > div.infoConcierto > p.tituloConcierto{
+    margin:0;
+    font-weight:800;
+    font-family: "Oswald", Inter, sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.2px;
+}
+#seccionConciertos > div.tarjetaConcierto > div.infoConcierto > p.descripcionConcierto{
+    margin:0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Botones (mantengo tu nomenclatura botonVerMas) */
+#seccionConciertos > div.tarjetaConcierto > div.infoConcierto > button.botonVerMas,
+#seccionConciertos > div.tarjetaConcierto > div.infoConcierto > button.botonInfo{
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .14s ease, box-shadow .14s ease;
+}
+
+/* clases añadidas para estilizado avanzado (pueden coexistir con tu nomenclatura) */
+.btn-primary{
+    background: linear-gradient(180deg, var(--accent-guitar), #e37400);
+    color: #081019;
+    box-shadow: 0 8px 24px rgba(255,138,0,0.12);
+}
+.btn-primary:hover{ transform: translateY(-3px); box-shadow: 0 18px 40px rgba(255,138,0,0.16); }
+
+.btn-ghost{
+    background: transparent;
+    color: var(--text);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 8px 14px;
+    border-radius: 10px;
+}
+.btn-ghost:hover{ background: var(--glass-2); transform: translateY(-2px); }
+
+/* Footer */
+footer{
+    height: 60px;
+    margin-top: 28px;
+}
+
+/* Responsive */
+@media (max-width: 720px){
+    header{ height: auto; padding: 14px; flex-direction: column; gap: 8px; align-items: flex-start; }
+    #seccionConciertos > div.tarjetaConcierto{ width: 96%; }
+    #seccionConciertos > div.tarjetaConcierto > video{ max-width:100%; }
+    #seccionConciertos > div.tarjetaConcierto > audio{ max-width:100%; }
+    #seccionConciertos > div.tarjetaConcierto > div.infoConcierto{ padding: 16px; }
+}
