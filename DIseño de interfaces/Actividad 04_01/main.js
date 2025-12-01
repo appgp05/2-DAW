@@ -1,10 +1,5 @@
 $(document).ready(() => {
-    function recorrerLista() {
-        console.log("---- Recorriendo lista ----");
-        $("ul li").each((index) => {
-            console.log(index + ": " + $(this).text());
-        });
-    }
+    // Ejercicio 2
 
     recorrerLista();
 
@@ -12,6 +7,7 @@ $(document).ready(() => {
 
     recorrerLista();
 
+    // Ejercicio 3
     console.log("---- Manipulación básica: get() y prevObject ----");
 
     let primerLi = $("ul li").get(0);
@@ -23,5 +19,16 @@ $(document).ready(() => {
     console.log("Elemento resultante:", cadena);  
     console.log("prevObject:", cadena.prevObject); 
     
-    $("ul li").first().text("Elemento modificado con jQuery");
+    $("ul li").first().text("Elemento modificado con jQuery"); 
 });
+
+function recorrerLista() {
+    console.log("---- Recorriendo lista ----");
+    $("ul li").each((index, value) => {
+        console.log(index + ": " + $(value).text());
+    });
+}
+
+function funcionalidadMostrarInfo(){
+    recorrerLista()
+}

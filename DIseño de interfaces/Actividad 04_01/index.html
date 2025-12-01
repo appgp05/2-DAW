@@ -17,6 +17,7 @@
         <li>Agregar elementos</li>
         <li>Detectar eventos</li>
     </ul>
+    <button onclick="funcionalidadMostrarInfo()">Mostrar info</button>
 </body>
 </html>
 
@@ -28,4 +29,7 @@ PREGUNTAS
         c) $(document).ready() (en jQuery) asegura que el DOM esté completamente cargado y accesible antes de ejecutar el código, evitando errores por intentar manipular elementos que todavía no se han creado.
     EJERCICIO 2
         A)La función each() recibe dos valores (índice y elemento) porque el índice indica la posición del elemento dentro de la colección que se está recorriendo mientras que elemento es la referencia directa al objeto actual (por ejemplo, un nodo del DOM o un elemento de un arreglo).
+    EJERCICIO 4
+        A)Si intentas aplicar css a un sleector vacío no ocurrirá nada puesto que no se está seleccionando un elemento existente
+        B)jQuery detecta que la selección es nula porque la instancia creada tiene length = 0, es decir, el objeto jQuery está vacío.
 -->
