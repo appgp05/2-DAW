@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Convertir a números
+        console.log(Number(1.23423))
+        console.log(parseInt("1.999"))
+        console.log(parseFloat("1.123"))
+
+        // Números máximos y mínimos
+        console.log("MAX_VALUE", Number.MAX_VALUE)
+        console.log("MIN_VALUE", Number.MIN_VALUE)
+
+        // Números máximos y mínimos seguros para operar
+        console.log("MAX_SAFE_INTEGER", Number.MAX_SAFE_INTEGER)
+        console.log("MIN_SAFE_INTEGER", Number.MIN_SAFE_INTEGER)
+
+        // Determinar decimales
+        let numero = 10.3294756
+        console.log("ToFixed", numero.toFixed(5)) //Cantidad de decimales
+        console.log("ToPrecision", numero.toPrecision(5)) //Cantidad de digitos en total
+
+        // Big ints
+        console.log(BigInt(123))
+        console.log(123n)
+    </script>
+</body>
+</html>
