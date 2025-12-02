@@ -1,0 +1,12 @@
+div{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background: lightgray;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.resaltada {
+    background: gold !important;
+}
