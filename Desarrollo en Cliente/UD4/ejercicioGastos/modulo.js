@@ -15,33 +15,57 @@ let mostrarPresupuesto = () => {
     return "Tu presupuesto actual es de " + presupuestoDisponible + "€"
 }
 
-class Gasto{
-    descripcion
-    valor
-    fecha
+// class Gasto{
+//     descripcion
+//     valor
+//     fecha
+//     etiquetas
+
+//     constructor(
+//         descripcion,
+//         valor,
+//         fecha,
+//         etiquetas
+//     ){
+//         this.descripcion = descripcion
+//         this.valor = valor >= 0 ? valor : 0
+//         this.fecha = fecha
+//         this.etiquetas = etiquetas
+//     }
+
+//     mostrarGasto(){
+//         return "Gasto correspondiente a " + this.descripcion + " con valor " + this.valor + "€"
+//     }
+
+//     actualizarDescripcion(descripcion){
+//         this.descripcion = descripcion
+//     }
+
+//     actualizarValor(valor){
+//         this.valor = valor
+//     }
+// }
+
+let crearGasto = (
+    descripcion,
+    valor,
+    fecha,
     etiquetas
+) => {
+    this.descripcion = descripcion
+    this.valor = valor >= 0 ? valor : 0
+    this.fecha = fecha
+    this.etiquetas = etiquetas
 
-    constructor(
-        descripcion,
-        valor,
-        fecha,
-        etiquetas
-    ){
-        this.descripcion = descripcion
-        this.valor = valor >= 0 ? valor : 0
-        this.fecha = fecha
-        this.etiquetas = etiquetas
-    }
-
-    mostrarGasto(){
+    function mostrarGasto(){
         return "Gasto correspondiente a " + this.descripcion + " con valor " + this.valor + "€"
     }
 
-    actualizarDescripcion(descripcion){
+    function actualizarDescripcion(descripcion){
         this.descripcion = descripcion
     }
 
-    actualizarValor(valor){
+    function actualizarValor(valor){
         this.valor = valor
     }
 }

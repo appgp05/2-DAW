@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="resultado"></div>
+
+    <script>
+        // Crear Strings
+        console.log("############Crear Strings")
+        
+        let string1 = "Este es mi string 1"
+        let string2 = String(10)
+        let string3 = new String(10)
+        let miVariable = 16
+        let string4 = miVariable.toString()
+
+        console.log(string1, typeof string1)
+        console.log(string2, typeof string2)
+        console.log(string3, typeof string3)
+        console.log(string4, typeof string4)
+
+        document.getElementById("resultado").innerHTML += "<p>"+string1+"</p>"
+
+        // Juntar Strings
+        console.log(string1.concat(string2))
+
+        // Dividir Strings
+        console.log(string1.split(""))
+        console.log(string1.split(" "))
+        console.log(string1.replace("Este", "Ejemplo de lo que"))
+        console.log(string1.slice(5, -4)) // Acepta índices negativos
+        console.log(string1.substring(5, -0)) // No acepta índices negativos, toma el indice negativo como 0
+
+        // Strings a mayúsculas
+        console.log(string1.toUpperCase())
+
+        // Strings a minúsculas
+        console.log(string1.toLowerCase())
+
+        // Encontrar posiciones en el texto
+        console.log(string1.indexOf("e"))
+        console.log(string1.lastIndexOf("e"))
+
+
+        
+
+
+        </script>
+</body>
+</html>
