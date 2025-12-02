@@ -10,8 +10,6 @@
 
     <script>
         // Crear Strings
-        console.log("############Crear Strings")
-        
         let string1 = "Este es mi string 1"
         let string2 = String(10)
         let string3 = new String(10)
@@ -29,7 +27,6 @@
         console.log(string1.concat(string2))
 
         // Dividir Strings
-        console.log(string1.split(""))
         console.log(string1.split(" "))
         console.log(string1.replace("Este", "Ejemplo de lo que"))
         console.log(string1.slice(5, -4)) // Acepta índices negativos
@@ -41,14 +38,34 @@
         // Strings a minúsculas
         console.log(string1.toLowerCase())
 
-        // Encontrar posiciones en el texto
+        // Encontrar posiciones en el string
         console.log(string1.indexOf("e"))
         console.log(string1.lastIndexOf("e"))
 
+        // Reemplazar parte del string
+        console.log(string1.replace("es", "esa"))
 
-        
+        // Repetir varias veces un string
+        console.log(string1.repeat(10))
 
+        // Coger un caracter en concreto
+        console.log(string1.charAt(1))
+        console.log(string1.charAt(1))
 
-        </script>
+        // Coger todos los caracteres
+        console.log(string1.split(""))
+        console.log(...string1)
+        console.log(Array.from(string1))
+
+        // Quitar espacios al principio y al final del string
+        console.log("       asd        asd     asd     ".trim())
+
+        // Usar expresiones regulares
+        let expresionRegular = /\s+/g
+        console.log(expresionRegular.test("a"))
+        console.log("       asd        asd     asd     ".replace(expresionRegular, ""))
+        console.log("       asd        asd     asd     ".split(expresionRegular))
+
+    </script>
 </body>
 </html>

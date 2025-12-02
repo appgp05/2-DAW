@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Crear Dates
+        let date = new Date("02-29-2000 10:10:10:013")
+        date = new Date()
+        console.log(date)
+
+        // Coger los parametros
+        console.log("Fecha en milisegundos", date.getTime())
+        console.log("Milisegundos", date.getMilliseconds())
+        console.log("Segundos", date.getSeconds())
+        console.log("Minutos", date.getMinutes())
+        console.log("Horas", date.getHours())
+        console.log("Día del mes", date.getDate())
+        console.log("Día de la semana", date.getDay())
+        console.log("Mes", date.getMonth())
+        console.log("Año", date.getFullYear())
+
+        // Sentenciar parametros
+        date.setFullYear(date.getFullYear() - 10)
+        console.log(date)
+    </script>
+</body>
+</html>

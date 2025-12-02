@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero1 = 2
+        let numero2 = 3
+
+        // Elevar un numero
+        console.log(Math.pow(numero1, numero2))
+        console.log(numero1 ** numero2)
+
+        // Elevar el numero e a cirto numero, en este caso 10
+        console.log(Math.exp(10))
+
+        // Coger un numero random entre 0 y 0.999999999999
+        console.log((Math.random()))
+
+        // Redondeos
+        let numeroRedondeo1 = 3.5
+        console.log("Ceil", Math.ceil(numeroRedondeo1)) // Reondeo hacia arriba, siempre
+        console.log("Floor", Math.floor(numeroRedondeo1)) //Redondeo hacia abajo, siempre
+        console.log("Round", Math.round(numeroRedondeo1)) // Reondeo hacia arriba, a partir de .5 inclusive
+        console.log("Trunc", Math.trunc(numeroRedondeo1)) // Elimina la parte decimal, como si no estuviese
+
+        // Recoger el signo de un numero
+        console.log("Sign -10", Math.sign(-10))
+        console.log("Sign 10", Math.sign(10))
+        console.log("Sign 0", Math.sign(0))
+
+        // Raiz cuadrada
+        console.log(Math.sqrt(9))
+
+        // Número absoluto
+        console.log(Math.abs(-3.2))
+    </script>
+</body>
+</html>
