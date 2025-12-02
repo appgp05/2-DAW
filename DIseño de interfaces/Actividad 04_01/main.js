@@ -32,3 +32,10 @@ function recorrerLista() {
 function funcionalidadMostrarInfo(){
     recorrerLista()
 }
+
+let elementoAnadidoActual = 0
+
+function funcionalidadAnadirElemento(){
+    ++elementoAnadidoActual
+    $("ul").append("<li>li añadido número "+elementoAnadidoActual+"</li>")
+}
