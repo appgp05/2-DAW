@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const reservas = [ 
+            { id: 10000, precio: 25, habitacion: 'individual', pagada: false }, 
+            { id: 10001, precio: 15, habitacion: 'individual', pagada: false }, 
+            { id: 10002, precio: 55, habitacion: 'doble', pagada: true }, 
+            { id: 10003, precio: 55, habitacion: 'doble', pagada: true }, 
+            { id: 10004, precio: 65, habitacion: 'doble', pagada: true }
+        ]
+
+        console.log(reservas)
+
+        const reservaPagadas = reservas.every(booking => booking.pagada);
+        console.log(reservaPagadas);
+
+        noPagadas = reservas.filter(reserva =>  {if(reserva.pagada != true){return true}})
+        console.log(noPagadas)
+
+        const booking = reservas.find(booking => booking.habitacion === 'individual'); 
+        console.log(booking.id);
+
+        const reservaIndex = reservas.findIndex(booking => booking.habitacion === 'doble'); 
+        console.log(reservaIndex);
+        
+        const descuento = 10; 
+        const descuentoReserva = reservas.map(booking => ({ 
+        price: booking.precio * (1 - (descuento / 100)) 
+        })); 
+        console.log(descuentoReserva); 
+        console.log(reservas)
+
+        const totalPrecio = reservas.reduce((total, booking) => total + booking.precio, 0); 
+        console.log(totalPrecio);
+         
+        const habitacionSuit = reservas.some(booking => booking.habitacion === 'suit'); 
+        console.log(habitacionSuit); 
+
+        //PENDIENTE
+        let array = ["uno", "dos", "tres", "cuatrouno", "uno"]
+
+        // let busqueda = array.filter((cadena) => cadena.includes(["uno"]))
+        let busqueda = array.filter((cadena) => cadena.match(/uno/))
+        console.log(busqueda)
+
+        // ejecutarb()
+
+        // console.log(b)
+
+        // {
+        //     var b = 10
+        // }
+        
+        function ejecutarb(){
+            var b = 10
+            console.log(b)
+        }
+        console.log(b)
+
+    </script>
+</body>
+</html>
