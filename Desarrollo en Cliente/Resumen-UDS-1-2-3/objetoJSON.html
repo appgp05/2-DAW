@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let objetoOriginal = {
+            parametro1: "valor1",
+            metodo1: () => {return "a"}
+        }
+
+        let json = JSON.stringify(objetoOriginal) // Pasar valor en javascript a JSON
+        let objeto = JSON.parse(json) // Pasar JSON a valor en javascript
+
+        console.log(typeof json, json)
+        console.log(typeof objeto, objeto)
+    </script>
+</body>
+</html>

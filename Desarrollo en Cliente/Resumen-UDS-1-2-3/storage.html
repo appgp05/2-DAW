@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <button type="submit" onclick="sumar()">Sumar</button>
+        <button type="submit" onclick="borrar()">Borrar</button>
+    </form>
+    <script>
+        // Localstorage es indefinido
+        // Sessionstorage es limitado al tiempo en el que la sesión está abierta
+
+        console.log(localStorage)
+
+        let sumar = () => localStorage.getItem("click") ? ++localStorage["click"] : localStorage["click"] = 1
+        // let borrar = () => localStorage.clear()
+        let borrar = () => localStorage.removeItem("click")
+    </script>
+</body>
+</html>

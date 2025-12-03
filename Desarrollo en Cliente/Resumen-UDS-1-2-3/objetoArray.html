@@ -7,19 +7,26 @@
 </head>
 <body>
     <script>
+        // Crear Arrays
         let array = ["uno", "dos" , "tres", "cuatro", "cinco"]
 
         console.log([1, 2, 3, 4, 5])
         console.log(new Array(1, 2, 3, 4, 5))
         console.log(Array(1, 2, 3, 4, 5))
 
-        console.log("Pop", array.pop())
+        // Añadir y eliminar elementos
+        console.log("Pop", array.pop()) // Eliminar el último elemento
         console.log("Array", array)
-        console.log("Push", array.push("seis", "siete", "ocho"))
+        console.log("Push", array.push("seis", "sieteseis", "ocho")) // Añadir elementos
         console.log("Array", array)
         console.log("Pop", array.pop())
         console.log("Array", array)
         
+        console.log(array.filter((elemento) => elemento.includes("seis"))) // Buscar elementos dentro del array
+        console.log(array.map((elemento) => elemento = "frog")) // Cambiar valores de dentro del array
+        console.log(array.every((elemento) => typeof elemento == "string")) // Comprobar que todos cumplan una condicion
+        console.log(array.reduce((cadena, elemento) => { return cadena = cadena + elemento }, "")) // Aplicar un operando total a todos los elementos, por ejemplo juntar todas las cadenas
+        console.log(array.some((elemento) => elemento == "uno")) // Comprobar que uno cumpla una condicion
     </script>
 </body>
 </html>

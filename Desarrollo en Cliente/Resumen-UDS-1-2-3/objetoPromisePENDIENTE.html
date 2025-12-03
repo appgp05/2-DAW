@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // fetch('ahttps://jsonplaceholder.typicode.com/posts/1')
+        // .then((res) => res.json())
+        // .then((data) => {console.log(data)})
+        // .catch(console.log("Error"))
+        // .finally(console.log("Siempre"))
+        
+        new Promise(() => 1)
+        .then(
+            console.log("A")
+            // (data) => {
+            //     console.log("A")
+            // }
+        )
+        .catch(
+            console.log("Error:")
+            // () => {
+            //     console.log("Error:")
+            // }
+        )
+        .finally(console.log("Siempre"))
+    </script>
+</body>
+</html>

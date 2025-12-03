@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const mapa = new Map();
+        mapa.set("nombre", "Ana");
+        mapa.set("nombre", "Jose");
+        mapa.set("nombre2", "Maria");
+        mapa.set("nombre3", "Ricardo");
+        mapa.set("nombre4", "Pepe");
+        mapa.set("nombre5", "Juan");
+        mapa.set("apellido1", "Lopez");
+        
+        console.log(mapa);
+
+        mapa.delete("apellido1")
+
+        console.log(mapa);
+        console.log(mapa.get("nombre"));
+
+    </script>
+</body>
+</html>
