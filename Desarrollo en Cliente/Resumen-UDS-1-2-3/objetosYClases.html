@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Función constructora
+        function Persona(){
+            this.nombre
+            this.apellido = "López"
+            this.edad
+            this.hablar = () => {console.log("Estoy hablando")}
+        }
+
+        let persona1 = new Persona()
+        persona1.nombre = "Marta"
+
+        
+        // Literal declarativo
+        let persona2 = {
+            nombre: "Lucas",
+            apellido: "Martinez",
+            edad: "Perez",
+            hablar: () => {console.log("Estoy hablando")}
+        }
+        
+        persona2.nombres = "Jose"
+        
+        
+        // Palabra new
+        let persona3 = new Object(
+            {
+                nombre: "Paco",
+                hablar: () => {console.log("Estoy hablando")}
+            }
+        )
+        
+
+
+        // Mostrar Personas
+
+        console.log("Persona 1", persona1)
+        persona1.hablar()
+        
+        console.log("Persona 2", persona3)
+        persona2.hablar()
+        
+        console.log("Persona 3", persona2)
+        persona3.hablar()
+
+        // Crear un objeto en base a otro
+        
+        let enfermero = Object.create(persona1)
+        enfermero.curar = () => {console.log("Te curo")}
+
+        enfermero.curar()
+        console.log(enfermero.nombre)
+
+        // Uso de clases
+
+        class Bombero extends Persona{
+            licencia = "A todo riesgo"
+
+            apagar = () => {console.log("Apagando el fuego")}
+        }
+
+        let bombero1 = new Bombero()
+        console.log(bombero1)
+        bombero1.apagar()
+
+    </script>
+</body>
+</html>

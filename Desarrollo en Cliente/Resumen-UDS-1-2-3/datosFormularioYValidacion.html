@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form style="display: flex; flex-direction: column;">
+        <table>
+            <tr>
+                <td>
+                    <label for="nombre">Nombre</label>
+                </td>
+                <td>
+                    <input type="text" id="nombre" name="nombre">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="fNac">Fecha Nacimiento</label>
+                </td>
+                <td>
+                    <input type="date" id="fNac" name="fNac">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <label for="telefono">Telefono</label>
+                </td>
+                <td>
+                    <input type="number" id="telefono" name="telefono">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <label for="dni">DNI</label>
+                </td>
+                <td>
+                    <input type="text" id="dni" name="dni">
+                </td>
+            </tr>
+        </table>
+        <input type="button" value="Enviar" id="enviar">
+    </form>
+
+    <script>
+        document.getElementById("enviar").addEventListener("click", () => {
+            let nombre = document.getElementById("nombre").value
+            let fNac = document.getElementById("fNac").value
+            let telefono = document.getElementById("telefono").value
+            let dni = document.getElementById("dni").value
+
+            // Validacion
+            fNac = new Date(fNac)
+            telefono = Number(telefono)
+            if(/[1-9][0-9]{8}[A-Z]/.test(dni)){
+                console.log("DNI correcto")
+            } else {
+                console.log("DNI incorrecto")
+            }
+
+            // console.log(nombre, fNac, telefono, dni)
+            console.log("Nombre", nombre, typeof nombre)
+            console.log("fNac", fNac, typeof fNac)
+            console.log("telefono", telefono, typeof telefono)
+            console.log("dni", dni, typeof dni)
+        })
+    </script>
+</body>
+</html>
