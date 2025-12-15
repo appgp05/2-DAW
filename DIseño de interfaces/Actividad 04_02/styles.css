@@ -8,5 +8,5 @@ div{
 }
 
 .resaltada {
-    background: gold !important;
+    border: red 3px solid;
 }

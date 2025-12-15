@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <script src="index.js"></script>
 </head>
 <body>
-    <div onclick="toggleClass('resaltada')">1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <button>Resltar todas</button>
-    <button>Ocultar todas</button>
-    <button>Alternar estado</button>
+    <div class="caja">1</div>
+    <div class="caja">2</div>
+    <div class="caja">3</div>
+    <div class="caja">4</div>
+    <div class="caja">5</div>
+    <button onclick="resaltarTodas()">Resaltar todas</button>
+    <button onclick="ocultarTodas()">Ocultar todas</button>
+    <button onclick="alternarEstado()">Alternar estado</button>
+    <!-- 
+        1 a) Para poder reutilizar código
+        1 b) Sí, el evento de clic de jQuery está diseñado para soportar clics muy rápidos.
+        
+        2 Ocultar hace que no se muestre un elemento y desactivar un estado visual hace que el estado visual del elemento cambie
+        3 jQuery maneja las selecciones vacías devolviendo un objeto vacío en lugar de null o undefined, lo que permite que el resto del código siga ejecutándose sin fallos.
+    -->
 </body>
 </html>
