@@ -1,0 +1,11 @@
+video{
+    width: 500px;
+}
+
+.oculto{
+    display: none;
+}
+
+.resaltado{
+    border: 2px red solid;
+}
