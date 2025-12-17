@@ -13,8 +13,18 @@ $().ready(() => {
     $("#video").addClass("oculto")
 
     $("div > video").each(function () {
-        this.on("click", function () {
-            this.addClass("resaltado")
+        $(this).on("click", function () {
+            $("div > video").each(function () {
+                $(this).removeClass("resaltado")
+            })
+
+            let nombreVideo = this.src.split("/")
+            console.log(nombreVideo)
+            nombreVideo = nombreVideo[nombreVideo.length - 1]
+            
+            console.log(nombreVideo)
+
+            $(this).addClass("resaltado")
         })
     })
 
