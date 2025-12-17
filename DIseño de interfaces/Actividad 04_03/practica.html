@@ -5,22 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilos.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css"/>
 </head>
 <body>
     <video id="video" src="multimedia/bateria editado.mp4" controls></video>
     <audio src="multimedia/bateria editado.mp3"></audio>
-    <input type="checkbox">Acepto reproducir el contenido multimedia
-    <button id="botonMostrarOcultarReproductor">Mostrar / Ocultar reproductor</button>
     <div>
-        <button id="botonReproducir">Reproducir</button>
-        <button id="botonPausar">Pausar</button>
-        <button id="botonComprobarPausa">Comprobar Pausa</button>
-        <p id="indicadoresVideo"></p>
+        <input id="checkboxAceptoReproduccion" type="checkbox">Acepto reproducir el contenido multimedia
     </div>
+    <button id="botonMostrarOcultarReproductor" class="requiereAceptarReproduccion">Mostrar / Ocultar reproductor</button>
+    <div class="reposicionarElementos">
+        <button id="botonReproducir" class="requiereAceptarReproduccion">Reproducir</button>
+        <button id="botonPausar" class="requiereAceptarReproduccion">Pausar</button>
+        <button id="botonComprobarPausa" class="requiereAceptarReproduccion">Comprobar Pausa</button>
+        <p id="indicadoresVideo"  class="requiereAceptarReproduccion"></p>
+    </div>
+    
     <noscript>
         Debes activar Javascript para poder visualizar el vídeo y escuchar el audio
     </noscript>
+
+    <ul>
+        <div>
+            <h2>Titulo 1</h2>
+            <video src=""></video>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, iste. Enim quibusdam, minima veniam, inventore rerum dolorem, dolore tenetur nemo vero tempora eos fugit laborum asperiores. Quibusdam, pariatur excepturi? Debitis.</p>
+        </div>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    <script src="script.js"></script>
+
+    <!-- 
+        1 - 1 Para mayor accesibilidad, compatibilidad y cumplir el progresiveengagement, que quiere decir que lo básico y nativo funcione sin scripts 
+        1 - 2 Porque se requiere que antes de que el usuario pueda realizar alguna acción primero acepte que quiere poder realizar esas acciones
+        3 - 1 El reproductor nativo tiene los controles más simples y menos atractivos frente a los dela librería Plyr, Plyr presenta iconos másatractivos, redondeos y colores que aportan énfasis
+        4 - 1 Es mejor actualizar con eventos del reproductos que con setInterval, puesto que lo0s eventos del reproductor se lanzan cuando el tiempo realmenrte cambia, son más precisos y están mejor optimizados además de evitar ejecuciones innecesarias cuando elvídeo estápausado, mientras que lo que elsetInterval ejecuta acciones en tiempo real cada cierto tiempo, lo que consume más recursos de los necesarios y estápeor optimizado
+        7 - 1 - a Sí que puede reproducirse
+        7 - 1 - b Siguen disponibles los controles nativos del propio html
+        7 - 2 - a Se pierden los controles y estilos personalizados de la propia librería, dejando únicamente los controles y estilos del elemento nativo de html
+        7 - 3 - a Sí se mantiene usable, css solo aplica estilos y diseños visuales
+        7 - 3 - b Se pierden diseños y aspectos visuales, pero no se pierde ninguna característica funcional
+
+        1 - Check
+        2 - Check
+        3 - Check
+        4 - Check
+        5 - Check
+        1 - Check
+        7 - Check
+    -->
 </body>
 </html>
