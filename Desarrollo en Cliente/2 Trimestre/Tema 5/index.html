@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- FORMAS DE DEFINIR LOS LISTENERS DE LOS EVENTOS -->
+    <h3>FORMAS DE DEFINIR LOS LISTENERS DE LOS EVENTOS</h3>
+    <button onclick="console.log('Integrado en el HTML')">Integrado en el HTML</button>
+    <button onclick="mostrarEnConsola('Integrado con funcion externa')">Integrado con funcion externa</button>
+    <button id="botonConManejadorSemántico">Con manejador semántico</button>
+    <button id="botonConAddEventListener">Con AddEventListener</button>
+    <button id="botonConSetAtribute">Con SetAtribute</button>
+
+    <!-- EVENTOS EXISTENTES MÁS COMUNES -->
+    <h3>MouseOver</h3>
+    <div onmouseover="console.log('over')">
+        <div>
+        </div>
+    </div>
+    
+    <h3>MouseEnter</h3>
+    <div onmouseenter="console.log('over')">
+        <div>
+        </div>
+    </div>
+</body>
+</html>
