@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="contenedor">
+        <nav>
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+        </nav>
+        <ul>
+            <li>
+                <div>
+                    <div>
+                        <p>Texto 1</p>
+                        <p>Texto 2</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div>
+                        <p>Texto 3</p>
+                        <p>Texto 4</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <form action="">
+            <fieldset>
+                <legend>Datos</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Nombre">
+            </fieldset>
+            <fieldset>
+                <legend>Estudios</legend>
+                <input type="checkbox">Primaria
+                <input type="checkbox">ESO
+                <input type="checkbox">Grado Medio
+                <input type="checkbox">Bachillerato
+                <input type="checkbox">Grado Superior
+            </fieldset>
+        </form>
+        <section>
+            <article>
+                <p>Libro Cliente</p>
+                <p>5€</p>
+            </article>
+            <article>
+                <p>Libro Servidor</p>
+                <p>10€</p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <p>Libro Sostenibilidad</p>
+                <p>6€</p>
+            </article>
+            <article>
+                <p>Libro IA</p>
+                <p>11€</p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <p>Libro Diseño</p>
+                <p>7€</p>
+            </article>
+            <article>
+                <p>Libro Despliegue</p>
+                <p>12€</p>
+            </article>
+        </section>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!--
+    Ejercicio 1
+    a) La etiqueta más profundamente anidada es caulquiera de las dos del 3 nivel del ul, puesto que es el elemento que más subniveles tiene
+    b) Lasventajas de tener una estructura jerárquica bien definida con la mejora de la disposición de los elemtnos en pantalla, favoreciendo a la accesibilidad y diseño coherente, permite códificar más fácilmente a futuro al estar los elemtnos dispuestos de forma ordenada y coherente
+
+    Ejercicio 2
+    a) En un .eacj jQuery le pasa a una funcion un node correspondiente al nodo del DOM perteneciente a la nodelist a la que se le estáhacinedo el .each
+    b) La diferencia es que con this obtienes el objeto que es un nodo del DOM mientras que con $(this) envuelves el nodo en una capa de jQuery para poder utilizar funciones y aspectos de jQuery
+-->

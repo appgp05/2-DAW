@@ -1,0 +1,47 @@
+*Cada texto en el esquema es un nodo, es decir cada etiqueta html
+*Cada nodo que contiene flechas por debajo suyo es un nivel
+*Los padres son los nodos que contienen más nodos dentro,y estos son los hijos
+*Los hijos son los elementos que están contenidos dentro de un nodo, que es el padre
+*Los hermanos son los elementos que están al mismo nivel que un elemento concreto
+
+div -> principal
+|->	nav
+|	|->	a
+|->	ul
+|	|->	div
+|	|	|->	div
+|	|	|	|->	p -> Texto 1
+|	|	|	|->	p -> Texto 2
+|->	form
+|	|->	fieldset
+|	|	|-> legend
+|	|   |-> label
+|	|   |-> input
+|   |-> fieldset
+|   |   |-> legend
+|   |   |-> input
+|   |   |-> input
+|   |   |-> input
+|   |   |-> input
+|   |   |-> input
+|-> section
+|   |-> article
+|   |   |-> p
+|   |   |-> p
+|   |-> article
+|   |   |-> p
+|   |   |-> p
+|-> section
+|   |-> article
+|   |   |-> p
+|   |   |-> p
+|   |-> article
+|   |   |-> p
+|   |   |-> p
+|-> section
+|   |-> article
+|   |   |-> p
+|   |   |-> p
+|   |-> article
+|   |   |-> p
+|   |   |-> p
