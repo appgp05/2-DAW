@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="contenedor">
@@ -30,7 +31,7 @@
                 </div>
             </li>
         </ul>
-        <form action="">
+        <form id="form" action="">
             <fieldset>
                 <legend>Datos</legend>
                 <label for="nombre">Nombre:</label>
@@ -76,6 +77,7 @@
             </article>
         </section>
 
+        <button id="buttonResaltarFinds">Resaltar finds</button>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -91,4 +93,12 @@
     Ejercicio 2
     a) En un .eacj jQuery le pasa a una funcion un node correspondiente al nodo del DOM perteneciente a la nodelist a la que se le estáhacinedo el .each
     b) La diferencia es que con this obtienes el objeto que es un nodo del DOM mientras que con $(this) envuelves el nodo en una capa de jQuery para poder utilizar funciones y aspectos de jQuery
+
+    Ejercicio 3
+    a) Cada búsqueda encuentra tantos elementos como los que existen y se están buscando
+    b) La diferencia es que con $("li") buscas todos los li del DOM y con $("#contenedor").fin("li") buscas todos los li que están contenidos dentro del elemento que tenga el id "contenedor"
+
+    Ejercicio 4
+    a) Children es preferible frente a find en algunos casos porque a veces solo quieres obtener los hijos de un elemento del DOM y no requieres de una búsqueda más compleja, por lo que el el children simplifica la búsqueda cuando solo quieres los hijos de un elemento
+    b) Un selector demasiado general puede llegar a seleccionar elementos que no deseas, por lo que debes ser lo más específico posible para evitar que se seleccionen nodos del DOM no deseados, además provoca un emeporamiento del rendimiento al hacer una búsqueda más amplia de lo necesario y es más dificil mantenerlo por la complejidad de tratas con más elementos de los necesarios
 -->

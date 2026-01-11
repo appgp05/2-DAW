@@ -1,0 +1,7 @@
+*{
+    transition: 1s;
+}
+.resaltado{
+    transition: 1s;
+    background-color: yellow;
+}
