@@ -41,6 +41,11 @@ $().ready(() => {
     let hijosDivContenedor = divContenedor.children()
     console.log(divContenedor)
     console.log(hijosDivContenedor)
+
+    let elementos = $("li").find("a")
+    console.log(elementos.prevObject)
+
+    $("#buttonResaltarPorTexto").on("click", resaltarPorTexto)
 })
 
 let resaltado = false
@@ -57,4 +62,24 @@ function resaltarFinds(finds){
     }
     
     resaltado = !resaltado
+}
+
+let busquedasAnteriores = undefined
+
+function resaltarPorTexto(){
+    if(busquedasAnteriores != undefined){
+        busquedasAnteriores.removeClass("resaltado")
+    }
+    
+    let texto = $("#inputResaltarPorTexto").get(0).value
+    let busqueda = $("*:contains('" + texto + "')").filter(function() {
+        return $(this).children().length === 0 || $(this).children(":contains('" + texto + "')").length === 0;
+    });
+
+    busqueda.addClass("resaltado")
+
+    busquedasAnteriores = busqueda
+
+    console.log(busqueda.length+" resultados")
+    console.log("Resultado de la búsqueda", busqueda)
 }
