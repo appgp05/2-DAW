@@ -58,6 +58,10 @@ $().ready(() => {
     $("#botonVolver").on("click", function() {
         video.currentTime = 0;
     });
+
+    $(".textoPromo").addClass("textoPromo").on("mouseenter mouseleave", function() {
+        $(this).toggleClass("fade");
+    });
 })
 
 function comprarLibro(){
@@ -142,6 +146,7 @@ function comprarLibro(){
 
     if(aceptarCompra){
         alert("Muchas gracias por confiar en nosotros " + nombre + ". La compra se ha realizado de forma correcta. Libro comprado: "+libro+". Se le ha enviado la factura correspondiente al correo "+correoElectronico)
+        $("#formularioCompra").toggleClass("hidden");
     } else {
         alert("Compra cancelada")
     }

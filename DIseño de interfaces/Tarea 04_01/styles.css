@@ -1,17 +1,50 @@
 :root{
-    --bg-body: rgb(255, 241, 176);
-    --bg-header: rgb(165, 42, 42);
+    --bg-body: rgb(255, 232, 206);
+
+    --color-titles: rgb(0, 0, 0);
+    --bg-input: rgb(255, 204, 146);
+    --border-input: rgb(255, 153, 85);
+    --color-button: rgb(255, 255, 255);
+    --bg-button: rgb(255, 150, 31);
+
+    --color-header: rgb(255, 255, 255);
+    --bg-header: rgb(201, 134, 79);
+
     --bg-main: rgb(0, 0, 0, 0);
-    --bg-footer: rgb(165, 42, 42);
+
+    --bg-formulario-compra: rgb(255, 218, 176);
+
+    --bg-footer: rgb(255, 191, 132);
 }
 
 h1, h2, h3{
     margin: 0px;
+    color: var(--color-titles);
+}
+
+input, select{
+    background-color: var(--bg-input);
+    border-radius: 6px;
+    border: var(--border-input) 2px solid;
+}
+
+button{
+    height: 30px;
+
+    background-color: var(--bg-button);
+    border-radius: 15px;
+    color: var(--color-button);
+    border: var(--border-input) 0px solid;
 }
 
 body{
     margin: 0px;
     background-color: var(--bg-body);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 header{
@@ -22,6 +55,7 @@ header{
     align-items: center;
     justify-content: space-evenly;
 
+    color: var(--color-header);
     background-color: var(--bg-header);
 }
 
@@ -40,6 +74,7 @@ main{
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 30px;
 
         > div{
             display: flex;
@@ -57,12 +92,28 @@ main{
             }
 
             .controlesVideo{
-                width: 100%;
+                width: fit;
                 height: 50px;
-                background-color: aliceblue;
+
+                background-color: rgb(255, 204, 145);
+
+                border-radius: 100px;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
             }
         }
     }
+}
+
+#formularioCompra{
+    width: 200px;
+    
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--bg-formulario-compra);
 }
 
 footer{
@@ -85,4 +136,35 @@ footer{
 
 #videoDestacado{
     border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(-20px);
+    transition: all 0.8s ease;
+}
+
+.fade {
+    opacity: 0.3;
+}
+
+.textoPromo {
+    transition: opacity 0.5s ease;
+    cursor: help;
 }
