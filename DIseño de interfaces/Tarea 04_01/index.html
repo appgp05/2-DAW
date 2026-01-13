@@ -20,15 +20,21 @@
                 <p id="descripcionImagen" style="display: none;">Wigetta Un viaje mágico</p>
             </div>
             <div>
-                <video id="videoDestacado" style="display: none;" controls>
+                <video id="videoDestacado" style="display: none;">
                     <source src="src/inaguración librería.mp4">
                 </video>
+                <div class="controlesVideo">
+                    <button id="botonReproducirPausar">Reproducir/Pausar</button>
+                    <label>Volumen:</label>
+                    <input type="range" id="barraVolumen" min="0" max="1" step="0.1" value="0.5">
+                    <button id="botonVolver">Volver</button>
+                </div>
                 <p id="descripciónVideo" style="display:none;">Esta es una descripción corta del video.</p>
             </div>
         </div>
     </main>
 
-    <form>
+    <form id="formularioCompra">
         <h2>Formulario de compra</h2>
 
         <label for="nombre">Nombre</label>
@@ -40,7 +46,7 @@
         </select>
 
         <label for="correoElectronico">Correo electrónico</label>
-        <input type="text" id="correoElectronico">
+        <input type="email" id="correoElectronico">
 
         <button type="button" id="buttonComprarLibro">Comprar ahora</button>
     </form>

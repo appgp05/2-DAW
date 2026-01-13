@@ -55,6 +55,12 @@ main{
             > video {
                 width: 400px;
             }
+
+            .controlesVideo{
+                width: 100%;
+                height: 50px;
+                background-color: aliceblue;
+            }
         }
     }
 }
