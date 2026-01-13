@@ -1,4 +1,4 @@
-addEventListener("load", () => {
+addEventListener("DOMContentLoaded", () => {
     document.getElementById("principal").addEventListener("mouseover", () => {
         document.getElementById("principal").src = "src/cpifp-los-enlaces-logo-mobile-2x.png"
     })
