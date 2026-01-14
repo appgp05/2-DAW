@@ -13,6 +13,7 @@
     --bg-main: rgb(0, 0, 0, 0);
 
     --bg-formulario-compra: rgb(255, 218, 176);
+    --border-formulario-compra: rgb(255, 162, 56);
 
     --bg-footer: rgb(255, 191, 132);
 }
@@ -61,7 +62,7 @@ header{
 
 main{
     width: 100%;
-    min-height: calc(100vh - 200px);
+    min-height: calc(80vh - 200px);
 
     display: flex;
     flex-direction: column;
@@ -76,7 +77,11 @@ main{
         justify-content: center;
         gap: 30px;
 
-        > div{
+        > div:nth-child(2){
+            width: 420px;
+        }
+
+        > div {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -84,15 +89,13 @@ main{
             > img {
                 width: 200px;
             }
-        }
-    
-        > div {
+
             > video {
-                width: 400px;
+                width: 420px;
             }
 
             .controlesVideo{
-                width: fit;
+                width: inherit;
                 height: 50px;
 
                 background-color: rgb(255, 204, 145);
@@ -103,15 +106,28 @@ main{
                 align-items: center;
                 justify-content: space-evenly;
             }
+
+            #descripciónVideo{
+                width: inherit;
+                text-wrap: wrap;
+                overflow-wrap: break-word;
+            }
         }
     }
 }
 
 #formularioCompra{
-    width: 200px;
+    width: 250px;
+    margin-bottom: 100px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+    border: 2px var(--border-formulario-compra) solid;
     
     display: flex;
     flex-direction: column;
+    gap: 10px;
 
     background-color: var(--bg-formulario-compra);
 }
@@ -127,31 +143,22 @@ footer{
     background-color: var(--bg-footer);
 }
 
+#promocionEspecial{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--bg-body);
+}
+
 /* ESTILOS REQUERIDOS */
 
-#imagenDestacada{
+.imagenDestacada{
     border-radius: 20px;
     box-shadow: 0px 0px 10px 2px;
 }
 
-#videoDestacado{
+.videoDestacado{
     border-radius: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .hidden {
     opacity: 0 !important;
@@ -167,4 +174,51 @@ footer{
 .textoPromo {
     transition: opacity 0.5s ease;
     cursor: help;
+}
+
+@media (max-width: 768px) {
+    main > div {
+        flex-direction: column;
+        padding: 20px;
+        gap: 40px;
+    }
+
+    main > div > div:nth-child(2) {
+        width: 90% !important;
+        max-width: 420px;
+    }
+
+    main > div > div > video {
+        width: 100% !important;
+        height: auto;
+    }
+
+    .controlesVideo {
+        width: 100% !important;
+        flex-wrap: wrap;
+        height: auto !important;
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    #formularioCompra {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    main > div > div > img {
+        width: 150px;
+    }
+    
+    .controlesVideo label, 
+    .controlesVideo input {
+        display: none;
+    }
 }

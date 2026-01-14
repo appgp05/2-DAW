@@ -1,5 +1,7 @@
 $().ready(() => {
     let imagenDestacada = $("#imagenDestacada")
+
+    imagenDestacada.addClass("imagenDestacada")
     
     imagenDestacada.on({
         mouseenter: function() {
@@ -24,6 +26,8 @@ $().ready(() => {
     
     let videoDestacado = $("#videoDestacado")
     
+    videoDestacado.addClass("videoDestacado")
+
     videoDestacado.on("click", function() {
         let descripcion = $("#descripciónVideo")
         
@@ -120,19 +124,19 @@ function comprarLibro(){
     let camposInvalidos = []
 
     if (nombre.length < 5){
-        camposInvalidos.push("Debe introducir un nombre con al menos 5 caracteres")
+        camposInvalidos.push(" - Debe introducir un nombre con al menos 5 caracteres")
     }
 
     if(libro === ""){
-        camposInvalidos.push("Debe introducir un libro")
+        camposInvalidos.push(" - Debe introducir un libro")
     }
 
     if(!/([a-zA-Z]+)@([a-zA-Z]+)/.test(correoElectronico)) {
-        camposInvalidos.push("Debe introducir un correo válido con el formato ejemplo@ejemplo")
+        camposInvalidos.push(" - Debe introducir un correo válido con el formato ejemplo@ejemplo")
     }
 
     if(camposInvalidos.length > 0){
-        let alerta = "Por favor, completa todos los campos antes de continuar. Errores en el formulario:"
+        let alerta = "Por favor, completa todos los campos antes de continuar.\n\nErrores en el formulario:"
         
         for(let campoInvalido of camposInvalidos){
             alerta += "\n"+campoInvalido
@@ -145,7 +149,7 @@ function comprarLibro(){
     let aceptarCompra = confirm("¿Desea realizar la compra del libro " + libro + "?")
 
     if(aceptarCompra){
-        alert("Muchas gracias por confiar en nosotros " + nombre + ". La compra se ha realizado de forma correcta. Libro comprado: "+libro+". Se le ha enviado la factura correspondiente al correo "+correoElectronico)
+        alert("Muchas gracias por confiar en nosotros " + nombre + ".\n\nLa compra se ha realizado de forma correcta.\n - Libro comprado: "+libro+".\n\nSe le ha enviado la factura correspondiente al correo "+correoElectronico)
         $("#formularioCompra").toggleClass("hidden");
     } else {
         alert("Compra cancelada")
