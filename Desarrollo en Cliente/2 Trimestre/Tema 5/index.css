@@ -16,3 +16,38 @@ div {
         flex-shrink: 0;
     }
 }
+
+#visabuelo2{
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(81, 255, 0);
+}
+
+#abuelo2, #abuelo3{
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
+
+#padre2, #padre3{
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: tomato;
+}
+
+#hijo2, #hijo3{
+    width: 25px;
+    height: 25px;
+}
