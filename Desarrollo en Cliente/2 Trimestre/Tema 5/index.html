@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script src="index.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <!-- FORMAS DE DEFINIR LOS LISTENERS DE LOS EVENTOS -->
     <h3>FORMAS DE DEFINIR LOS LISTENERS DE LOS EVENTOS</h3>
@@ -22,7 +24,7 @@
         <div>
         </div>
     </div>
-    
+
     <h3>MouseEnter</h3>
     <div onmouseenter="console.log('enter')">
         <div>
@@ -31,14 +33,13 @@
 
     <!-- PRUEBAS CLASE -->
 
-    <div style="width: 200px; height: 100px; background-color: red;" 
-        id="div1" onclick="alert('click on div1');"> 
-        <div style="width: 150px; height: 80px; background: green; margin: 10px;" 
-            id="div2" onclick="alert('click on div2');"> 
-                <div style="width: 100px; height: 60px; background: blue; margin: 10px;" 
-                id="div3" onclick="alert('click on div3'); return true;"> 
-            </div> 
-        </div> 
+    <div style="width: 200px; height: 100px; background-color: red;" id="div1" onclick="alert('click on div1');">
+        <div style="width: 150px; height: 80px; background: green; margin: 10px;" id="div2"
+            onclick="alert('click on div2');">
+            <div style="width: 100px; height: 60px; background: blue; margin: 10px;" id="div3"
+                onclick="alert('click on div3'); return true;">
+            </div>
+        </div>
     </div>
 
     <div id="padre">
@@ -60,5 +61,104 @@
             <button id="hijo3">Hijo</button>
         </div>
     </div>
+
+    <!-- FORMULARIOS -->
+
+    <body>
+        <form id="form1">
+            <input type="text" id="nombre" onChange="mostrar();">
+        </form>
+    </body>
+    <script type="text/javascript">
+        console.log(document.forms["form1"]);
+        console.log(document.getElementById("form1"));
+        console.log(document.forms["form1"].elements);
+        console.log(document.getElementById("form1").elements);
+
+        function mostrar() {
+            let f = document.forms["form1"];
+            let nom = f.elements["nombre"].value;
+            console.log(document.forms);
+        }
+    </script>
+
+    <form name="f3">
+        <select id="sel1" name="sel1">
+            <option value="dom">Dom</option>
+            <option value="objetos">Objetos</option>
+            <option value="eventos">Eventos</option>
+            <option value="formularios">Formularios</option>
+        </select>
+    </form>
+    <script type="text/javascript">
+        window.onload = function () {
+            asignarSelect();
+        }
+        function asignarSelect() {
+            let s = document.getElementById("sel1"); //el evento se asigna sobre el <select>.
+            s.addEventListener("change", mostrarSelect, false);
+        }
+        function mostrarSelect(event) {
+            console.log(this, event)
+            i = this.selectedIndex; console.log("Indice seleccionado: " + i);
+            v = this[i].value; console.log("El value seleccionado es: " + v);
+            h = this[i].innerHTML; console.log("El texto seleccionado es: " + h)
+        }
+    </script>
+
+    <form name="f2" id="f2">
+        <label><input type="checkbox" value="coche" name="coche" id="coche">coche</label>
+        <label><input type="checkbox" value="moto" name="moto" id="moto">moto</label>
+        <label><input type="checkbox" value="camion" name="camion" id="camion">camion</label>
+        <label><input type="checkbox" value="autobus" name="autobus" id="autobus">autobus</label>
+    </form>
+
+    <script>
+        asignarCheck()
+
+        function asignarCheck() {
+            //Se capturan todos los checkbox
+            let f = document.getElementById("f2");
+            let ch = f.getElementsByTagName("input");
+            for (var i = 0; i < ch.length; i++) {
+                if (ch[i].type == "checkbox") {
+                    ch[i].addEventListener("change", mostrarCheck, false);
+                }
+            }
+        }
+        function mostrarCheck(ev) {
+            //la función es genérica ya que usamos la captura del evento para el mensaje.
+            if (ev.target.checked) {
+                console.log(ev.target.name + " marcado");
+            }
+            else {
+                console.log(ev.target.name + " desmarcado");
+            }
+        }
+    </script>
+
+    <form name="f1">
+        <input type="radio" name="r1" id="r1_1" value="si">SI
+        <input type="radio" name="r1" id="r1_2" value="no">NO
+        <input type="radio" name="r1" id="r1_3" value="a veces">A VECES
+    </form>
+    <script>
+        window.onload = function () {
+            asignarRadio()
+        };
+        function asignarRadio() {
+            //seleccionamos los elementos radio
+            let r = document.getElementsByName("r1");
+            //les asignamos un Listener, hay que hacerlo a todos.
+            for (let i = 0; i < r.length; i++) {
+                r[i].addEventListener("change", mostrarRadio, false);
+            }
+        }
+        function mostrarRadio() {
+            console.log(this.value);
+        }
+    </script>
 </body>
+</body>
+
 </html>

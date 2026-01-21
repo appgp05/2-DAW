@@ -39,7 +39,7 @@ addEventListener("DOMContentLoaded", () => {
         console.log("ABUELO")
     }, true)
     
-    padre.addEventListener("click", (evento) => {
+    padre.addEventListener("mouseover", (evento) => {
         // evento.stopPropagation()
         console.log("PADRE")
     }, true)
