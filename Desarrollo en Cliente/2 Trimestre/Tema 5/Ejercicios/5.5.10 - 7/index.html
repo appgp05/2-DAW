@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" id="usuario" placeholder="Nombre de usuario">
+        <input type="text" id="nif" placeholder="NIF">
+        <input type="text" id="correo" placeholder="Correo electrónico">
+        <input type="text" id="pais" placeholder="País de residencia">
+        <button id="button"></button>
+    </form>
+
+    <script>
+        addEventListener("DOMContentLoaded", () => {
+            
+        })
+        let form = document.forms["form"]
+        let usuario = form.elements["usuario"].value
+        let nif = form.elements["nif"].value
+        let correo = form.elements["correo"].value
+        let pais = form.elements["pais"].value
+
+        let vlaido = true
+
+        if(pais != "España" || pais != "Italia"){
+            valido = false
+        }
+
+        console.log(/hotmail.com | yahoo.es^/.test(correo))
+
+        if(/hotmail.com^/.test(correo)){
+
+        }
+    </script>
+</body>
+</html>

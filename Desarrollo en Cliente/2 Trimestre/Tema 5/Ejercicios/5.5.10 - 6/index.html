@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" placeholder="Apellido">
+        <label for="titulacion">Titulacion:</label>
+        <select id="titulacion">
+            <option value="" selected hidden>Seleccione una titulacion</option>
+            <option value="Grado DAW">Grado Superior DAW</option>
+            <option value="Grado DAM">Grado Superior DAM</option>
+            <option value="ingenieria">Carrera ingeniería informática</option>
+        </select>
+        <label for="curso">Curso</label>
+        <select id="curso">
+            <option value="" selected hidden>Seleccione un CURSO</option>
+            <option value="1">1º</option>
+            <option value="2">2º</option>
+            <option value="3">3º</option>
+        </select>
+        <label for="ano">Año:</label>
+        <input type="number" id="ano" placeholder="Año">
+        <button id="button">Dar de alta</button>
+    </form>
+
+    <script>
+        addEventListener("DOMContentLoaded", () => {
+            let button = document.getElementById("button")
+            button.addEventListener("click", validar)
+        })
+
+        function validar(event){
+            event.preventDefault()
+
+            let form = document.forms["form"]
+            let nombre = form.elements["nombre"].value
+            let apellido = form.elements["apellido"].value
+            let titulacion = form.elements["titulacion"].value
+            let curso = form.elements["curso"].value
+            let ano = form.elements["ano"].value
+
+            let valido = true
+            
+            for(element of form.elements){
+                if(element.tagName != "BUTTON"){
+                    if(element.value == ""){
+                        console.log("Debe rellenar el campo " + element.id)
+                        valido = false
+                    }
+                }
+            }
+
+            if(titulacion.search("Grado") != -1 && Number(curso) > 2){
+                console.log("Los grados no pueden tener másde un curso")
+                vlaido = false
+            }
+            
+            if(ano.length > 4 || ano > new Date().getFullYear()){
+                console.log("El año no puede tener 5 digitos ni ser mayor al actual")
+                valido = false
+            }
+
+            if(valido){
+                console.log("Usuario dado de alta")
+            }
+
+            console.log("#".repeat(40))
+        }
+    </script>
+</body>
+
+</html>
