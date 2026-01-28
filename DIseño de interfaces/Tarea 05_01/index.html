@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="imagenes_exportadas/logo.png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+    <script>
+        addEventListener("DOMContentLoaded", () => {
+            document.getElementById("iconoDeCarga").style.display = "flex"
+            document.getElementById("contenidoPagina").style.display = "none"
+
+            setTimeout(() => {
+                document.getElementById("iconoDeCarga").style.display = "none"
+                document.getElementById("contenidoPagina").style.display = "initial"
+            }, 2500)
+        })
+    </script>
+</head>
+
+<body>
+    <!--
+
+    - Ejercicio 1
+    El usuario al entrar a la web quiere poder ver todoslos cafés ofrecidos, información sobre cada uno, los detalles de contacto y tiendas físicas disponibles
+
+    - Ejercicio 2
+        1 - Al entrar a la página no se observan directamente los productos, y no se indica de manera alguna que en la página de inicio se pueden ver, por lo que los usuarios pueden llegar a entrar y no darse cuenta de que deben deslizarlapágina hacia abajo para poder viasulizar los cafés
+        2 - La interfaz no dispone de sistema de busqueda o filtro alguno para los cafés,lo que dificulta mucho al usuario encontrar los cafésdeseados,voliéndolo una tarea tediosa e incluso pudiendo provocar que abandonen la página
+        3 - El usuario a la hora de ver los cafés no puede observar el precio, uno de los datos másimportante acerca delcafé, y obligar al usuario a meterse a los detalles del café para ver su precio puede llegar a resultar confuso y redioso
+        4 - Las cards delos cafés tienen un hover que las hace crecer,pero esto puede resultar confuso para los usuarios con pocos conocimeintos informáticos, llegando a poder pensar que al clickar en ellas pasará algo,lo cual no es así
+        5 - El header estádemasiado sobrecargado y puede llevar a provocar una experiencia poco intuitiva, poseyendo secciones que se pueden agrupar en una sola (como cafés, cafeteras y accesorios, que se podrían agrupar en Productos) y con secciones como sucripción que no dan a entender del todo qué va a encontrar el usuario en ese apartado
+    -->
+
+    <div id="iconoDeCarga">
+        <img src='animaciones/taza_cafe.gif'></img>
+    </div>
+    <div id="contenidoPagina">
+        <header>
+            <img src="imagenes_exportadas/logo.png" alt="logo" id="logo">
+            <div>
+                <a href="#">Inicio</a>
+                <a href="#">Cafés</a>
+                <a href="#">Cafeteras</a>
+                <a href="#">Accesorios</a>
+                <a href="#">Suscripcion</a>
+                <a href="#">Contacto</a>
+            </div>
+            <div>
+                <img src="imagenes_exportadas/shopping_cart.svg" alt="shoppingcart">
+                <img src="imagenes_exportadas/account.svg" alt="cuenta">
+            </div>
+        </header>
+
+        <!-- <img src="imagenes_exportadas/banner.jpg" id="banner"></img> -->
+        <section id="banner"></section>
+
+        <h1>Nuestros productos</h1>
+        <section id="productos">
+            <div id="producto">
+                <img src="imagenes_exportadas/producto_9.webp" alt="">
+                <div>
+                    <p>Nombre</p>
+                    <p>Descubre el sabor auténtico del café premium. Cada grano cuidadosamente seleccionado para
+                        brindarte una experiencia única. Perfecto para disfrutar en cualquier momento del día. ¡Haz de
+                        cada taza un momento especial!</p>
+                    <button>Ver<img src="imagenes_exportadas/eye.svg" alt="ojo"></button>
+                </div>
+            </div>
+            <div id="producto">
+                <img src="imagenes_exportadas/producto_10.webp" alt="">
+                <div>
+                    <p>Nombre</p>
+                    <p>Nuestro café es más que una bebida, es una experiencia. Con granos de la mejor calidad y un
+                        tueste perfecto, te ofrecemos un sabor suave y envolvente que te acompañará en cada sorbo.
+                        ¡Pruébalo ahora!</p>
+                    <button>Ver<img src="imagenes_exportadas/eye.svg" alt="ojo"></button>
+                </div>
+            </div>
+            <div id="producto">
+                <img src="imagenes_exportadas/producto_11.webp" alt="">
+                <div>
+                    <p>Nombre</p>
+                    <p>El café que estabas buscando: sabor intenso, aroma inconfundible y la frescura que tu día
+                        necesita. Con nuestro café, cada taza es una invitación a disfrutar de la vida en su mejor
+                        versión. ¡Hazlo tuyo!</p>
+                    <button>Ver<img src="imagenes_exportadas/eye.svg" alt="ojo"></button>
+                </div>
+            </div>
+            <div id="producto">
+                <img src="imagenes_exportadas/producto_12.webp" alt="">
+                <div>
+                    <p>Nombre</p>
+                    <p>Transforma tu día con el café que te despierta los sentidos. Su sabor balanceado y su aroma
+                        irresistible harán de cada taza una experiencia única. Perfecto para esos momentos donde
+                        necesitas más que solo café.</p>
+                    <button>Ver<img src="imagenes_exportadas/eye.svg" alt="ojo"></button>
+                </div>
+            </div>
+            <div id="producto">
+                <img src="imagenes_exportadas/producto_13.webp" alt="">
+                <div>
+                    <p>Nombre</p>
+                    <p>Elige lo mejor para tus mañanas. Con granos seleccionados a mano y un proceso de tueste
+                        artesanal, nuestro café es el aliado perfecto para empezar el día con energía. ¡Haz de tu café
+                        una tradición!</p>
+                    <button>Ver<img src="imagenes_exportadas/eye.svg" alt="ojo"></button>
+                </div>
+            </div>
+            <div id="producto">
+                <img src="imagenes_exportadas/producto_14.webp" alt="">
+                <div>
+                    <p>Nombre</p>
+                    <p>Si lo tuyo es el buen café, este es el indicado para ti. Disfruta de una mezcla excepcional,
+                        suave y de sabor pleno que te hará querer repetir. Ideal para los que buscan calidad en cada
+                        taza.</p>
+                    <button>Ver<img src="imagenes_exportadas/eye.svg" alt="ojo"></button>
+                </div>
+            </div>
+            <div id="producto">
+                <img src="imagenes_exportadas/producto_15.webp" alt="">
+                <div>
+                    <p>Nombre</p>
+                    <p>Tu café, tu momento. Dale un toque único a tu rutina con nuestro café gourmet, una mezcla
+                        perfecta de granos seleccionados que te brindan el equilibrio ideal entre suavidad y cuerpo. ¡No
+                        te quedes sin el tuyo!</p>
+                    <button>Ver<img src="imagenes_exportadas/eye.svg" alt="ojo"></button>
+                </div>
+            </div>
+            <div id="producto">
+                <img src="imagenes_exportadas/producto_16.webp" alt="">
+                <div>
+                    <p>Nombre</p>
+                    <p>Siente la diferencia con cada taza. Nuestro café está hecho con granos de origen seleccionado y
+                        tostado a la perfección para ofrecerte un sabor único y delicioso. Ideal para aquellos que
+                        buscan calidad y un toque especial en su día.</p>
+                    <button>Ver<img src="imagenes_exportadas/eye.svg" alt="ojo"></button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <img src="imagenes_exportadas/logo-blanco.png" alt="">
+            <div>
+                <p>Copyright ©Los enlaces brew. All rights reserved 2025</p>
+                <div>
+                    <a href="#">Política de cookies</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Condiciones generales de uso</a>
+                    <a href="#">Aviso legal</a>
+                    <a href="#">Bases legales</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
