@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="formAlta" action="alta.php">
+        <input type="text" id="nombre" placeholder="nombre">
+        <input type="text" id="apellido" placeholder="apellido">
+        <input type="text" id="apellido" placeholder="apellido">
+        <input type="text" id="dni" placeholder="dni">
+        <input type="text" id="email" placeholder="email">
+        <input type="password" id="contraseña" placeholder="contraseña">
+        <button id="buttonAlta"></button>
+    </form>
+
+    <form id="formPasarela" action="pasarelaPago.php">
+        <input type="text" id="digitos" placeholder="digitos">
+        <input type="text" id="cvv" placeholder="cvv">
+        <input type="password" id="clave" placeholder="clave">
+        <button id="buttonPasarela"></button>
+    </form>
+
+    <script>
+        let formAlta = document.getElementById("formAlta")
+        let formPasarela = document.getElementById("formPasarela")
+
+        let buttonAlta = document.getElementById("buttonAlta")
+        let buttonpasarela = document.getElementById("buttonPasarela")
+
+        buttonAlta.addEventListener("click", () => {
+            let valido = true
+
+            for (element of formAlta.elements) {
+                if (element.tagName != "BUTTON") {
+                    if (element.value == "") {
+                        console.log("Debe rellenar el campo " + element.id)
+                        valido = false
+                    }
+                }
+            }
+
+            let contraseña = document.getElementById("contraseña").value
+
+            if (/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/.test(contraseña)) {
+                valido = false
+            }
+
+            let email = document.getElementById("email")
+
+            if (/hotmail\.com|yahoo\.es^/.test(email)) { }
+
+            valor = document.getElementById("dni").value;
+            var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+            if (!(/^\d{8}[A-Z]$/.test(valor))) {
+                valido = false;
+            }
+
+            if (valor.charAt(8) != letras[(valor.substring(0, 8)) % 23]) {
+                valido = false;
+            }
+
+            console.log(valido)
+        })
+
+        buttonPasarela.addEventListener("click", () => {
+            let valido = true
+
+            let clave = document.getElementById("clave").value
+
+            if (clave.lengh != 4) {
+                valido = false
+            }
+
+            for (element of formPasarela.elements) {
+                if (element.tagName != "BUTTON") {
+                    if (element.value == "") {
+                        console.log("Debe rellenar el campo " + element.id)
+                        valido = false
+                    }
+                }
+            }
+            console.log(valido)
+        })
+    </script>
+</body>
+
+</html>
