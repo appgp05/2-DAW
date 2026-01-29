@@ -32,10 +32,11 @@
 <body>
     <!--
     - Ejercicio 1
-        El usuario al entrar a la web quiere poder ver todos los cafés ofrecidos, información sobre cada uno, los detalles de contacto y tiendas físicas
-        disponibles. Para ello lo más recomendable es una sección de cafés en la que cada producto disponga de una card simple e intuitiva que muestre
-        la información más improtante acerca del producto, es decir, nombre, pequeña descripción, precio y un botón de detalles, y además que el usuario
-        pueda consultar tanto la página de contacto como las tiendas físicas disponibles a través del footer y el header
+        El usuario al entrar a la web quiere poder ver todos los cafés ofrecidos, información sobre cada uno, los detalles de contacto, sobretodo el 
+        teléfono puesto que son personas mayores y prefieren llamar, y tiendas físicas disponibles. Para ello lo más recomendable es una sección de cafés
+        en la que cada producto disponga de una card simple e intuitiva que muestre la información más importante acerca del producto, es decir, nombre,
+        pequeña descripción, precio y un botón de detalles, y además que el usuario pueda consultar tanto la página de contacto como las tiendas físicas
+        disponibles a través del footer y el header, y el teléfono de contacto que esté presente en el footer para ser accesible e intuitivo y en la página de contacto
 
     - Ejercicio 2
         1 - Al entrar a la página no se observan directamente los productos, y no se indica de manera alguna que en la página de inicio se pueden ver,
@@ -55,6 +56,9 @@
         del todo qué va a encontrar el usuario en ese apartado, además de encajar mejor como una sección del apartado de cuenta, siendo así una
         navegación más intuitiva, de tal forma que desde el header se debería mantener la seccion Mi cuenta, con el icono, y desde ahí acceder a suscripciones
 
+        6 - El número de tléfono de contacto no es visible a primera vista en ningún apartado de la página principal, lo que puede confundir al usuario
+        y marearlo a la hora de encontrar esta información
+
     - Ejercicio 3
         Las modificaciones realizadas están comentadas a lo largo del código, tanto en el index.html como en el style.css, y además para ver las diferencias
         entre el original y el modificado hay un botón en el header para navegar entre ambos
@@ -70,6 +74,7 @@
                 - Se ha reducido las secciones de Cafes, Cafeteras y Accesorios a Productos
                 - Se ha eliminado el botón de acceso al apartado de suscripción, ahora para acceder a suscripción se debe hacer desde el apartado de
                   Mi cuenta, para que la navegación sea de esta forma más simple e intuitiva
+            6 - Añadido al footer de las secciones de contacto, número de teléfono y de tiendas físicas para facilitar al usuario el acceso a estos apartados
 
     - Ejercicio 4
         Explicación de los cambios y por qué mejoran la usabilidad de la página web:
@@ -88,7 +93,12 @@
                     Mejora UX: Reduce la intensidad del efecto de crecimiento al pasar el ratón. Con lo que evita la confusión del usuario puesto que podría
                     pensar que la tarjeta es un botón clicable cuando no lo es, alineando así el diseño con la funcionalidad.
             5 - Cambio en el header realizando las siguientes modificaciones:
-                    Mejora UX: Se agrupan las secciones redundantes (Cafés, Cafeteras, etc., en Productos) y se mueven las suscripciones a Mi cuenta. Con lo que se reduce la complejidad del menú, haciendo la navegación más limpia e intuitiva.
+                    Mejora UX: Se agrupan las secciones redundantes (Cafés, Cafeteras, etc., en Productos) y se mueven las suscripciones a Mi cuenta.
+                    Con lo que se reduce la complejidad del menú, haciendo la navegación más limpia e intuitiva.
+            6 - Añadido al footer de las secciones de contacto, número de teléfono y de tiendas físicas para facilitar al usuario el acceso a estos apartados:
+                    Mejora UX: Proporciona un acceso directo y permanente a la información más crítica para este perfil. Con lo que al destacar de esta forma
+                    el número de teléfono y las tiendas físicas, se ofrece seguridad y una vía de comunicación tradicional (no digital) que este grupo de edad
+                    prefiere y domina. Lo que reduce la ansiedad de navegación y genera confianza en el servicio.
     -->
 
     <!--
@@ -267,6 +277,10 @@
                     <a href="#">Condiciones generales de uso</a>
                     <a href="#">Aviso legal</a>
                     <a href="#">Bases legales</a>
+                    <!-- Añadido al footer de las secciones de contacto, número de teléfono y de tiendas físicas para facilitar al usuario el acceso a estos apartados -->
+                    <a href="#">Tel. +34 916 77 77 77</a>
+                    <a href="#">Contacto</a>
+                    <a href="#">Tiendas físicas</a>
                 </div>
             </div>
         </footer>
