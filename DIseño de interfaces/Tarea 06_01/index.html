@@ -18,20 +18,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
     <script>
         addEventListener("DOMContentLoaded", () => {
-            // document.getElementById("iconoDeCarga").style.display = "flex"
-            // document.getElementById("contenidoPagina").style.display = "none"
+            document.getElementById("iconoDeCarga").style.display = "flex"
+            document.getElementById("contenidoPagina").style.display = "none"
 
-            // setTimeout(() => {
-            //     document.getElementById("iconoDeCarga").style.display = "none"
-            //     document.getElementById("contenidoPagina").style.display = "initial"
-            // }, 2500)
+            setTimeout(() => {
+                document.getElementById("iconoDeCarga").style.display = "none"
+                document.getElementById("contenidoPagina").style.display = "initial"
+            }, 2500)
         })
     </script>
 </head>
 
 <body>
     <!--
-
     - Ejercicio 1
         El usuario al entrar a la web quiere poder ver todos los cafés ofrecidos, información sobre cada uno, los detalles de contacto y tiendas físicas
         disponibles. Para ello lo más recomendable es una sección de cafés en la que cada producto disponga de una card simple e intuitiva que muestre
@@ -55,6 +54,41 @@
         en una sola (como cafés, cafeteras y accesorios, que se podrían agrupar en Productos) y con secciones como sucripción que no dan a entender
         del todo qué va a encontrar el usuario en ese apartado, además de encajar mejor como una sección del apartado de cuenta, siendo así una
         navegación más intuitiva, de tal forma que desde el header se debería mantener la seccion Mi cuenta, con el icono, y desde ahí acceder a suscripciones
+
+    - Ejercicio 3
+        Las modificaciones realizadas están comentadas a lo largo del código, tanto en el index.html como en el style.css, y además para ver las diferencias
+        entre el original y el modificado hay un botón en el header para navegar entre ambos
+
+        Las modificaciones realizadas son las sigueintes:
+            1 - Añadido un indicador para que el usuario sepa que debe scrollear para ver los cafés al entrar a la página
+            2 - Añadido de una sección para buscar productos tanto por nombre como por descripción para facilitar al usuario encontrar el producto deseado
+            3 - Añadido a todas las cards el apartado de precio para que el usuario pueda conocer este sin tener que meterse a los detalles
+                del producto de uno en uno
+            4 - Cambio del escalado del card cuando tiene hover de 1.05 a 1.01 para suavizar este efecto
+                y que sea más dificil que los usuarios lo confundan con una funcionalidad como si fuese un botón
+            5 - Cambio en el header realizando las siguientes modificaciones:
+                - Se ha reducido las secciones de Cafes, Cafeteras y Accesorios a Productos
+                - Se ha eliminado el botón de acceso al apartado de suscripción, ahora para acceder a suscripción se debe hacer desde el apartado de
+                  Mi cuenta, para que la navegación sea de esta forma más simple e intuitiva
+
+    - Ejercicio 4
+        Explicación de los cambios y por qué mejoran la usabilidad de la página web:
+            1 - Añadido un indicador para que el usuario sepa que debe scrollear para ver los cafés al entrar a la página:
+                    Mejora UX: Añade una pista visual para guiar al usuario a deslizar la página hacia abajo. Con lo que soluciona el problema de
+                    que los usuarios no vieran los productos si no scrolleaban puesto que el banner ocupaba gran parte de la pantalla.
+            2 - Añadido de una sección para buscar productos tanto por nombre como por descripción para facilitar al usuario encontrar el producto deseado:
+                    Mejora UX: Permite a los usuarios buscar cafés por nombre o descripción. Con lo que reduce el tiempo y la frustración al encontrar
+                    productos específicos, facilitando la navegación por el catálogo.
+            3 - Añadido a todas las cards el apartado de precio para que el usuario pueda conocer este sin tener que meterse a los detalles
+                del producto de uno en uno:
+                    Mejora UX: Muestra el precio directamente en la vista principal de la tarjeta. Con lo que elimina clicks innecesarios y permite una
+                    comparación rápida y eficiente entre productos.
+            4 - Cambio del escalado del card cuando tiene hover de 1.05 a 1.01 para suavizar este efecto
+                y que sea más dificil que los usuarios lo confundan con una funcionalidad como si fuese un botón:
+                    Mejora UX: Reduce la intensidad del efecto de crecimiento al pasar el ratón. Con lo que evita la confusión del usuario puesto que podría
+                    pensar que la tarjeta es un botón clicable cuando no lo es, alineando así el diseño con la funcionalidad.
+            5 - Cambio en el header realizando las siguientes modificaciones:
+                    Mejora UX: Se agrupan las secciones redundantes (Cafés, Cafeteras, etc., en Productos) y se mueven las suscripciones a Mi cuenta. Con lo que se reduce la complejidad del menú, haciendo la navegación más limpia e intuitiva.
     -->
 
     <!--
@@ -68,9 +102,9 @@
         transition: 0.4s;
     } -->
 
-    <!-- <div id="iconoDeCarga">
+    <div id="iconoDeCarga">
         <img src='animaciones/taza_cafe.gif'></img>
-    </div> -->
+    </div>
     <div id="contenidoPagina">
         <header>
             <img src="imagenes_exportadas/logo.png" alt="logo" id="logo">
