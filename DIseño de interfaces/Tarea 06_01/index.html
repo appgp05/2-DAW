@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="imagenes_exportadas/logo.png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+    <script>
+        addEventListener("DOMContentLoaded", () => {
+            // document.getElementById("iconoDeCarga").style.display = "flex"
+            // document.getElementById("contenidoPagina").style.display = "none"
+
+            // setTimeout(() => {
+            //     document.getElementById("iconoDeCarga").style.display = "none"
+            //     document.getElementById("contenidoPagina").style.display = "initial"
+            // }, 2500)
+        })
+    </script>
+</head>
+
+<body>
+    <!--
+
+    - Ejercicio 1
+        El usuario al entrar a la web quiere poder ver todos los cafés ofrecidos, información sobre cada uno, los detalles de contacto y tiendas físicas
+        disponibles. Para ello lo más recomendable es una sección de cafés en la que cada producto disponga de una card simple e intuitiva que muestre
+        la información más improtante acerca del producto, es decir, nombre, pequeña descripción, precio y un botón de detalles, y además que el usuario
+        pueda consultar tanto la página de contacto como las tiendas físicas disponibles a través del footer y el header
+
+    - Ejercicio 2
+        1 - Al entrar a la página no se observan directamente los productos, y no se indica de manera alguna que en la página de inicio se pueden ver,
+        por lo que los usuarios pueden llegar a entrar y no darse cuenta de que deben deslizar la página hacia abajo para poder viasulizar los cafés
+        
+        2 - La interfaz no dispone de sistema de busqueda o filtro alguno para los cafés, lo que dificulta mucho al usuario encontrar los cafés deseados,
+        voliéndolo una tarea tediosa e incluso pudiendo provocar que abandonen la página
+        
+        3 - El usuario a la hora de ver los cafés no puede observar el precio, uno de los datos más importante acerca del café, y obligar al usuario a
+        meterse a los detalles del café para ver su precio puede llegar a resultar confuso y redioso
+        
+        4 - Las cards de los cafés tienen un hover que las hace crecer,pero esto puede resultar confuso para los usuarios con pocos conocimientos
+        informáticos, llegando a poder pensar que al clickar en ellas pasará algo,lo cual no es así
+        
+        5 - El header está demasiado sobrecargado y puede llevar a provocar una experiencia poco intuitiva, poseyendo secciones que se pueden agrupar
+        en una sola (como cafés, cafeteras y accesorios, que se podrían agrupar en Productos) y con secciones como sucripción que no dan a entender
+        del todo qué va a encontrar el usuario en ese apartado, además de encajar mejor como una sección del apartado de cuenta, siendo así una
+        navegación más intuitiva, de tal forma que desde el header se debería mantener la seccion Mi cuenta, con el icono, y desde ahí acceder a suscripciones
+    -->
+
+    <!--
+        En el css he aplicado esta modificación
+
+        > #producto:hover {
+        /* Cambio del escalado del card caundo tiene hover de 1.05 a 1.01 para suavizar este efecto
+        y que sea más dificil que los usuarios lo confundan con una funcionalidad como si fuese un botón */
+        /* scale: 1.05; */
+        scale: 1.01;
+        transition: 0.4s;
+    } -->
+
+    <!-- <div id="iconoDeCarga">
+        <img src='animaciones/taza_cafe.gif'></img>
+    </div> -->
+    <div id="contenidoPagina">
+        <header>
+            <img src="imagenes_exportadas/logo.png" alt="logo" id="logo">
+            <div>
+                <a href="#">Inicio</a>
+                <!-- Se ha reducido las secciones de Cafes, Cafeteras y Accesorios a Productos -->
+                <a href="#">Productos</a>
+                <a href="#">Contacto</a>
+                <!-- Se ha eliminado el botón de acceso al apartado de suscripción, ahora para acceder a suscripción se debe hacer desde el apartado de
+                 Mi cuenta, para que la navegación sea de esta forma más simple e intuitiva -->
+
+                <!-- El ancla de abajo sirve para navegar a la página antes de aplciar los cambios -->
+                <a href="indexAntiguo.html" id="aAlternarNuevaVieja">Página sin arregar</a>
+            </div>
+            <div>
+                <img src="imagenes_exportadas/shopping_cart.svg" alt="shoppingcart">
+                <img src="imagenes_exportadas/account.svg" alt="cuenta">
+            </div>
+        </header>
+
+        <section id="banner">
+            <!-- Añadido de un indicador para que el usuario sepa que debe scrollear para ver los cafés -->
+            <div class="scroll-indicator">
+                <span>Explorar cafés</span>
+                <div class="arrow"></div>
+            </div>
+        </section>
+
+        <h1>Nuestros productos</h1>
+        <!-- Añadido de una sección para buscar productos tanto por nombre como por descripción para facilitar al usuario encontrar el producto deseado -->
+        <div id="contenedorBuscador">
+            <input type="text" id="buscador" placeholder="Buscar por nombre o descripción...">
+        </div>
+        <script>
+            document.getElementById("buscador").addEventListener("keyup", function () {
+                // Convertimos la búsqueda a minúsculas para que no importe si escriben con Mayus
+                let filtro = this.value.toLowerCase();
+                let cards = document.getElementsByClassName("producto");
+
+                Array.from(cards).forEach(card => {
+                    // Buscamos dentro del nombre y la descripción de cada card
+                    let textoCard = card.innerText.toLowerCase();
+
+                    if (textoCard.includes(filtro)) {
+                        card.style.display = "flex"; // O "block" según tu CSS original
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            });
+        </script>
+        <section id="productos">
+            <div class="producto">
+                <img src="imagenes_exportadas/producto_9.webp" alt="">
+                <div>
+                    <p>Nombre</p>
+                    <p>Descubre el sabor auténtico del café premium. Cada grano cuidadosamente seleccionado para
+                        brindarte una experiencia única. Perfecto para disfrutar en cualquier momento del día. ¡Haz de
+                        cada taza un momento especial!</p>
+                    <!-- Se han añadido a todas las cards el apartado de precio apra que el usuario pueda conocer este sin tener que meterse a los detalles
+                     del producto de uno en uno -->
+                    <div class="separator"></div>
+                    <p>10,29€/Kg</p>
+                    <button>Ver<img src="imagenes_exportadas/eye.svg" alt="ojo"></button>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="imagenes_exportadas/producto_10.webp" alt="">
+                <div>
+                    <p>Nombre</p>
+                    <p>Nuestro café es más que una bebida, es una experiencia. Con granos de la mejor calidad y un
+                        tueste perfecto, te ofrecemos un sabor suave y envolvente que te acompañará en cada sorbo.
+                        ¡Pruébalo ahora!</p>
+                    <div class="separator"></div>
+                    <p>9,69€/Kg</p>
+                    <button>Ver<img src="imagenes_exportadas/eye.svg" alt="ojo"></button>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="imagenes_exportadas/producto_11.webp" alt="">
+                <div>
+                    <p>Nombre</p>
+                    <p>El café que estabas buscando: sabor intenso, aroma inconfundible y la frescura que tu día
+                        necesita. Con nuestro café, cada taza es una invitación a disfrutar de la vida en su mejor
+                        versión. ¡Hazlo tuyo!</p>
+                    <div class="separator"></div>
+                    <p>11,15€/Kg</p>
+                    <button>Ver<img src="imagenes_exportadas/eye.svg" alt="ojo"></button>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="imagenes_exportadas/producto_12.webp" alt="">
+                <div>
+                    <p>Nombre</p>
+                    <p>Transforma tu día con el café que te despierta los sentidos. Su sabor balanceado y su aroma
+                        irresistible harán de cada taza una experiencia única. Perfecto para esos momentos donde
+                        necesitas más que solo café.</p>
+                    <div class="separator"></div>
+                    <p>13,16€/Kg</p>
+                    <button>Ver<img src="imagenes_exportadas/eye.svg" alt="ojo"></button>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="imagenes_exportadas/producto_13.webp" alt="">
+                <div>
+                    <p>Nombre</p>
+                    <p>Elige lo mejor para tus mañanas. Con granos seleccionados a mano y un proceso de tueste
+                        artesanal, nuestro café es el aliado perfecto para empezar el día con energía. ¡Haz de tu café
+                        una tradición!</p>
+                    <div class="separator"></div>
+                    <p>11,99€/Kg</p>
+                    <button>Ver<img src="imagenes_exportadas/eye.svg" alt="ojo"></button>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="imagenes_exportadas/producto_14.webp" alt="">
+                <div>
+                    <p>Nombre</p>
+                    <p>Si lo tuyo es el buen café, este es el indicado para ti. Disfruta de una mezcla excepcional,
+                        suave y de sabor pleno que te hará querer repetir. Ideal para los que buscan calidad en cada
+                        taza.</p>
+                    <div class="separator"></div>
+                    <p>11,29€/Kg</p>
+                    <button>Ver<img src="imagenes_exportadas/eye.svg" alt="ojo"></button>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="imagenes_exportadas/producto_15.webp" alt="">
+                <div>
+                    <p>Nombre</p>
+                    <p>Tu café, tu momento. Dale un toque único a tu rutina con nuestro café gourmet, una mezcla
+                        perfecta de granos seleccionados que te brindan el equilibrio ideal entre suavidad y cuerpo. ¡No
+                        te quedes sin el tuyo!</p>
+                    <div class="separator"></div>
+                    <p>12,66€/Kg</p>
+                    <button>Ver<img src="imagenes_exportadas/eye.svg" alt="ojo"></button>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="imagenes_exportadas/producto_16.webp" alt="">
+                <div>
+                    <p>Nombre</p>
+                    <p>Siente la diferencia con cada taza. Nuestro café está hecho con granos de origen seleccionado y
+                        tostado a la perfección para ofrecerte un sabor único y delicioso. Ideal para aquellos que
+                        buscan calidad y un toque especial en su día.</p>
+                    <div class="separator"></div>
+                    <p>10,29€/Kg</p>
+                    <button>Ver<img src="imagenes_exportadas/eye.svg" alt="ojo"></button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <img src="imagenes_exportadas/logo-blanco.png" alt="">
+            <div>
+                <p>Copyright ©Los enlaces brew. All rights reserved 2025</p>
+                <div>
+                    <a href="#">Política de cookies</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Condiciones generales de uso</a>
+                    <a href="#">Aviso legal</a>
+                    <a href="#">Bases legales</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
