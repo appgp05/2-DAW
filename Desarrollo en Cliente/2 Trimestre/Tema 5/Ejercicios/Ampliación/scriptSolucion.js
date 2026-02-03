@@ -80,8 +80,16 @@ addEventListener("DOMContentLoaded", () => {
         let diaDelMes = "((0?[1-9])|([1-2][0-9])|(3[0-1]))"
         let mesDelAno = "((0?[1-9])|(1[0-2]))"
         let ano = "[0-9]{4}"
+        // ? Indica que lo que lo precede es opcional y no es necesario que aparezca
+        // | Indica que se debe cumplir o lo que lo precede o lo que lo sucede
+        // [x-y] Indica que debe contener un caracter desde el carecter x hasta el caracter y
+        // {4} Indica que se debe repetir 4 veces la condición que lo precede
         let expresionRegularBarras = RegExp("^(" + diaDelMes + "\\/" + mesDelAno + "\\/" + ano + ")$")
         let expresionRegularGuiones = RegExp("^(" + diaDelMes + "\\-" + mesDelAno + "\\-" + ano + ")$")
+        // ^ Indica que la expresión regular debe empezar por lo que siga en la propia expresión regular
+        // $ Indica que la expresión regular debe acabar por lo que se precede en la propia expresión regular
+        // \\- Indica que debe haber un guión y las \\ se requieren puesto que el guión en una expresión regular es un caracter especial y hay que escaparlo
+        // \\/ Indica que debe haber una barra y las \\ se requieren puesto que la barra en una expresión regular es un caracter especial y hay que escaparla
         if(!expresionRegularBarras.test(fecha.value) && !expresionRegularGuiones.test(fecha.value)){
             errores.innerHTML += "<p>Debe indicar una fecha con el formato dd/mm/aaaa o dd-mm-aaaa</p>"
             fecha.focus()
@@ -93,12 +101,20 @@ addEventListener("DOMContentLoaded", () => {
             // ^ Indica que la expresión regular debe empezar por lo que siga en la propia expresión regular
             // [0-9]{9}: [0-9] Indica que puede haber numeros del 0 al 9 y {9} indica que debe haber 9
             // $ Indica que la expresión regular debe acabar por lo que se precede en la propia expresión regular
-
+            
             errores.innerHTML += "<p>Debe indicar un telefono que contenga 9 dígitos</p>"
             telefono.focus()
         }
         
         if(!/^(([0-1]?[0-9])|(2[0-3])):([0-5]?[0-9])$/.test(hora.value)){
+            // Mi expresión regular contiene:
+            // // Las dos barras para indicar cuándo empieza y acaba la expresión regular
+            // ^ Indica que la expresión regular debe empezar por lo que siga en la propia expresión regular
+            // [x-y] Indica que debe contener un caracter desde el carecter x hasta el caracter y
+            // ? Indica que lo que lo precede es opcional y no es necesario que aparezca
+            // | Indica que se debe cumplir o lo que lo precede o lo que lo sucede
+            // : Indica que debe haber :
+            // $ Indica que la expresión regular debe acabar por lo que se precede en la propia expresión regular
             errores.innerHTML += "<p>Debe indicar una hora correcta con el formato hh:mm</p>"
             hora.focus()
         }
