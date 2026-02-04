@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table {
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1"></div>
+</body>
+<script>
+    // window.onload = (event) => {
+    //     console.log(event)
+    // }
+    addEventListener("DOMContentLoaded", (event) => {
+        let d = document.getElementById("d1");
+        let p = document.createElement("p");
+        let t = document.createTextNode("Este es el segundo párrafo");
+        d.appendChild(p);
+        p.appendChild(t);
+    })
+
+    //Creamos una tabla de 3 filas y 5 columnas 
+    //Creamos la tabla vacía: 
+    let miTabla = document.createElement("TABLE");
+    let tblBody = document.createElement("TBODY");
+    //Creamos las filas 
+    for (let i = 0; i < 3; i++) {
+        let fila = document.createElement("TR");
+        //Dentro de cada fila, creamos las columas 
+        for (let i = 0; i < 5; i++) {
+            let columna = document.createElement("TD");
+            //Y cada columna creada la vinculamos a la fila 
+            fila.appendChild(columna);
+        }
+        //Vinculamos nuestra filas con sus celdas, al cuerpo de la tabla 
+        tblBody.appendChild(fila);
+    }
+    //Por último, vinculamos el tbody a la tabla, y la tabla a la página 
+    miTabla.appendChild(tblBody);
+    document.body.appendChild(miTabla);
+    miTabla.setAttribute("border", "2"); 
+</script>
+<script>
+    console.log("no carga de página ni de recursos....", document.readyState);
+    document.addEventListener('readystatechange', function (ev) {
+        console.log("statechange", document.readyState);
+    })
+    document.addEventListener("DOMContentLoaded", function (ev) {
+        console.log("DOM CARGADO", ev);
+    }); 
+</script>
+<script>
+    console.log("Este es un script"); 
+</script>
+
+</html>
