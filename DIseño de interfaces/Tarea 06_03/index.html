@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Librería Los Enlaces</h1>
+    </header>
+
+    <main>
+        <h2>Top ventas Nº1</h2>
+        <div>
+            <div>
+                <img id="imagenDestacada" src="src/libro destacado.jpg" alt="Libro Wigetta Un viaje mágico" style="display: none;">
+                <button id="buttonDescripcionImagen">Ver descripción</button>
+                <p id="descripcionImagen" style="display: none;">Un libro lleno de aventuras fantásticas, magia, amistad y los personajes entrañables de Vegetta777 y Willyrex.</p>
+            </div>
+            <div>
+                <video id="videoDestacado" style="display: none;">
+                    <source src="src/inaguración librería.mp4">
+                </video>
+                <div class="controlesVideo">
+                    <button id="botonReproducirPausar">Reproducir/Pausar</button>
+                    <label>Volumen:</label>
+                    <input type="range" id="barraVolumen" min="0" max="1" step="0.1" value="0.5">
+                    <button id="botonVolver">Reiniciar</button>
+                </div>
+                <p id="descripciónVideo" style="display:none;">En el vídeo se puede observar la inauguración de nuestra nueva librería Los Enlaces en colaboración con el fondo de cultura económica.</p>
+            </div>
+        </div>
+    </main>
+
+    <form id="formularioCompra">
+        
+        <h2>Formulario de compra</h2>
+
+        <div id="promocionEspecial">
+            <h4>PROMOCIÓN ESPECIAL</h4>
+            <p class="textoPromo">¡¡¡Ahora todos nuestros libros con hasta un 35% de descuento!!!</p>
+        </div>
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre">
+
+        <label for="libro">Libro</label>
+        <select id="libro">
+            <option value="" hidden selected>Seleccione un libro</option>
+            <option value="Wigetta Un viaje mágico">Wigetta Un viaje mágico</option>
+            <option value="Wigetta El efecto mariposa">Wigetta El efecto mariposa</option>
+            <option value="Wigetta Y el mundo de trotuman">Wigetta Y el mundo de trotuman</option>
+        </select>
+
+        <label for="correoElectronico">Correo electrónico</label>
+        <input type="email" id="correoElectronico" placeholder="usuario@dominio">
+
+        <button type="button" id="buttonComprarLibro">Comprar ahora</button>
+    </form>
+
+    <footer>
+        <div class="footer-content">
+        <div class="footer-section">
+            <h3>Librería Los Enlaces</h3>
+            <p>Tu rincón favorito para la lectura y la cultura en colaboración con el Fondo de Cultura Económica.</p>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Contacto</h4>
+            <p>📍 Calle Libreros, 12, Madrid</p>
+            <p>📞 +34 900 123 456</p>
+            <p>✉️ info@losenlaces.com</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Síguenos</h4>
+            <div class="redes-sociales">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Librería Los Enlaces. Todos los derechos reservados.</p>
+    </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
