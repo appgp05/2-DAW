@@ -30,7 +30,10 @@ function transformarEnEditable(spanEditar) {
 
 function cambiarBotonDeEditar(spanEditar) {
     let texto = document.createTextNode("En edición")
-    spanEditar.textContent = ""
+    // spanEditar.textContent = ""
+    for(let child of spanEditar.childNodes){
+        spanEditar.removeChild(child)
+    }
     spanEditar.appendChild(texto)
     spanEditar.style.color = "black"
 }
