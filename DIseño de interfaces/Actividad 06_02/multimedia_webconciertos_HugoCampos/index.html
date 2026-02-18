@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva sala de música</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="banner">
+        <div class="topnav topnav--front" role="navigation" aria-label="Menú principal">
+            <a href="#">Inicio</a>
+            <a href="#">Pistas de audio</a>
+            <a href="#">Horarios</a>
+        </div>
+
+        <video id="bannerVideo" class="banner__video" preload="metadata" poster="imagenBanner.png" playsinline>
+            <source src="banner.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de vídeo.
+        </video>
+
+        <div class="banner__overlay">
+            <h1 class="banner__title">Nueva sala de música en Zaragoza</h1>
+            <div class="banner__controls">
+                <button id="playBtn" class="banner__btn" aria-label="Reproducir vídeo">Reproducir</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="content">
+        <section class="audios">
+            <h2>Pistas de audio</h2>
+            <div class="audio-area" id="audioArea">
+                <div class="audio-label" id="audioLabel">Cargando pista...</div>
+                <audio id="bannerAudio" controls></audio>
+            </div>
+        </section>
+        <br>
+        <br>
+        <section class="horarios">
+            <h2>Horarios de la sala</h2><br>
+            <table class="tabla-horarios" style="margin:auto; text-align:center; width:70%; border-collapse:collapse; border:2px solid #fff;">
+                <tr style="border:1px solid #fff;"><th style="border:1px solid #fff;">Día</th><th>Apertura</th><th>Cierre</th></tr>
+                <tr style="border:1px solid #fff;"><td style="border:1px solid #fff;">Viernes</td><td>22:00</td><td>06:00</td></tr>
+                <tr style="border:1px solid #fff;"><td style="border:1px solid #fff;">Sábado</td><td>22:00</td><td>06:00</td></tr>
+                <tr style="border:1px solid #fff;"><td style="border:1px solid #fff;">Domingo</td><td>18:00</td><td>02:00</td></tr>
+            </table>
+        </section>
+    </main>
+
+    <script>
+        const video = document.getElementById('bannerVideo');
+        const btn = document.getElementById('playBtn');
+
+        btn.addEventListener('click', () => {
+            if (video.paused) {
+                video.muted = false;
+                video.play();
+                btn.textContent = 'Pausar';
+            } else {
+                video.pause();
+                btn.textContent = 'Reproducir';
+            }
+        });
+
+        video.addEventListener('play', () => btn.textContent = 'Pausar');
+        video.addEventListener('pause', () => btn.textContent = 'Reproducir');
+
+        const audio = document.getElementById('bannerAudio');
+        const label = document.getElementById('audioLabel');
+
+        function chooseAudioSource() {
+            const wavTypes = ['audio/wav','audio/x-wav','audio/vnd.wave'];
+            let wavSupport = '';
+
+            for (const t of wavTypes) {
+                const r = audio.canPlayType(t);
+                if (r === 'probably' || r === 'maybe') { wavSupport = t; break; }
+            }
+
+            if (wavSupport) {
+                audio.src = 'audioBannerwav.wav';
+                label.textContent = 'audioBanner.wav';
+                return;
+            }
+
+            const mp3Support = audio.canPlayType('audio/mpeg');
+            if (mp3Support === 'probably' || mp3Support === 'maybe') {
+                audio.src = 'audioBannermp3.mp3';
+                label.textContent = 'audioBanner.mp3';
+                return;
+            }
+
+            const area = document.getElementById('audioArea');
+            area.innerHTML = '<p>No hay formatos de audio compatibles en este navegador.</p>';
+        }
+
+        chooseAudioSource();
+    </script>
+</body>
+</html>
