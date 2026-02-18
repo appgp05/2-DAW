@@ -10,8 +10,19 @@
 <body>
     <p id="introduccion" style="color: blue">Parrafo de prueba</p>
     <p id="introduccion" style="color: blue">Parrafosdasdasd de prueba</p>
+
+    <select name="" id="asd" onchange="">
+        <option value="asd">asd</option>
+        <option value="asds">asda</option>
+        <option value="asdd">asdd</option>
+        <option value="asde">asdc</option>
+    </select>
 </body>
 <script type="text/javascript">
+    // function mostrarSelect(){ let i = this.selectedIndex; console.log(this[i].value); } 
+
+    document.getElementById("asd").addEventListener("change", function mostrarSelect(){ let i = this.selectedIndex; console.log(this[i].value); } )
+
     let p = document.getElementById("introduccion");
     // let elId = p.attributes.getNamedItem("id").nodeValue; // elId = "introduccion"
     let elId = p.attributes.item(0).nodeValue; // elId = "introduccion"
