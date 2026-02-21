@@ -1,73 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="index.js"></script>
 </head>
-
 <body>
-    <form id="formCancelar" action="https://google.com" onsubmit="alert('a')">
-        <button>Enviar</button>
-    </form>
-
-    <script>
-        document.getElementById("formCancelar").addEventListener("submit", (event) => {
-            event.preventDefault()
-        })
-    </script>
-
-    <!-- EVENTOS EXISTENTES MÁS COMUNES -->
-    <h3>MouseOver</h3>
-    <div onmouseover="console.log('over rojo')">
-        <div>
-        </div>
-    </div>
-
-    <h3>MouseEnter</h3>
-    <div onmouseenter="console.log('enter')">
-        <div>
-        </div>
-    </div>
-
-    <!-- PRUEBAS CLASE -->
-
-    <div style="width: 200px; height: 100px; background-color: red;" id="div1" onclick="alert('click on div1');">
-        <div style="width: 150px; height: 80px; background: green; margin: 10px;" id="div2"
-            onclick="alert('click on div2');">
-            <div style="width: 100px; height: 60px; background: blue; margin: 10px;" id="div3"
-                onclick="alert('click on div3'); return true;">
-            </div>
-        </div>
-    </div>
-
-    <div id="padre">
-        <button id="hijo">Click</button>
-    </div>
-
-    <h3>Orden de disparo y stopPropagation</h3>
-
-    <div id="visabuelo2">
-        <div id="abuelo2">
-            <div id="padre2">
-                <button id="hijo2">Hijo</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="abuelo3">
-        <div id="padre3">
-            <button id="hijo3">Hijo</button>
-        </div>
-    </div>
-
-    <!-- FORMULARIOS -->
-
     <!-- document.forms[(el indice del formulario, su id o su name)] -->
     <!-- element.elements[(el indice del elementp, su id o su name)] -->
 
+    <!-- elemento.getElementsByTagName((Etiquetas buscadas en el html, por ejemplo p)) -->
+    <!-- elemento.getElementsByName((name por el que buscar los elementos)) -->
+    <!-- elemento.getElementsById((id por el que buscar el elemento)) -->
     <body>
         <form id="form1" name="form2">
             <input type="text" id="nombre" name="nombre2" onChange="mostrar();">
@@ -86,7 +30,7 @@
         function mostrar() {
             let f = document.forms["form1"];
             let nom = f.elements["nombre"].value;
-            console.log(document.forms);
+            console.log(nom);
         }
     </script>
 
@@ -98,10 +42,10 @@
             <option value="formularios">Formularios</option>
         </select>
     </form>
-    <script type="text/javascript">
-        window.onload = function () {
+    <script>
+        addEventListener("DOMContentLoaded", () => {
             asignarSelect();
-        }
+        })
         function asignarSelect() {
             let s = document.getElementById("sel1"); //el evento se asigna sobre el <select>.
             s.addEventListener("change", mostrarSelect, false);
@@ -134,13 +78,13 @@
                 }
             }
         }
-        function mostrarCheck(ev) {
+        function mostrarCheck(event) {
             //la función es genérica ya que usamos la captura del evento para el mensaje.
-            if (ev.target.checked) {
-                console.log(ev.target.name + " marcado");
+            if (event.target.checked) {
+                console.log(event.target.name + " marcado");
             }
             else {
-                console.log(ev.target.name + " desmarcado");
+                console.log(event.target.name + " desmarcado");
             }
         }
     </script>
@@ -166,65 +110,5 @@
             console.log(this.value);
         }
     </script>
-    <style>
-        div {
-            width: 50px;
-            height: 200px;
-            background-color: red;
-
-            overflow: visible;
-
-            display: flex;
-            align-items: center;
-            justify-content: start;
-
-            > div {
-                width: 100px;
-                height: 75px;
-                background-color: blue;
-                flex-shrink: 0;
-            }
-        }
-
-        #visabuelo2 {
-            width: 300px;
-            height: 300px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgb(81, 255, 0);
-        }
-
-        #abuelo2,
-        #abuelo3 {
-            width: 200px;
-            height: 200px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: aqua;
-        }
-
-        #padre2,
-        #padre3 {
-            width: 100px;
-            height: 100px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: tomato;
-        }
-
-        #hijo2,
-        #hijo3 {
-            width: 25px;
-            height: 25px;
-        }
-    </style>
 </body>
-</body>
-
 </html>
