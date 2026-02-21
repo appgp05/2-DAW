@@ -37,7 +37,7 @@ addEventListener("DOMContentLoaded", () => {
     
     abuelo.addEventListener("click", (evento) => {
         console.log("ABUELO")
-    }, true)
+    }, false)
     
     padre.addEventListener("mouseover", (evento) => {
         // evento.stopPropagation()

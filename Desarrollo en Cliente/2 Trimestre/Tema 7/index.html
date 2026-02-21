@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let recetasJSON = []
+
+        // FETCH VERSION CORTA
+
+        // a = async () => {
+        //     let response = await fetch("recetas.json")
+        //     recetasJSON = await response.json()
+        //     pintarRecetas(recetasJSON)
+        // }
+        // a()
+
+        // FETCH VERSION LARGA
+
+        fetch('recetas.json')
+            .then(async response => {
+                if (!response.ok) {
+                    throw new Error('Archivo no encontrado');
+                }
+
+                response = response.json()
+
+                return response;
+            })
+            .then(contenido => {
+                console.log(contenido)
+                recetasJSON = contenido
+                
+                pintarRecetas(recetasJSON)
+            })
+            .catch(error => {
+                console.error('Error al descargar:', error);
+            });
+
+        function pintarRecetas(recetas) {
+            let body = document.body
+            let div = document.createElement("div")
+            let divTitulo = document.createElement("h1")
+            let divTextoTitulo = document.createTextNode("Recetas JSON")
+            let tabla = document.createElement("table")
+
+            body.appendChild(div)
+            div.appendChild(divTitulo)
+            divTitulo.appendChild(divTextoTitulo)
+            div.appendChild(tabla)
+
+            for (let titulo of Object.keys(recetas[0] ?? {})) {
+                let th = document.createElement("th")
+                let td = document.createElement("td")
+                let text = document.createTextNode(titulo.toUpperCase())
+
+                tabla.append(th)
+                th.appendChild(td)
+                td.appendChild(text)
+            }
+
+            for (let receta of recetas) {
+                let tableRow = document.createElement("tr")
+
+                for (let data of Object.values(receta)) {
+                    let tableData = document.createElement("td")
+                    let text = document.createTextNode(data)
+
+                    tableRow.appendChild(tableData)
+                    tableData.appendChild(text)
+                }
+
+                tabla.appendChild(tableRow)
+            }
+        }
+
+        // ENVIAR DATOS A LA API CON FETCH
+
+        // Ejemplo de envío de datos (POST) con Fetch API
+        // const nuevoPost = {
+        //     titulo: 'Mi viaje a Zaragoza',
+        //     contenido: 'Fue una experiencia increíble.',
+        //     userId: 1
+        // };
+        // fetch('https://jsonplaceholder.typicode.com', {
+        //     method: 'POST', // Especificamos el método
+        //     body: JSON.stringify(nuevoPost), // Convertimos el objeto JS a una cadena JSON
+        //     headers: {
+        //         'Content-type': 'application/json; charset=UTF-8', // Indicamos el tipo de contenido
+        //     },
+        // })
+        //     .then(response => {
+        //         if (response.ok) {
+        //             return response.json(); // Si el servidor creó el recurso, nos devuelve la respuesta
+        //         }
+        //         throw new Error('No se pudo crear el recurso');
+        //     })
+        //     .then(data => {
+        //         console.log('Éxito, objeto creado:', data);
+        //         // Mostramos un mensaje de confirmación al usuario
+        //         document.getElementById('resultado').innerText = `Post creado con ID: ${data.id}`;
+        //     })
+        //     .catch(error => {
+        //         console.error('Error al enviar datos:', error);
+        //     });
+
+    </script>
+</body>
+
+</html>

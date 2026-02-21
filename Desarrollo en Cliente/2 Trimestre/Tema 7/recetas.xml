@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recetario>
+  <receta>
+    <userId>Peter</userId>
+    <id>1</id>
+    <title>Tortilla de Patatas</title>
+    <body>La clásica tortilla española hecha con huevos, patatas y cebolla. Sofríe las patatas y la cebolla, bátelas con huevos y cocina a fuego lento hasta que esté dorada por ambos lados.</body>
+  </receta>
+  <receta>
+    <userId>Paul</userId>
+    <id>2</id>
+    <title>Ensalada César</title>
+    <body>Una ensalada fresca y deliciosa con lechuga romana, croutones, queso parmesano y aderezo César. Sirve con pollo a la parrilla para una comida completa.</body>
+  </receta>
+  <receta>
+    <userId>Mary</userId>
+    <id>3</id>
+    <title>Pasta Aglio e Olio</title>
+    <body>Una receta italiana simple con pasta, ajo, aceite de oliva, guindilla y perejil. Cocina la pasta al dente, mezcla con el ajo dorado y el aceite de oliva, y espolvorea con perejil.</body>
+  </receta>
+  <receta>
+    <userId>Nina</userId>
+    <id>4</id>
+    <title>Sándwich de Jamón y Queso</title>
+    <body>Un clásico sándwich caliente con jamón, queso y mantequilla. Tuesta en una sartén hasta que el queso se derrita y el pan esté crujiente.</body>
+  </receta>
+  <receta>
+    <userId>admin</userId>
+    <id>5</id>
+    <title>Gazpacho</title>
+    <body>Una sopa fría española hecha con tomates, pepino, pimiento, cebolla, ajo, aceite de oliva y vinagre. Refrescante y perfecta para los días calurosos.</body>
+  </receta>
+  <receta>
+    <userId>Peter</userId>
+    <id>6</id>
+    <title>Arroz con Pollo</title>
+    <body>Un plato tradicional latinoamericano que combina arroz, pollo, verduras y especias. Cocina el arroz con caldo de pollo y mezcla con el pollo desmenuzado y las verduras.</body>
+  </receta>
+  <receta>
+    <userId>Paul</userId>
+    <id>7</id>
+    <title>Tostadas Francesas</title>
+    <body>Rebanadas de pan sumergidas en una mezcla de huevo batido, leche y canela, luego doradas en una sartén. Sirve con jarabe de arce y frutas frescas.</body>
+  </receta>
+  <receta>
+    <userId>Mary</userId>
+    <id>8</id>
+    <title>Guacamole</title>
+    <body>Un dip mexicano hecho con aguacate, cebolla, tomate, cilantro, limón y sal. Tritura los ingredientes juntos y sirve con nachos o tacos.</body>
+  </receta>
+  <receta>
+    <userId>Nina</userId>
+    <id>9</id>
+    <title>Spaghetti Aglio e Peperoncino</title>
+    <body>Una versión picante de la receta italiana de pasta Aglio e Olio. Cocina los espaguetis al dente, mezcla con ajo, aceite de oliva y guindilla roja.</body>
+  </receta>
+  <receta>
+    <userId>admin</userId>
+    <id>10</id>
+    <title>Ensalada Caprese</title>
+    <body>Una ensalada italiana con tomates, mozzarella fresca, albahaca y aceite de oliva. Sazona con sal y pimienta, y disfruta como aperitivo o acompañamiento.</body>
+  </receta>
+  <receta>
+    <userId>Peter</userId>
+    <id>11</id>
+    <title>Hummus</title>
+    <body>Un dip mediterráneo hecho con puré de garbanzos, tahini, ajo, limón y aceite de oliva. Sirve con pan pita o verduras crudas.</body>
+  </receta>
+  <receta>
+    <userId>Paul</userId>
+    <id>12</id>
+    <title>Pollo al Curry</title>
+    <body>Un plato de pollo cocido en una salsa de curry con cebolla, ajo, jengibre y especias. Sirve con arroz o pan naan.</body>
+  </receta>
+  <receta>
+    <userId>Peter</userId>
+    <id>13</id>
+    <title>Ratatouille</title>
+    <body>Un plato de verduras asadas que incluye berenjena, calabacín, pimiento, cebolla y tomate. Condimenta con hierbas provenzales y sirve caliente.</body>
+  </receta>
+  <receta>
+    <userId>Paul</userId>
+    <id>14</id>
+    <title>Sopa de Lentejas</title>
+    <body>Una sopa reconfortante hecha con lentejas, cebolla, zanahorias y caldo de verduras. Cocina a fuego lento hasta que las lentejas estén tiernas.</body>
+  </receta>
+  <receta>
+    <userId>Mary</userId>
+    <id>15</id>
+    <title>Pollo al Limón</title>
+    <body>Pechugas de pollo cocidas en una salsa de limón con ajo y hierbas. Sirve con arroz o ensalada fresca.</body>
+  </receta>
+  <receta>
+    <userId>Nina</userId>
+    <id>16</id>
+    <title>Tiramisú</title>
+    <body>Un postre italiano clásico hecho con capas de bizcochos de soletilla empapados en café y crema de mascarpone. Espolvorea con cacao en polvo.</body>
+  </receta>
+</recetario>

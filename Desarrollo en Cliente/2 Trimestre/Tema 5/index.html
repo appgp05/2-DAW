@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="index.js"></script>
-    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -20,7 +19,7 @@
 
     <!-- EVENTOS EXISTENTES MÁS COMUNES -->
     <h3>MouseOver</h3>
-    <div onmouseover="console.log('over')">
+    <div onmouseover="console.log('over rojo')">
         <div>
         </div>
     </div>
@@ -158,6 +157,64 @@
             console.log(this.value);
         }
     </script>
+    <style>
+        div {
+            width: 50px;
+            height: 200px;
+            background-color: red;
+
+            overflow: visible;
+
+            display: flex;
+            align-items: center;
+            justify-content: start;
+
+            > div {
+                width: 100px;
+                height: 75px;
+                background-color: blue;
+                flex-shrink: 0;
+            }
+        }
+
+        #visabuelo2 {
+            width: 300px;
+            height: 300px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(81, 255, 0);
+        }
+
+        #abuelo2,
+        #abuelo3 {
+            width: 200px;
+            height: 200px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aqua;
+        }
+
+        #padre2,
+        #padre3 {
+            width: 100px;
+            height: 100px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: tomato;
+        }
+
+        #hijo2,
+        #hijo3 {
+            width: 25px;
+            height: 25px;
+        }
+    </style>
 </body>
 </body>
 

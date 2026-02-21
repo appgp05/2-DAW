@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Ejemplo Cookies</title>
-  <script src="cookie.js"></script>
 </head>
-<body>
-<button onclick="guardar()">Guardar cookie</button>
-<button onclick="leer()">Leer cookie</button>
-<button onclick="borrar()">Borrar cookie</button>
-</body>
-</html>
 
+<body>
+  <button onclick="guardar()">Guardar cookie</button>
+  <button onclick="leer()">Leer cookie</button>
+  <button onclick="borrar()">Borrar cookie</button>
+
+  <script>
+    function setCookie(nombre, valor, dias) {
+      let fecha = new Date();
+      fecha.setTime(fecha.getTime() + (dias * 24 * 60 * 60 * 1000));
+      document.cookie = nombre + "=" + encodeURIComponent(valor) +
+        ";expires=" + fecha.toUTCString() + ";path=/";
+    }
+    //encodeURIComponent: codificar texto para que sea seguro usarlo en URLs y cookies
+    // caracteres que rompen URLs o cookies, por ejemplo:
+    // espacios 
+    // acentos (á, é) 
+    // símbolos (&, =, ?, /)
+
+    function getCookie(nombre) {
+      let name = nombre + "=";
+      let cookies = document.cookie.split(';');
+      for (let c of cookies) {
+        c = c.trim();
+        if (c.indexOf(name) === 0) {
+          return decodeURIComponent(c.substring(name.length));
+        }
+      }
+      return null;
+    }
+
+    // decodeURIComponent: Para decodificar y volver al texto original
+
+    function deleteCookie(nombre) {
+      document.cookie = nombre + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    }
+
+    function guardar() {
+      setCookie("temas", "oscuro", 5);
+      alert("Cookie guardada");
+    }
+
+    function leer() {
+      alert("Cookie: " + getCookie("temas"));
+    }
+
+    function borrar() {
+      deleteCookie("temas");
+      alert("Cookie borrada");
+    }
+  </script>
+</body>
+
+</html>
