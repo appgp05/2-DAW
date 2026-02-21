@@ -12,17 +12,15 @@
   <button onclick="borrar()">Borrar cookie</button>
 
   <script>
+    console.log(document.cookie)
     function setCookie(nombre, valor, dias) {
       let fecha = new Date();
       fecha.setTime(fecha.getTime() + (dias * 24 * 60 * 60 * 1000));
-      document.cookie = nombre + "=" + encodeURIComponent(valor) +
-        ";expires=" + fecha.toUTCString() + ";path=/";
+      document.cookie = nombre + "=" + encodeURIComponent(valor) + ";expires=" + fecha.toUTCString() + ";path=/";
     }
+
     //encodeURIComponent: codificar texto para que sea seguro usarlo en URLs y cookies
-    // caracteres que rompen URLs o cookies, por ejemplo:
-    // espacios 
-    // acentos (á, é) 
-    // símbolos (&, =, ?, /)
+    // caracteres que rompen URLs o cookies, por ejemplo: espacios, acentos (á, é), símbolos (&, =, ?, /)
 
     function getCookie(nombre) {
       let name = nombre + "=";
@@ -55,6 +53,13 @@
       deleteCookie("temas");
       alert("Cookie borrada");
     }
+
+    // OTROS VALORES OPCIONALES PARA LAS COOKIES
+    // expires=. Indica hasta cuando dura la cookie. En combinación con max-age prevalece esta última.
+    // max-age. Duración máxima de la cookie en segundos. Si no se establecen ninguno de los 2 atributos de duración, la cookie sólo será válida mientras dure la sesión.
+    // Path. Ruta para la cuál la cookie es válida. Si no se especifica nada será válida para el directorio actual.
+    // Domain. Dominio para el cuál la cookie es válida. Si no se especifica nada será válida para el subdominio actual. Por seguridad no se permite crear cookies para dominios diferentes al que crea la cookie.
+    // Secure. Sin valor. Si se indica sólo será válida para conexiones encriptadas (HTTPS por ejemplo).
   </script>
 </body>
 

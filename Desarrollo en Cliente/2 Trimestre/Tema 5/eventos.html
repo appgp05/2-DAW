@@ -9,16 +9,127 @@
 
 <body>
     <!-- 
-    .onclick                        Se ejecuta al hacer click con el ratón sobre un elemento
-    .ondblclick                     Se ejecuta al hacer doble click con el ratón sobre un elemento
-    .onmousedown                    Se ejecuta al presionar el ratón sobre un elemento
-    .onmouseenter                   Se ejecuta al entrar con el ratón sobre un elemento
-    .onmouseover    (Bubbling)      Se ejecuta al entrar con el ratón sobre un elemento y sus secundarios
-    .onmouseleave                   Se ejecuta al sacar el ratón de un elemento
-    .onmouseout     (Bubbling)      Se ejecuta al sacar el ratón de un elemento y sus secundarios
-    .onmousemove                    Se ejecuta al mover el ratón sobre un elemento
-    .onmouseup                      Se ejecuta al soltar el ratón sobre un elemento
+        .onclick                        Se ejecuta al hacer click con el ratón sobre un elemento
+        .ondblclick                     Se ejecuta al hacer doble click con el ratón sobre un elemento
+        .onmousedown                    Se ejecuta al presionar el ratón sobre un elemento
+        .onmouseenter                   Se ejecuta al entrar con el ratón sobre un elemento
+        .onmouseover    (Bubbling)      Se ejecuta al entrar con el ratón sobre un elemento y sus secundarios
+        .onmouseleave                   Se ejecuta al sacar el ratón de un elemento
+        .onmouseout     (Bubbling)      Se ejecuta al sacar el ratón de un elemento y sus secundarios
+        .onmousemove                    Se ejecuta al mover el ratón sobre un elemento
+        .onmouseup                      Se ejecuta al soltar el ratón sobre un elemento
     -->
+
+    <!-- FORMAS DE DEFINIR LOS LISTENERS DE LOS EVENTOS -->
+    <h3>FORMAS DE DEFINIR LOS LISTENERS DE LOS EVENTOS</h3>
+    <button onclick="console.log('Integrado en el HTML')">Integrado en el HTML</button>
+    <button onclick="mostrarEnConsola('Integrado con funcion externa')">Integrado con funcion externa</button>
+    <button id="botonConManejadorSemántico">Con manejador semántico</button>
+    <button id="botonConAddEventListener">Con AddEventListener</button>
+    <button id="botonConSetAtribute">Con SetAtribute</button>
+
+    <!-- ORDEN DE DISPARO Y STOP PROPAGATION -->
+    <h3>Orden de disparo y stopPropagation</h3>
+
+    <div id="visabuelo">
+        <div id="abuelo">
+            <div id="padre">
+                <button id="hijo">Hijo</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        addEventListener("DOMContentLoaded", () => {
+            function mostrarEnConsola(texto) {
+                console.log(texto)
+            }
+
+            document.getElementById("botonConManejadorSemántico").onclick = () => mostrarEnConsola("Con manejador semántico")
+            let miFuncion = () => { mostrarEnConsola("Con AddEventListener") } // La declaro en una variable para luego poder borrarla con removeEventListener, puesto que sino al declarar dos veces la función detecta que son dos funciones distintas
+            document.getElementById("botonConAddEventListener").addEventListener("click", miFuncion)
+            document.getElementById("botonConSetAtribute").setAttribute("onclick", "mostrarEnConsola('Con SetAtribute')")
+
+            // MOSTRAR EVENTOS SETEADOS COMO ATRIBUTOS
+            console.log(document.getElementById("botonConManejadorSemántico").onclick)
+
+            // EJECUTAR EVENTOS SETEADOS COMO ATRIBUTOS
+            document.getElementById("botonConManejadorSemántico").onclick()
+
+            // ELIMINAR LISTENERS
+            // document.getElementById("botonConAddEventListener").removeEventListener("click", miFuncion)
+        })
+
+        addEventListener("DOMContentLoaded", () => {
+            // NORMAS Y FUNCIONES PARA EL RECORRIDO DE LOS EVENTOS
+            //      -   La propagación solo activa eventos del mismo tipo (Si haces un click en el hijo de activa el click en los padres, no los mouseover, por ejemplo)
+            //      -   TRUE Activa la propagación en fase de captura
+            //      -   FALSE Activa la propagación en fase de burbujeo
+            //      -   event.preventDefault() cancela el evento predeterminado que se ejecuta en determinados elementos, como el submit de un formulario
+            //      -   event.stopPropagation() detiene la propagación sin importar la fase en la que se encuentre, captura o burbujeo
+            
+            //      -   event.target es el elemento que inicio el evento
+            //      -   event.currentTarget es el elemento actual por el que está apsando el evento
+
+            let visabuelo = document.getElementById("visabuelo")
+            let abuelo = document.getElementById("abuelo")
+            let padre = document.getElementById("padre")
+            let hijo = document.getElementById("hijo")
+
+            visabuelo.addEventListener("click", (evento) => {
+                // evento.stopPropagation()
+                console.log("VISABUELO")
+            }, true)
+
+            abuelo.addEventListener("click", (evento) => {
+                console.log("ABUELO")
+            }, false)
+
+            padre.addEventListener("mouseover", (evento) => {
+                console.log("PADRE")
+            }, true)
+
+            hijo.addEventListener("click", (evento) => {
+                console.log("HIJO")
+            }, true)
+        })
+    </script>
+    <style>
+        #visabuelo {
+            width: 300px;
+            height: 300px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(81, 255, 0);
+        }
+
+        #abuelo {
+            width: 200px;
+            height: 200px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aqua;
+        }
+
+        #padre {
+            width: 100px;
+            height: 100px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: tomato;
+        }
+
+        #hijo {
+            width: 25px;
+            height: 25px;
+        }
+    </style>
 </body>
 
 </html>
