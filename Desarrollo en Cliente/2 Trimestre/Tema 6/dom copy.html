@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+    <p>Aprendiendo DOM</p>
+    <p>DOM es sencillo de aprender</p>
+    <p>Ademas, DOM es muy potente</p>
+
+    <!-- <script>
+        let objeto_html = document.documentElement;
+        let body = objeto_html.lastElementChild
+        console.log(body)
+        console.log(body.children)
+        console.log(body.firstElementChild)
+        console.log(body.lastElementChild)
+        console.log(body.children)
+        console.log(document.nodeType);
+        console.log(document.documentElement.nodeType == Node.ELEMENT_NODE);
+    </script> -->
+    <script>
+
+        // DEFINIR EL NODE SI NO EXISTE EN EL NAVEGADOR
+
+        if (typeof Node == "undefined") {
+            var Node = {
+                ELEMENT_NODE: 1,
+                ATTRIBUTE_NODE: 2,
+                TEXT_NODE: 3,
+                CDATA_SECTION_NODE: 4,
+                ENTITY_REFERENCE_NODE: 5,
+                ENTITY_NODE: 6,
+                PROCESSING_INSTRUCTION_NODE: 7,
+                COMMENT_NODE: 8,
+                DOCUMENT_NODE: 9,
+                DOCUMENT_TYPE_NODE: 10,
+                DOCUMENT_FRAGMENT_NODE: 11,
+                NOTATION_NODE: 12
+            }
+        }
+
+
+        console.log(Node.TEXT_NODE)
+        let objeto_html = document.documentElement;
+        let objeto_head = objeto_html.firstChild;
+        let objeto_body = objeto_html.lastChild;
+        // let objeto_head = objeto_html.childNodes[0];
+        // let objeto_body = objeto_html.childNodes[1];
+        let numeroDescendientes = objeto_html.childNodes.length;
+        objeto_body = document.body;
+
+        console.log(document.documentElement.childNodes)
+        
+        console.log(objeto_head.parentNode == objeto_html); //true
+        console.log(objeto_body.parentNode == objeto_html); //true
+        console.log(objeto_body.previousElementSibling == objeto_head); //false
+        console.log(objeto_head.nextElementSibling == objeto_body); //false
+        console.log(objeto_head.ownerDocument == document); //true
+
+        console.log(document.nodeName);
+        console.log(document.documentElement);
+
+        console.log(document.nodeType); // 9
+        console.log(document.documentElement.nodeType); // 1
+        
+        
+
+    </script>
+</body>
+
+</html>

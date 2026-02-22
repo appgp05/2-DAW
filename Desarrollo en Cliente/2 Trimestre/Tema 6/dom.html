@@ -6,46 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-    <body>
+
+<body>
     <p>Aprendiendo DOM</p>
     <p>DOM es sencillo de aprender</p>
     <p>Ademas, DOM es muy potente</p>
 
-    <!-- <script>
-        let objeto_html = document.documentElement;
-        let body = objeto_html.lastElementChild
-        console.log(body)
-        console.log(body.children)
-        console.log(body.firstElementChild)
-        console.log(body.lastElementChild)
-        console.log(body.children)
-        console.log(document.nodeType);
-        console.log(document.documentElement.nodeType == Node.ELEMENT_NODE);
-    </script> -->
+    <p id="introduccion" style="color: blue">Parrafo de prueba</p>
+
     <script>
-        console.log(Node.TEXT_NODE)
-        let objeto_html = document.documentElement;
-        let objeto_head = objeto_html.firstChild;
-        let objeto_body = objeto_html.lastChild;
-        //let objeto_head = objeto_html.childNodes[0];
-        //let objeto_body = objeto_html.childNodes[1];
-        let numeroDescendientes = objeto_html.childNodes.length;
-        objeto_body = document.body;
+        // MÉTODOS A APUNTAR
+        // document.getElementById()                    Element             (Elementos dentro del documento en el que se aplica la función filtrados por el atributo id)
+        // document.getElementsByName()                 NodeList      (Elementos dentro del documento en el que se aplica la función filtrados por el atributo name)
+        // elemento.getElementsByTagName()              HTMLCollection      (Elementos dentro del elemento en el que se aplica la función filtrados por el nombre de la etiqueta HTML)
 
-        console.log(document.documentElement.childNodes)
-        
-        console.log(objeto_head.parentNode == objeto_html); //true
-        console.log(objeto_body.parentNode == objeto_html); //true
-        console.log(objeto_body.previousElementSibling == objeto_head); //false
-        console.log(objeto_head.nextElementSibling == objeto_body); //false
-        console.log(objeto_head.ownerDocument == document); //true
 
-        console.log(document.nodeName);
-        console.log(document.documentElement);
+        // MÉTODOS A CONOCER
 
-        console.log(document.nodeType); // 9
-        console.log(document.documentElement.nodeType); // 1
-        
+        // document.nodeType                            9
+        // document.documentElement.nodeType            1
+        // document.head                                Elemento            (Elemento del head)
+        // document.body                                Elemento            (Elemento del body)
+        // elemento.ownerDocument                       Document            (Documento al que pertenece el elemento)
+        // elemento.parentNode                          Nodo                (Nodo padre)
+        // elemento.parentElement                       Elemento            (Elemento padre)
+        // elemento.nextSibling                         Node                (Siguiente nodo hermano)
+        // elemento.nextElementSibling                  Element             (Siguiente elemento hermano)
+        // elemento.previousSibling                     Node                (Anterior nodo hermano)
+        // elemento.previousElementSibling              Element             (Anterior elemento hermano)
+        // elemento.childNodes                          NodeList            (Con nodos que pueden dar problemas)
+        // elemento.children                            HTMLCollection      (Elementos hijos)
+        // elemento.firstChild                          Nodo                (Primer nodo hijo)
+        // elemento.firstElementChild                   Elemento            (Primer elemento hijo)
+        // elemento.lastChild                           Nodo                (Último nodo hijo)
+        // elemento.lastElementChild                    Elemento            (Último elemento hijo)
+        // nodo.nodeValue                               String              (Valor del texto del nodo, solo funciona para tributos, comentarios o textos)
+        // element.textContent                          String              (Valor del texto del elemento)
+
+        // DEFINIR EL NODE SI NO EXISTE EN EL NAVEGADOR
+
         if (typeof Node == "undefined") {
             var Node = {
                 ELEMENT_NODE: 1,
@@ -63,6 +62,32 @@
             }
         }
 
+        
+        // OBTENER ATRIBUTOS
+        let p = document.getElementById("introduccion");
+        
+        let id = p.attributes.getNamedItem("id").nodeValue;
+        let id2 = p.attributes.item(0).nodeValue;
+        let id3 = p.getAttribute("id")
+
+        // MODIFICAR ATRIBUTOS
+        p.attributes.getNamedItem("id").nodeValue = "preintroduccion";
+
+        // SETEAR O MODIFICAR ATRIBUTOS
+        let atributo = document.createAttribute("lang");
+        atributo.nodeValue = "es";
+        p.attributes.setNamedItem(atributo);
+
+        p.setAttribute("lang2", "en")
+        p.setAttribute("lang3", "fr")
+
+        // ELIMINAR UN ATRUBUTO
+        p.attributes.removeNamedItem("lang2")
+        p.removeAttribute("lang3")
+
+        console.log(id);
+        console.log(p);
+        console.log(atributo); 
     </script>
 </body>
 
