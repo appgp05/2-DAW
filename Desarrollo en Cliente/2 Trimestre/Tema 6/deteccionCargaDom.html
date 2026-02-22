@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(document.readyState)
+        console.log("JS EJECUTÁNDOSE DURANTE EL ESTADO LOADING")
+        
+        document.addEventListener("readystatechange", () => {
+            console.log(document.readyState)
+
+            switch(document.readyState){
+                case "interactive":
+                    console.log("JS EJECUTÁNDOSE DURANTE EL ESTADO INTERACTIVE")
+                    break
+                case "complete":
+                    console.log("JS EJECUTÁNDOSE DURANTE EL ESTADO COMPLETE")
+                    break
+            }
+        })
+
+        addEventListener("DOMContentLoaded", () => {
+            // El evento DOMContentLoaded se activa cuando el readyState cambia de loading a interactive. 
+            console.log("DOMContentLoaded")
+        })
+        
+        window.onload = function () {
+            // El evento ONLOAD se activa cuando el readyState cambia de interactive a complete. 
+            console.log('Documento cargado');
+        }
+        window.onload = function () {
+            console.log('Window Onload');
+        }
+    </script>
+</body>
+
+</html>
