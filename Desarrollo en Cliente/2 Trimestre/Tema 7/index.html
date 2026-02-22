@@ -10,6 +10,38 @@
 <body>
     <script>
         let recetasJSON = []
+        let recetasXML = []
+
+        let xhr = new XMLHttpRequest()
+
+        xhr.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+
+                let xmlDoc = this.responseXML;
+
+                let recetas = xmlDoc.getElementsByTagName("receta");
+
+                for (let i = 0; i < recetas.length; i++) {
+                    // console.log(recetas[i])
+                    let receta = {
+                        userId: recetas[i].getElementsByTagName("userId")[0].textContent,
+                        id: recetas[i].getElementsByTagName("id")[0].textContent,
+                        title: recetas[i].getElementsByTagName("title")[0].textContent,
+                        body: recetas[i].getElementsByTagName("body")[0].textContent
+                    }
+
+                    recetasXML.push(receta)
+                }
+
+                pintarRecetas(recetasXML)
+            } else if (this.readyState === 4) {
+                console.error("No se pudo cargar el archivo: " + this.statusText);
+            }
+        }
+
+        xhr.open("GET", "recetas.xml", true);
+        xhr.send()
+
 
         // FETCH VERSION CORTA
 
@@ -22,25 +54,25 @@
 
         // FETCH VERSION LARGA
 
-        fetch('recetas.json')
-            .then(async response => {
-                if (!response.ok) {
-                    throw new Error('Archivo no encontrado');
-                }
+        // fetch('recetas.json')
+        //     .then(async response => {
+        //         if (!response.ok) {
+        //             throw new Error('Archivo no encontrado');
+        //         }
 
-                response = response.json()
+        //         response = response.json()
 
-                return response;
-            })
-            .then(contenido => {
-                console.log(contenido)
-                recetasJSON = contenido
-                
-                pintarRecetas(recetasJSON)
-            })
-            .catch(error => {
-                console.error('Error al descargar:', error);
-            });
+        //         return response;
+        //     })
+        //     .then(contenido => {
+        //         console.log(contenido)
+        //         recetasJSON = contenido
+
+        //         pintarRecetas(recetasJSON)
+        //     })
+        //     .catch(error => {
+        //         console.error('Error al descargar:', error);
+        //     });
 
         function pintarRecetas(recetas) {
             let body = document.body
