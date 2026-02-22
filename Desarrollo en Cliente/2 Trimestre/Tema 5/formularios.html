@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <!-- document.forms[(el indice del formulario, su id o su name)] -->
     <!-- element.elements[(el indice del elementp, su id o su name)] -->
@@ -12,6 +14,7 @@
     <!-- elemento.getElementsByTagName((Etiquetas buscadas en el html, por ejemplo p)) -->
     <!-- elemento.getElementsByName((name por el que buscar los elementos)) -->
     <!-- elemento.getElementsById((id por el que buscar el elemento)) -->
+
     <body>
         <form id="form1" name="form2">
             <input type="text" id="nombre" name="nombre2" onChange="mostrar();">
@@ -110,5 +113,125 @@
             console.log(this.value);
         }
     </script>
+
+    <!-- VALIDACIÓN DE FORMULARIOS -->
+    <form onsubmit="return validar(event)">
+        <input type="text" name="nombreV" placeholder="Obligatorio">
+        <input type="text" name="numeroV" placeholder="Numero">
+        <select name="listaV">
+            <option hidden value="">Selecciona una</option>
+            <option value="1">Opcion 1</option>
+            <option value="2">Opcion 2</option>
+            <option value="3">Opcion 3</option>
+        </select>
+        <input type="text" name="emailV" placeholder="Email">
+        <input type="text" name="anoV" placeholder="Año">
+        <input type="text" name="mesV" placeholder="Mes">
+        <input type="text" name="diaV" placeholder="Día">
+        <input type="text" name="fechaV" placeholder="Fecha">
+        <input type="text" name="dniV" placeholder="DNI">
+        <input type="text" name="telefonoV" placeholder="Teléfono">
+        <div>
+            <input type="checkbox" name="checkboxV" value="A">CheckBox
+        </div>
+        <div>
+            <input type="radio" name="opcionesV" value="radio1">Radio1
+            <input type="radio" name="opcionesV" value="radio2">Radio2
+            <input type="radio" name="opcionesV" value="radio3">Radio3
+            <input type="radio" name="opcionesV" value="radio4">Radio4
+        </div>
+        <button>Enviar</button>
+    </form>
+
+    <script>
+        function validar(event) {
+            // event.preventDefault()
+            // // VALIDAR UN CAMPO OBLIGATORIO
+            // valor = document.getElementsByName("nombreV")[0].value;
+            // if (valor == null || valor.length == 0 || /^\s+$/.test(valor)) {
+            //     return false;
+            // }
+
+            // // VALIDAR VALORES NUMÉRICOS
+            // valor = document.getElementsByName("numeroV")[0].value;
+            // if (isNaN(valor)) {
+            //     return false;
+            // }
+
+            // // VALIDAR OPCIÓN SELECCIONADA EN UNA LISTA
+            // valor = document.getElementsByName("listaV")[0];
+
+            // if (valor.selectedIndex == 0 || valor.selectedIndex == null) {
+            //     return false;
+            // }
+
+            // // VALIDAR DIRECCIÓN DE EMAIL (VERSIÓN APUNTES ROBERTO)
+            // valor = document.getElementsByName("emailV")[0].value;
+            // if (!(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(valor))) {
+            //     return false
+            // }
+
+            // // VALIDAR DIRECCIÓN DE EMAIL (VERSIÓN GOOGLE)
+            // valor = document.getElementsByName("emailV")[0].value;
+            // if (!(/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(valor))) {
+            //     return false
+            // }
+
+            // // VALIDAR UNA FECHA
+            // let ano = document.getElementsByName("anoV")[0].value;
+            // let mes = document.getElementsByName("mesV")[0].value - 1;
+            // let dia = document.getElementsByName("diaV")[0].value;
+
+            // fecha = new Date(ano, mes, dia);
+            // if (fecha.getFullYear() != ano || fecha.getMonth() != mes || fecha.getDate() != dia || isNaN(fecha.valueOf())) {
+            //     return false;
+            // }
+
+            // // VALIDAR UNA FECHA
+            // valor = document.getElementsByName("fechaV")[0].value;
+            // console.log(new Date(valor))
+            // if (isNaN(new Date(valor).valueOf())){
+            //     return false
+            // }
+
+            // // VALIDAR UN DNI
+            // valor = document.getElementsByName("dniV")[0].value;
+            // var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+            // if (!(/^\d{8}[A-Z]$/.test(valor))) {
+            //     return false;
+            // }
+
+            // if (valor.charAt(8) != letras[(valor.substring(0, 8)) % 23]) {
+            //     return false;
+            // }
+
+            // // VALIDAR UN TELÉFONO
+            // valor = document.getElementsByName("telefonoV")[0].value;
+            // if (!(/^\d{9}$/.test(valor))) {
+            //     return false;
+            // }
+            // // !!!!!!!!!!!!!!!!!! MIRAR TEMA 5 PÁGINA 21 PARA VER TODOS LOS FORMATOS DE TELÉFONOS Y SUS EXPRESIONES REGULARES
+
+            // // VALIDAR UN CHECKBOX SELECCIONADO
+            // elemento = document.getElementsByName("checkboxV")[0];
+            // if (!elemento.checked) {
+            //     return false;
+            // }
+
+            opciones = document.getElementsByName("opcionesV");
+            let seleccionado = false;
+            for (let i = 0; i < opciones.length; i++) {
+                if (opciones[i].checked) {
+                    seleccionado = true;
+                    break;
+                }
+            }
+            if (!seleccionado) {
+                return false;
+            }
+        }
+    </script>
 </body>
+
 </html>
