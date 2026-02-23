@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background-color: #f0f2f5;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Clase aplicada dinámicamente mediante JS */
+.fila-favorita {
+    background-color: #e3f2fd !important;
+    border-left: 5px solid #007bff;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-add { background-color: #28a745; color: white; }
+.btn-remove { background-color: #dc3545; color: white; }
