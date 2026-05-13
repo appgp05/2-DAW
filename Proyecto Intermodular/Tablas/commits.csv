@@ -1,0 +1,199 @@
+rename Authentication to authentication (case fix);2026-05-12
+temp rename authentication;2026-05-12
+.;2026-05-12
+.;2026-05-12
+Arreglos de diseño y correcciones de fechas al filtrar quedadas;2026-05-11
+Pequeños arreglos y cambios;2026-05-11
+.;2026-05-11
+.;2026-05-10
+Sistema de creación de chats;2026-05-10
+.;2026-05-10
+.;2026-05-10
+Avances en el sistema de estadísticas personales;2026-05-10
+Búsqueda de quedadas por competitive_score_target y eliminación de los botones en los emails;2026-05-10
+.;2026-05-10
+Reorganización del TODO, arreglo de notificaciones a creadores de quedadas y arreglo de participación en quedadas no competitivas;2026-05-10
+.;2026-05-10
+Arreglos y avances en el componente manage-chat-details, ahora hay administardores y creadores y se pueden editar los detalles;2026-05-09
+.;2026-05-09
+Arreglos visuales en los chats;2026-05-09
+Pequeños cambios en el sistema para los usuarios que no han iniciado sesión;2026-05-09
+.;2026-05-06
+.;2026-05-06
+Avances con las url temporales en chat-details;2026-05-06
+Arreglos diseño;2026-05-05
+.;2026-05-05
+Arreglos en el diseño del formulario de quedadas;2026-05-05
+Avances con el competitive_score_target;2026-05-05
+Comienzo de la implementación del competitive_score_target para buscar quedadas;2026-05-04
+Arreglo del sistema de refresh tokens;2026-05-04
+Avances con el sistema de refresh de tokns (Peniente de arreglar);2026-05-03
+Continuación sistema de tokens;2026-05-03
+Añadido del componente meeting-card, arreglo de búsqueda de quedadas ya pasadas, eliminación del select de las contraseñas de los usuarios sin hacerlo a mano y rediseño de la pantalla personal-stats;2026-05-02
+.;2026-05-01
+Pequeño cambio en el sistema de asignación de puntuaciones;2026-05-01
+Continuación del sistema competitivo;2026-05-01
+.;2026-05-01
+.;2026-05-01
+Eliminación de quedadas y necesidad de aceptación del creador en una solicitud;2026-05-01
+Comienzo sistema de solicitudes completas;2026-05-01
+Implementación del componente de lista de quedadas para simplificar y no repetir tanto código;2026-05-01
+.;2026-04-29
+.;2026-04-29
+.;2026-04-28
+.;2026-04-28
+Avances en el sistema de confirmaciones de solicitudes;2026-04-27
+Uso de Prettier en todo el proyecto;2026-04-27
+Comienzo prettier y añadido de dos iconos a las cards de solicitudes;2026-04-27
+Arreglos de diseño y avances con el sistema de notificaciones y solicitudes;2026-04-27
+Implementación del sistema de despliegue del proyecto;2026-04-27
+Arreglos de diseño y continuación del sistema de edición de quedadas;2026-04-26
+Pequeños arreglos de diseño;2026-04-26
+.;2026-04-25
+Arreglo del require login;2026-04-25
+.;2026-04-25
+.;2026-04-25
+.;2026-04-24
+.;2026-04-24
+.;2026-04-24
+.;2026-04-24
+.;2026-04-24
+.;2026-04-23
+Continuación del sistema de edición de quedadas;2026-04-23
+Cambio del sistema de equipos y jugadores fijos por deporte a equipos y jugadores minimos y máximos por deporte;2026-04-21
+Continuación del S3 con minio en el Docker;2026-04-20
+.;2026-04-20
+.;2026-04-19
+.;2026-04-19
+Arreglo Problema entre dispositivos;2026-04-19
+Comienzo implementación en el docker de la base de datos y del bucket s3;2026-04-19
+Implementación de Docker;2026-04-19
+Comienzo del sistema de tokens para acceder a la api y cambio del sistema de autentificación del UserService  al AuthService;2026-04-14
+.;2026-04-14
+Comienzo arreglo del metodo para ordenar las puntuaciones de una quedada;2026-04-13
+Añadido de cancelación de la suscripción premium a la pasarela de pago;2026-04-12
+Implementación de la pasarela de pago;2026-04-12
+.;2026-04-12
+Arreglo sistema de requerimiento de inicio de sesión;2026-04-12
+.;2026-04-12
+.;2026-04-12
+Comienzo de la pagina de estadísticas personales;2026-04-12
+.;2026-04-08
+Comienzo creación de chats y comienzo del arreglo de añadir y eliminar usuarios de un chat;2026-03-30
+Continuación de gateway para unirse y salir de chats;2026-03-27
+Envio de mensajes con imágenes;2026-03-27
+.;2026-03-27
+.;2026-03-24
+.;2026-03-24
+Comienzo Gateway para unirse y salir de chats;2026-03-23
+Avances gestión de usuarios de un chat;2026-03-23
+.;2026-03-23
+Subir archivos al S3 con Nest;2026-03-23
+.;2026-03-21
+Corrección scroll mensajes del chat;2026-03-21
+.;2026-03-17
+.;2026-03-17
+Comienzo del gateway para los mensajes del chat;2026-03-17
+.;2026-03-17
+.;2026-03-17
+.;2026-03-17
+.;2026-03-16
+.;2026-03-16
+Comienzo sistema de envío de mensajes por chat;2026-03-16
+Sistema de filtrado de usuarios en chats;2026-03-16
+Continuación sietema de chats;2026-03-16
+.;2026-03-14
+.;2026-03-14
+.;2026-03-14
+.;2026-01-31
+.;2026-01-31
+.;2026-01-31
+.;2026-01-31
+Cambios en el action;2026-01-31
+Comienzo arreglo requerimiento de login para realizar acciones;2026-01-30
+.;2026-01-26
+.;2026-01-26
+.;2026-01-26
+.;2026-01-26
+.;2026-01-26
+Action para el despliegue en AWS;2026-01-26
+Comienzo sistema de chats;2026-01-25
+.;2026-01-25
+.;2026-01-25
+.;2026-01-25
+Servicio de manejo de errores al conectar a la api y comienzo lista de amistades;2026-01-24
+.;2026-01-22
+.;2026-01-22
+.;2026-01-22
+.;2026-01-21
+.;2026-01-21
+Comienzo WebSocket de usuarios;2026-01-21
+Confirmación al cancelar una solicitud;2026-01-21
+Formateo de fechas en las solicitudes;2026-01-21
+Comienzo mejora diseños;2026-01-21
+.;2026-01-21
+.;2026-01-21
+.;2026-01-20
+Comienzo solicitudes de amistad;2026-01-20
+.;2026-01-19
+.;2026-01-15
+.;2026-01-15
+Mejoras visuales en search meetings;2026-01-15
+Arreglos en el tema de primeng;2026-01-15
+Comienzo historial de quedadas y arreglo del header;2026-01-15
+.;2026-01-14
+Avances en la gestión de administradores;2026-01-14
+Arreglos en meeting details y comienzo de la gestion de administradores en los detalles de la quedada;2026-01-14
+Comienzo asignación de puntuaciones en quedadas;2026-01-12
+.;2026-01-10
+Comienzo de la gestión de equipos de una quedada;2026-01-10
+.;2026-01-10
+Avances actualización de los detalles de las quedadas;2026-01-10
+Comienzo implementación sockets para los detalles de las quedadas;2026-01-10
+.;2026-01-09
+Mostrar reportes y reportar la quedada;2026-01-09
+.;2026-01-07
+Continuación reporte usuarios;2026-01-07
+.;2026-01-06
+Comienzo reporte usuarios;2026-01-06
+.;2026-01-01
+.;2025-12-31
+Avance en validación de campos;2025-12-31
+Comienzo servicio de validación de inputs;2025-12-31
+.;2025-12-31
+Avances con los cambios de campos del perfil;2025-12-31
+Comienzo arreglo validación contraseña en cambios de campos del perfil;2025-12-30
+.;2025-12-30
+Implementación verificaci´´onn por correo en registro;2025-12-30
+Avances con los cambios de campos del perfil;2025-12-30
+Avances con los cambios de campos del perfil (nombre, telefono...);2025-12-29
+Avances con los cambios de campos del perfil en el front (nombre, telefono...);2025-12-29
+Avances con login, registro, y creación de quedadas;2025-12-29
+Comienzo filtros front quedadas;2025-12-28
+Arreglo filtros back quedadas;2025-12-28
+.;2025-12-28
+.;2025-12-28
+.;2025-12-28
+.;2025-12-28
+.;2025-12-28
+Avance de los detalles de las quedadas;2025-12-28
+Comienzo de detalles quedada;2025-12-27
+Comienzo verificación por correo electrónico;2025-12-27
+arreglo vulnerabilidades;2025-12-26
+Avances en creación de quedadas;2025-12-26
+Hasheo de contraseñas y comienzo de creación de quedadas;2025-12-26
+.;2025-12-23
+.;2025-12-23
+Avances en el perfil del usuario y añadidos de páginas de los 2 primeros sprints;2025-12-23
+.;2025-12-22
+Avances Login y Search Meetings;2025-12-22
+.;2025-12-17
+Comienzo Funciones Usuario API;2025-12-17
+.;2025-12-16
+.;2025-12-16
+.;2025-12-15
+.;2025-12-15
+Desarrollo consultas quedadas;2025-09-27
+Dessarrollo back;2025-09-26
+Comienzo del back;2025-09-26
+Initial commit;2025-09-26

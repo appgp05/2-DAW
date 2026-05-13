@@ -1,0 +1,103 @@
+﻿Column1,Año,Trimestre,Mes,Día
+Action para el despliegue en AWS,2026,Qtr 1,enero,26
+Añadido de cancelación de la suscripción premium a la pasarela de pago,2026,Qtr 2,abril,12
+"Añadido del componente meeting-card, arreglo de búsqueda de quedadas ya pasadas, eliminación del select de las contraseñas de los usuarios sin hacerlo a mano y rediseño de la pantalla personal-stats",2026,Qtr 2,mayo,2
+Arreglo del require login,2026,Qtr 2,abril,25
+Arreglo del sistema de refresh tokens,2026,Qtr 2,mayo,4
+Arreglo filtros back quedadas,2025,Qtr 4,diciembre,28
+Arreglo Problema entre dispositivos,2026,Qtr 2,abril,19
+Arreglo sistema de requerimiento de inicio de sesión,2026,Qtr 2,abril,12
+arreglo vulnerabilidades,2025,Qtr 4,diciembre,26
+Arreglos de diseño y avances con el sistema de notificaciones y solicitudes,2026,Qtr 2,abril,27
+Arreglos de diseño y continuación del sistema de edición de quedadas,2026,Qtr 2,abril,26
+Arreglos de diseño y correcciones de fechas al filtrar quedadas,2026,Qtr 2,mayo,11
+Arreglos diseño,2026,Qtr 2,mayo,5
+Arreglos en el diseño del formulario de quedadas,2026,Qtr 2,mayo,5
+Arreglos en el tema de primeng,2026,Qtr 1,enero,15
+Arreglos en meeting details y comienzo de la gestion de administradores en los detalles de la quedada,2026,Qtr 1,enero,14
+Arreglos visuales en los chats,2026,Qtr 2,mayo,9
+"Arreglos y avances en el componente manage-chat-details, ahora hay administardores y creadores y se pueden editar los detalles",2026,Qtr 2,mayo,9
+Avance de los detalles de las quedadas,2025,Qtr 4,diciembre,28
+Avance en validación de campos,2025,Qtr 4,diciembre,31
+Avances actualización de los detalles de las quedadas,2026,Qtr 1,enero,10
+Avances con el competitive_score_target,2026,Qtr 2,mayo,5
+Avances con el sistema de refresh de tokns (Peniente de arreglar),2026,Qtr 2,mayo,3
+Avances con las url temporales en chat-details,2026,Qtr 2,mayo,6
+"Avances con login, registro, y creación de quedadas",2025,Qtr 4,diciembre,29
+Avances con los cambios de campos del perfil,2025,Qtr 4,diciembre,30
+Avances con los cambios de campos del perfil,2025,Qtr 4,diciembre,31
+"Avances con los cambios de campos del perfil (nombre, telefono...)",2025,Qtr 4,diciembre,29
+"Avances con los cambios de campos del perfil en el front (nombre, telefono...)",2025,Qtr 4,diciembre,29
+Avances en creación de quedadas,2025,Qtr 4,diciembre,26
+Avances en el perfil del usuario y añadidos de páginas de los 2 primeros sprints,2025,Qtr 4,diciembre,23
+Avances en el sistema de confirmaciones de solicitudes,2026,Qtr 2,abril,27
+Avances en el sistema de estadísticas personales,2026,Qtr 2,mayo,10
+Avances en la gestión de administradores,2026,Qtr 1,enero,14
+Avances gestión de usuarios de un chat,2026,Qtr 1,marzo,23
+Avances Login y Search Meetings,2025,Qtr 4,diciembre,22
+Búsqueda de quedadas por competitive_score_target y eliminación de los botones en los emails,2026,Qtr 2,mayo,10
+Cambio del sistema de equipos y jugadores fijos por deporte a equipos y jugadores minimos y máximos por deporte,2026,Qtr 2,abril,21
+Cambios en el action,2026,Qtr 1,enero,31
+Comienzo arreglo del metodo para ordenar las puntuaciones de una quedada,2026,Qtr 2,abril,13
+Comienzo arreglo requerimiento de login para realizar acciones,2026,Qtr 1,enero,30
+Comienzo arreglo validación contraseña en cambios de campos del perfil,2025,Qtr 4,diciembre,30
+Comienzo asignación de puntuaciones en quedadas,2026,Qtr 1,enero,12
+Comienzo creación de chats y comienzo del arreglo de añadir y eliminar usuarios de un chat,2026,Qtr 1,marzo,30
+Comienzo de detalles quedada,2025,Qtr 4,diciembre,27
+Comienzo de la gestión de equipos de una quedada,2026,Qtr 1,enero,10
+Comienzo de la implementación del competitive_score_target para buscar quedadas,2026,Qtr 2,mayo,4
+Comienzo de la pagina de estadísticas personales,2026,Qtr 2,abril,12
+Comienzo del back,2025,Qtr 3,septiembre,26
+Comienzo del gateway para los mensajes del chat,2026,Qtr 1,marzo,17
+Comienzo del sistema de tokens para acceder a la api y cambio del sistema de autentificación del UserService  al AuthService,2026,Qtr 2,abril,14
+Comienzo filtros front quedadas,2025,Qtr 4,diciembre,28
+Comienzo Funciones Usuario API,2025,Qtr 4,diciembre,17
+Comienzo Gateway para unirse y salir de chats,2026,Qtr 1,marzo,23
+Comienzo historial de quedadas y arreglo del header,2026,Qtr 1,enero,15
+Comienzo implementación en el docker de la base de datos y del bucket s3,2026,Qtr 2,abril,19
+Comienzo implementación sockets para los detalles de las quedadas,2026,Qtr 1,enero,10
+Comienzo mejora diseños,2026,Qtr 1,enero,21
+Comienzo prettier y añadido de dos iconos a las cards de solicitudes,2026,Qtr 2,abril,27
+Comienzo reporte usuarios,2026,Qtr 1,enero,6
+Comienzo servicio de validación de inputs,2025,Qtr 4,diciembre,31
+Comienzo sistema de chats,2026,Qtr 1,enero,25
+Comienzo sistema de envío de mensajes por chat,2026,Qtr 1,marzo,16
+Comienzo sistema de solicitudes completas,2026,Qtr 2,mayo,1
+Comienzo solicitudes de amistad,2026,Qtr 1,enero,20
+Comienzo verificación por correo electrónico,2025,Qtr 4,diciembre,27
+Comienzo WebSocket de usuarios,2026,Qtr 1,enero,21
+Confirmación al cancelar una solicitud,2026,Qtr 1,enero,21
+Continuación de gateway para unirse y salir de chats,2026,Qtr 1,marzo,27
+Continuación del S3 con minio en el Docker,2026,Qtr 2,abril,20
+Continuación del sistema competitivo,2026,Qtr 2,mayo,1
+Continuación del sistema de edición de quedadas,2026,Qtr 2,abril,23
+Continuación reporte usuarios,2026,Qtr 1,enero,7
+Continuación sietema de chats,2026,Qtr 1,marzo,16
+Continuación sistema de tokens,2026,Qtr 2,mayo,3
+Corrección scroll mensajes del chat,2026,Qtr 1,marzo,21
+Desarrollo consultas quedadas,2025,Qtr 3,septiembre,27
+Dessarrollo back,2025,Qtr 3,septiembre,26
+Eliminación de quedadas y necesidad de aceptación del creador en una solicitud,2026,Qtr 2,mayo,1
+Envio de mensajes con imágenes,2026,Qtr 1,marzo,27
+Formateo de fechas en las solicitudes,2026,Qtr 1,enero,21
+Hasheo de contraseñas y comienzo de creación de quedadas,2025,Qtr 4,diciembre,26
+Implementación de Docker,2026,Qtr 2,abril,19
+Implementación de la pasarela de pago,2026,Qtr 2,abril,12
+Implementación del componente de lista de quedadas para simplificar y no repetir tanto código,2026,Qtr 2,mayo,1
+Implementación del sistema de despliegue del proyecto,2026,Qtr 2,abril,27
+Implementación verificaci´´onn por correo en registro,2025,Qtr 4,diciembre,30
+Initial commit,2025,Qtr 3,septiembre,26
+Mejoras visuales en search meetings,2026,Qtr 1,enero,15
+Mostrar reportes y reportar la quedada,2026,Qtr 1,enero,9
+Pequeño cambio en el sistema de asignación de puntuaciones,2026,Qtr 2,mayo,1
+Pequeños arreglos de diseño,2026,Qtr 2,abril,26
+Pequeños arreglos y cambios,2026,Qtr 2,mayo,11
+Pequeños cambios en el sistema para los usuarios que no han iniciado sesión,2026,Qtr 2,mayo,9
+rename Authentication to authentication (case fix),2026,Qtr 2,mayo,12
+"Reorganización del TODO, arreglo de notificaciones a creadores de quedadas y arreglo de participación en quedadas no competitivas",2026,Qtr 2,mayo,10
+Servicio de manejo de errores al conectar a la api y comienzo lista de amistades,2026,Qtr 1,enero,24
+Sistema de creación de chats,2026,Qtr 2,mayo,10
+Sistema de filtrado de usuarios en chats,2026,Qtr 1,marzo,16
+Subir archivos al S3 con Nest,2026,Qtr 1,marzo,23
+temp rename authentication,2026,Qtr 2,mayo,12
+Uso de Prettier en todo el proyecto,2026,Qtr 2,abril,27
